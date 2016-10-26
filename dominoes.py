@@ -1,7 +1,14 @@
 '''
-Not finished/commented
+Initial implementation of the dominoes game.
 
-a.k.a messy af
+There are likely better ways of organizing/passing/storing
+information about the current state of the game and memory of
+the game. (should/will edit for p-progress/p-final)
+
+In general, the following indices/ints correspond to the following
+players: 0 = me, 1 = first opp, 2 = partner, 3 = third opp.
+In the game, I sit opposite my partner and we play counter-clockwise,
+hence this numbering of players.
 '''
 
 class Dominoes(object):
@@ -10,25 +17,33 @@ class Dominoes(object):
 		@params:
 			- game_tiles (list of tuples of ints): each tuple has two
 			values representing a domino in the game. This list contains
-			all dominoes in the game.
-			- my_tiles (list of tuples of ints): the dominoes that I have.
-			- starter (int): 0 = me, 1 = first opp, 2 = partner, 3 = third opp.
-			In the game, I sit opposite my partner and we play counter-clockwise,
-			hence this numbering of players.
-			- alg (function): greedy or optimal
+			all dominoes in the game. The first value is less or equal
+			to the second value in the domino tuple.
+			- my_tiles (list of tuples of ints): the seven dominoes
+			that I begin with in the game.
+			- starter (int): Who is starting the game?
+			0 = me, 1 = first opp, 2 = partner, 3 = third opp.
+			- alg (function): the algorithm I am using to beat humans.
 		'''
 		self.tiles = game_tiles
 		self.my_tiles = my_tiles
 		self.starter = starter
 		self.moveMaker = alg
 
-		# TODO: Change these to lists of lists
-		self.tiles_opp1 = []	# none of us have played any tiles yet
-		self.tiles_opp2 = []
-		self.tiles_partner = []
-		self.tiles_me = []
-		# everyone has equal chance of having a domino that I don't have
-		self.passes = [None, None, None, None]
+		# my tiles, tiles of opp1, tiles of partner, tiles of opp2
+		self.placed_tiles = [[], [], [], []]
+		# passes: me, opp1, partner, opp2
+		self.passes = [set(), set(), set(), set()]
+
+	def getKnowledge(self):
+		'''
+		@returns:
+			- a tuple consisting of:
+			placed_tiles (list of lists) and passes (list of sets)
+			What tiles have been placed by whom on the table? What values
+			do people not have?
+		'''
+		return (self.placed_tiles, self.passes)
 
 	def startState(self):
 		'''
@@ -41,9 +56,10 @@ class Dominoes(object):
 	def actions(self, state):
 		'''
 		@params
-			-
+			- state tuple
 		@returns
-			-
+			- returns possible tiles (set) that could be placed
+			given the open ends of dominoes on the table.
 		'''
 		options = state[1]
 		res = set()
@@ -57,65 +73,59 @@ class Dominoes(object):
 	def isEnd(self, state):
 		'''
 		@params
-			-
+			- state tuple
 		@returns
-			-
+			- Has the previous player run out of dominoes? (bool)
 		'''
 		player = state[0]
-		if player == 0:
-			return len(self.tiles_me) == 7
-		if player == 1:
-			return len(self.tiles_opp1) == 7
-		if player == 2:
-			return len(self.my_tiles) == 7
-		if player == 3:
-			return len(self.my_tiles) == 7
+		return len(self.placed_tiles[player]) == 7
 
 	def update(self, player, move, state):
 		'''
 		@params
-			- move: valid move
+			- move (tuple): valid move e.g. ((2, 3), 3) or 'pass'
+			In example, (2, 3) is a domino and 3 is the end you
+			wish to attach to the dominoes on the table.
+			- player (int)
+			- state (tuple)
 		@returns
-			-
+			- state, with open ends of dominoes on table modified
+			as necessary
 		'''
-		# TODO check if move == 'pass'
+		options = list(state[1])
+		if move == 'pass':
+			self.passes[player] |= set(options)
+			return state
+		# else
 		placed_domino = move[0]
 		placement = move[1]
 		if placed_domino[0] == placement:
 			new_end = placed_domino[1]
 		else:
 			new_end = placed_domino[0]
-		options = list(state[1])
 		assert (player == state[0])
 		if options[0] == placement:
 			options[0] = new_end
 		else:
 			options[1] = new_end
 		state = (player, options)
-		# TODO: update lists of lists of played things
+		self.placed_tiles[player].append(placed_domino)
 		return state
 
-	def getKnowledge(self):
-		'''
-		@return:
-			- a dictionary.
-		'''
-		return {'opp1 tiles':self.tiles_opp1, 'opp2 tiles':self.tiles_opp2,
-			'partner tiles':self.tiles_partner, 'me tiles':self.tiles_me,
-			'my tiles':self.my_tiles,
-			'passes':self.passes}
-
-def bad():
+def bad(a, b):
 	# DELETE!
 	return 'pass'
 
 # Controller
 def setupGame():
 	'''
-	@params
-		-
+	Enter the tiles that I have.
+	Enter who is starting the game.
+	A little bit of checking about validity of inputs
+	and organizing/standardizing/cleaning
+	but please don't input something too crazy.
 	@returns
-		-
+		- Dominoes
 	'''
 	print 'Welcome.'
 	tiles = []
@@ -131,23 +141,28 @@ def setupGame():
 	my_tiles = []
 	for t in my_tiles_input:
 		my_tiles.append(tuple(sorted([int(num) for num in t.split('-')])))
+	print 'You have:', my_tiles
+	print
 	print 'Players are numbered as the following:'
-	print '(0 = me, 1 = opponent on my right, 2 = partner across from me, 3 = opponent on my left)'
+	print '(0 = me, 1 = opponent on my right,'
+	print '2 = partner across from me, 3 = opponent on my left)'
 	while True:
 		starter = int(raw_input('Who is starting? '))
 		if starter < 4 and starter >= 0:
 			break
 		else:
 			print "Not valid, try again"
+	print "Player " + str(starter) + " is starting, places 6-6 on the board."
+	print
 	alg = bad		# TODO: change this to actual function name
 	return Dominoes(tiles, my_tiles, starter, alg)
 
 def nextPlayer(player):
 	'''
 	@params
-		-
+		- player (int)
 	@returns
-		-
+		- next player (int)
 	'''
 	if player < 3:
 		return player + 1
@@ -156,15 +171,22 @@ def nextPlayer(player):
 def humanPlays(game, player):
 	'''
 	@params
-		-
+		- game (Dominoes)
+		- player (int)
 	@returns
-		-
+		- inputted move (tuple or string) of player
+		return not only the dominoes (2, 3) but also the
+		value you wish to append to, e.g. 3.
+		This is for cases where the open ends are 2, 3,
+		and you place down a 2-3, so that I know what to decrement
 	'''
-	print 'Player %d is playing', player
+	print 'Now, player ' + str(player) + ' is playing.'
 	actions = game.actions(state)
 	while True:
-		print 'Write down your move and intended placement, seperated by a space'
-		move = raw_input("e.g. 2-3 3")
+		print 'Write down your move and intended placement, seperated by a space (e.g. 2-3 3)'
+		move = raw_input("").strip()
+		if move == 'pass':
+			return move
 		move = move.split()
 		vals = move[0].split('-')
 		if move[1] == vals[0] or move[1] == vals[1]:	# intended placement must match
@@ -178,12 +200,12 @@ def computerPlays(game, state):
 	'''
 	@params:
 		- state (tuple)
-	NOTE:
-	It would be great to return not only the dominoes (2, 3) but also the
-	value you wish to append to, e.g. 3.
-	This is for cases where the open ends are 2, 3, and you place down a 2-3,
-	so that I know what to decrement
+		- game (Dominoes)
+	@returns:
+		- whatever move (tuple or string) my brain decides to do,
+		given information about the state of the game
 	'''
+	print "My turn! :D"
 	actions = game.actions(state)
 	possible_moves = [d for d in actions if d in game.my_tiles]
 	if not possible_moves:
@@ -200,10 +222,12 @@ if __name__ == '__main__':
 	state = game.startState()
 	while num_pass < 4 and not game.isEnd(state):
 		player = nextPlayer(state[0])
+		state = (player, state[1])
 		move = humanPlays(game, player) if player > 0 else computerPlays(game, state)
 		num_pass = num_pass + 1 if move == 'pass' else 0
 		state = game.update(player, move, state)
-		print "Player %d just played, ends of tiles " + \
-			"are %d and %d", state[0], state[1][0], state[1][1]
+		print "Player " + str(state[0]) + " just played, ends of tiles " + \
+			"are " + str(state[1][0]) + " and " + str(state[1][1])
+		print
 	print "Game ended."
 
