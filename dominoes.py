@@ -168,6 +168,8 @@ def setupGame():
 		else:
 			print "Not valid, try again"
 	print "Player " + str(starter) + " is starting, places 6-6 on the board."
+	if starter == 0:
+		my_tiles.remove((6, 6))
 	print
 	alg = bad		# TODO: change this to actual function name
 	return Dominoes(tiles, my_tiles, starter, alg)
