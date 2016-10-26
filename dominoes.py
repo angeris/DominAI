@@ -58,8 +58,8 @@ class Dominoes(object):
 		@params
 			- state tuple
 		@returns
-			- returns possible tiles (set) that could be placed
-			given the open ends of dominoes on the table.
+			- returns possible moves (set of tuples, (domino, placement))
+			that could be placed given the open ends of dominoes on the table.
 		'''
 		options = state[1]
 		res = set()
@@ -67,7 +67,7 @@ class Dominoes(object):
 		for v in vals:
 			for t in game.tiles:
 				if t[0] == v or t[1] == v:
-					res.add(t)
+					res.add((t, v))
 		return res
 
 	def isEnd(self, state):
@@ -110,11 +110,26 @@ class Dominoes(object):
 			options[1] = new_end
 		state = (player, options)
 		self.placed_tiles[player].append(placed_domino)
+		if player == 0:	# I just played, must update myself
+			self.my_tiles.remove(placed_domino)
 		return state
 
-def bad(a, b):
-	# DELETE!
-	return 'pass'
+def bad(possible_moves, knowledge_of_game):
+	'''
+	@params:
+		- possible_moves: dominoes that I can place
+		Not empty
+		- knowledge_of_game: ignore, who cares
+	'''
+	# Greedy algorithm
+	assert (possible_moves)	# list of moves
+	maximum = 0
+	ret = possible_moves[0]
+	for domino, placement in possible_moves:
+		if domino[1] + domino[0] > maximum:
+			maximum = domino[1] + domino[0]
+			ret = (domino, placement)
+	return ret
 
 # Controller
 def setupGame():
@@ -191,7 +206,7 @@ def humanPlays(game, player):
 		vals = move[0].split('-')
 		if move[1] == vals[0] or move[1] == vals[1]:	# intended placement must match
 			move = (tuple(sorted([int(v) for v in vals])), int(move[1]))
-			if move[0] in actions:	# must be a valid action at present state
+			if move in actions:	# must be a valid action at present state
 				break
 		print "Move not valid"
 	return move
@@ -206,8 +221,8 @@ def computerPlays(game, state):
 		given information about the state of the game
 	'''
 	print "My turn! :D"
-	actions = game.actions(state)
-	possible_moves = [d for d in actions if d in game.my_tiles]
+	actions = game.actions(state)	# list of moves
+	possible_moves = [d for d in actions if d[0] in game.my_tiles]
 	if not possible_moves:
 		return 'pass'
 	knowledge_of_game = game.getKnowledge()
