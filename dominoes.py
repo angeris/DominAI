@@ -120,6 +120,7 @@ def bad(possible_moves, knowledge_of_game):
 		- possible_moves: dominoes that I can place
 		Not empty
 		- knowledge_of_game: ignore, who cares
+	TODO: flip if you can place on either side
 	'''
 	# Greedy algorithm
 	assert (possible_moves)	# list of moves
