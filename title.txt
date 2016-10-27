@@ -1,1 +1,1 @@
-DominAI: Better Title of Project
+DominAI: A Dominoes-Playing AI
