@@ -133,8 +133,8 @@ class Dominoes(object):
         else:
             assert self._is_valid(move)
             self.dominos_played.append(move)
-            self.probabilities[t][self.curr_player] = 1
-            _renormalize(self.probabilities[t])
+            self.probabilities[move][self.curr_player] = 1
+            _renormalize(self.probabilities[move])
             if placement is None:
                 assert (self.ends[0] in move)^(self.ends[1] in move)
                 if self.ends[0] in move:
