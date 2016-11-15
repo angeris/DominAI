@@ -1,22 +1,8 @@
-from domino import Dominoes
+from domino import Dominoes, Domino
+import random
 
-def bad(possible_moves, knowledge_of_game):
-    '''
-    @params:
-        - possible_moves: dominoes that I can place
-        Not empty
-        - knowledge_of_game: ignore, who cares
-    TODO: flip if you can place on either side
-    '''
-    # Greedy algorithm
-    assert (possible_moves) # list of moves
-    maximum = 0
-    ret = possible_moves[0]
-    for domino, placement in possible_moves:
-        if domino[1] + domino[0] > maximum:
-            maximum = domino[1] + domino[0]
-            ret = (domino, placement)
-    return ret
+PASS_STR = 'PASS'
+PASS_DOMINO = Domino(-1,-1)
 
 # Controller
 def setupGame():
@@ -42,8 +28,8 @@ def setupGame():
             print "I need 7 tiles!"
     my_tiles = []
     for t in my_tiles_input:
-        my_tiles.append(tuple(sorted([int(num) for num in t.split('-')])))
-    print 'You have:', my_tiles
+        my_tiles.append(tuple([int(num) for num in t.split('-')]))
+    print 'I have:', my_tiles
     print
     print 'Players are numbered as the following:'
     print '(0 = me, 1 = opponent on my right,'
@@ -54,84 +40,99 @@ def setupGame():
             break
         else:
             print "Not valid, try again"
-    print "Player " + str(starter) + " is starting, places 6-6 on the board."
-    if starter == 0:
-        my_tiles.remove((6, 6))
+    print "Player " + str(starter) + " is starting."
+    if starter > 0:
+        print 'Write down your move (e.g. 2-3):'
+        move = raw_input("").strip()
+        start_tile = tuple([int(v) for v in move.split('-')])
+    else:
+        start_tile = greedyStarts(my_tiles)
+        print "I placed a " + str(start_tile)
+        tiles.remove(start_tile)
     print
-    alg = bad       # TODO: change this to actual function name
-    return Dominoes(tiles, my_tiles, starter, alg)
-
-def nextPlayer(player):
-    '''
-    @params
-        - player (int)
-    @returns
-        - next player (int)
-    '''
-    if player < 3:
-        return player + 1
-    return 0
+    return Dominoes(tiles, my_tiles, starter, start_tile)
 
 def humanPlays(game, player):
     '''
     @params
         - game (Dominoes)
         - player (int)
-    @returns
-        - inputted move (tuple or string) of player
-        return not only the dominoes (2, 3) but also the
-        value you wish to append to, e.g. 3.
-        This is for cases where the open ends are 2, 3,
-        and you place down a 2-3, so that I know what to decrement
     '''
     print 'Now, player ' + str(player) + ' is playing.'
-    actions = game.actions(state)
+    actions = game.actions()
     while True:
-        print 'Write down your move and intended placement, seperated by a space (e.g. 2-3 3)'
-        move = raw_input("").strip()
-        if move == 'pass':
-            return move
-        move = move.split()
-        vals = move[0].split('-')
-        if move[1] == vals[0] or move[1] == vals[1]:    # intended placement must match
-            move = (tuple(sorted([int(v) for v in vals])), int(move[1]))
-            if move in actions: # must be a valid action at present state
-                break
-        print "Move not valid"
-    return move
+        try: # lol this is dangerous
+            print 'Write down your move (e.g. 2-3)'
+            move = raw_input("").strip()
+            if move == PASS_STR:
+                game.update(PASS_DOMINO)
+            move = move.split('-')
+            move = tuple([int(v) for v in move])
+            if (game.ends[0] in move and game.ends[1] in move
+                    and game.ends[0] != game.ends[1]):
+                while True:
+                    print 'Specify placement:'
+                    placement = int(raw_input("").strip())
+                    if placement == move[0] or placement == move[1]:
+                        print "You played a " + str(move)
+                        game.update(move, placement)
+                        return
+            if game.ends[0] in move or game.ends[1] in move:
+                if Domino(*move) in actions:
+                    print "You played a " + str(move)
+                    game.update(move)
+                    return
+            print "Move not valid"
+        except KeyboardInterrupt:
+            raise
+        except:
+            print "Something went wrong, try again"
 
-def computerPlays(game, state):
+def greedyStarts(my_tiles):
+    maximum = 0
+    ret = my_tiles[0]
+    for domino in my_tiles:
+        if domino[1] + domino[0] > maximum:
+            maximum = domino[1] + domino[0]
+            ret = domino
+    return ret
+
+def greedyPlays(game):
     '''
     @params:
-        - state (tuple)
         - game (Dominoes)
-    @returns:
-        - whatever move (tuple or string) my brain decides to do,
-        given information about the state of the game
     '''
     print "My turn! :D"
-    actions = game.actions(state)   # list of moves
-    possible_moves = [d for d in actions if d[0] in game.my_tiles]
+    actions = game.actions()   # list of moves
+    possible_moves = [d for d in actions if d in game.my_tiles]
     if not possible_moves:
-        return 'pass'
-    knowledge_of_game = game.getKnowledge()
-    return game.moveMaker(possible_moves, knowledge_of_game)
+        game.update(PASS_DOMINO)
+    maximum = 0
+    ret = possible_moves[0]
+    for domino in possible_moves:
+        if domino.vals[1] + domino.vals[0] > maximum:
+            maximum = domino.vals[1] + domino.vals[0]
+            ret = domino
+    if (game.ends[0] in ret and game.ends[1] in ret and game.ends[0] != game.ends[1]):
+        placement = random.choice(game.ends)
+        game.update(ret, placement)
+    else:
+        game.update(ret)
+    print "I played a " + str(ret) + " , yay!"
+
 
 if __name__ == '__main__':
     '''
     Plays one game.
     '''
     game = setupGame()
-    num_pass = 0    # number of consecutive passes
-    state = game.startState()
-    while num_pass < 4 and not game.isEnd(state):
-        player = nextPlayer(state[0])
-        state = (player, state[1])
-        move = humanPlays(game, player) if player > 0 else computerPlays(game, state)
-        num_pass = num_pass + 1 if move == 'pass' else 0
-        state = game.update(player, move, state)
-        print "Player " + str(state[0]) + " just played, ends of tiles " + \
-            "are " + str(state[1][0]) + " and " + str(state[1][1])
+    game.debugging_fml()
+    while not game.is_end():
+        player = game.curr_player
+        humanPlays(game, player) if player > 0 else greedyPlays(game)
+        print "Player " + str(player) + " just played, ends of tiles " + \
+            "are " + str(game.ends[0]) + " and " + str(game.ends[1])
         print
+        game.debugging_fml()
     print "Game ended."
 
