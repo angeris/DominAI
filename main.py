@@ -48,7 +48,6 @@ def setupGame():
     else:
         start_tile = greedyStarts(my_tiles)
         print "I placed a " + str(start_tile)
-        tiles.remove(start_tile)
     print
     return Dominoes(tiles, my_tiles, starter, start_tile)
 
@@ -68,25 +67,25 @@ def humanPlays(game, player):
                 game.update(PASS_DOMINO)
             move = move.split('-')
             move = tuple([int(v) for v in move])
-            if (game.ends[0] in move and game.ends[1] in move
-                    and game.ends[0] != game.ends[1]):
-                while True:
-                    print 'Specify placement:'
-                    placement = int(raw_input("").strip())
-                    if placement == move[0] or placement == move[1]:
-                        print "You played a " + str(move)
-                        game.update(move, placement)
-                        return
-            if game.ends[0] in move or game.ends[1] in move:
-                if Domino(*move) in actions:
-                    print "You played a " + str(move)
-                    game.update(move)
-                    return
-            print "Move not valid"
         except KeyboardInterrupt:
             raise
         except:
             print "Something went wrong, try again"
+        if (game.ends[0] in move and game.ends[1] in move
+                and game.ends[0] != game.ends[1]):
+            while True:
+                print 'Specify placement:'
+                placement = int(raw_input("").strip())
+                if placement == 0 or placement == 1:
+                    print "You played a " + str(move)
+                    game.update(move, placement)
+                    return
+        if game.ends[0] in move or game.ends[1] in move:
+            if Domino(*move) in actions:
+                print "You played a " + str(move)
+                game.update(move)
+                return
+        print "Move not valid"
 
 def greedyStarts(my_tiles):
     maximum = 0
@@ -114,7 +113,7 @@ def greedyPlays(game):
             maximum = domino.vals[1] + domino.vals[0]
             ret = domino
     if (game.ends[0] in ret and game.ends[1] in ret and game.ends[0] != game.ends[1]):
-        placement = random.choice(game.ends)
+        placement = random.choice((0, 1))
         game.update(ret, placement)
     else:
         game.update(ret)

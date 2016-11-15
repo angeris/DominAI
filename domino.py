@@ -88,11 +88,13 @@ class Dominoes(object):
         _renormalize(self.probabilities[self.dominos_played[0]]) # something funky going on here
 
         self.curr_player = (starter+1)%4
+        self.tiles.remove(self.dominos_played[0])
 
     def debugging_fml(self):
+        # prints things so that I can see everything that is wrong
         print "Tiles left:"
         print self.tiles
-        print "Dominos_played:"
+        print "\nDominos_played:"
         print self.dominos_played
         print "\nEnds on table:"
         print self.ends
@@ -101,6 +103,7 @@ class Dominoes(object):
             print d, self.probabilities[d]
         print "\nCurrent player:"
         print self.curr_player
+        print
 
 
     def get_player(self, curr_play):
@@ -145,7 +148,7 @@ class Dominoes(object):
         @params
             - move (tuple): valid move e.g. (2, 3) or 'PASS'/(-1, -1)
             - placement: if there are multiple options for placement
-            specify which one, e.g. 2 or 3
+            specify which index
         '''
         if type(move) == tuple:
             move = Domino(*move)
