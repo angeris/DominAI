@@ -84,8 +84,8 @@ class Dominoes(object):
         self.probabilities = {d:(copy(u_third) if d not in self.my_tiles else
                                  copy(u_one)) for d in self.tiles}
 
+        self.probabilities[self.dominos_played[0]] = [0]*4
         self.probabilities[self.dominos_played[0]][starter] = 1
-        _renormalize(self.probabilities[self.dominos_played[0]]) # something funky going on here
 
         self.curr_player = (starter+1)%4
         self.tiles.remove(self.dominos_played[0])
@@ -156,13 +156,13 @@ class Dominoes(object):
             possible_moves = self.actions()
             for t in possible_moves:
                 self.probabilities[t][self.curr_player] = 0
-                _renormalize(self.probabilities[t])
+                self.probabilities[t] = _renormalize(self.probabilities[t])
             self.dominos_played[self.last_play + 1] = PASS_DOMINO
         else:
             assert self._is_valid(move)
             self.dominos_played[self.last_play + 1] = move
+            self.probabilities[move] = [0]*4
             self.probabilities[move][self.curr_player] = 1
-            _renormalize(self.probabilities[move])
             if placement is None:
                 assert (self.ends[0] in move)^(self.ends[1] in move)&(self.ends[0] != self.ends[1])
                 if self.ends[0] in move:

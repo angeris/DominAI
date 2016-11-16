@@ -76,7 +76,8 @@ def humanPlays(game, player):
         if (game.ends[0] in move and game.ends[1] in move
                 and game.ends[0] != game.ends[1]):
             while True:
-                print 'Specify placement (0 for first end or 1 for second):'
+                print 'Specify placement for ', game.ends
+                print '(0 for first end or 1 for second end):'
                 placement = int(raw_input("").strip())
                 if placement == 0 or placement == 1:
                     print "You played a " + str(move)
