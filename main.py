@@ -65,6 +65,8 @@ def humanPlays(game, player):
             move = raw_input("").strip()
             if move == PASS_STR:
                 game.update(PASS_DOMINO)
+                print "You just passed."
+                return
             move = move.split('-')
             move = tuple([int(v) for v in move])
         except KeyboardInterrupt:
@@ -74,7 +76,7 @@ def humanPlays(game, player):
         if (game.ends[0] in move and game.ends[1] in move
                 and game.ends[0] != game.ends[1]):
             while True:
-                print 'Specify placement:'
+                print 'Specify placement (0 for first end or 1 for second):'
                 placement = int(raw_input("").strip())
                 if placement == 0 or placement == 1:
                     print "You played a " + str(move)
@@ -105,7 +107,9 @@ def greedyPlays(game):
     actions = game.actions()   # list of moves
     possible_moves = [d for d in actions if d in game.my_tiles]
     if not possible_moves:
+        print "I passed. :("
         game.update(PASS_DOMINO)
+        return
     maximum = 0
     ret = possible_moves[0]
     for domino in possible_moves:

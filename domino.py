@@ -157,7 +157,7 @@ class Dominoes(object):
             for t in possible_moves:
                 self.probabilities[t][self.curr_player] = 0
                 _renormalize(self.probabilities[t])
-            self.dominos_played.append(PASS_DOMINO)
+            self.dominos_played[self.last_play + 1] = PASS_DOMINO
         else:
             assert self._is_valid(move)
             self.dominos_played[self.last_play + 1] = move
