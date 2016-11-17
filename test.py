@@ -1,4 +1,4 @@
-from domino import NegaMax
+from domino import NegaMax, ZeroSumGame
 
 class WeirdGame(ZeroSumGame):
     def __init__(self, nums=10):
