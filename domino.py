@@ -1,4 +1,5 @@
 from copy import copy
+from itertools import product
 
 '''
 Implemention of game, version 2.0
@@ -40,20 +41,35 @@ class Domino():
         return str(self)
 
 PASS_DOMINO = Domino(-1,-1)
+MACHINE_TEAM = 0
 
 def _renormalize(arr):
     '''
     @param
         - arr (list): probabilities that needs to be renormalized
-
-    TODO: Problem with this, works in ipython but not here, maybe scope problem
     '''
     total = sum(arr)
     if total <= 0: raise ZeroDivisonError('Array is not normalizable')
     total = float(total)
     return map(lambda x:x/total, arr)
 
-class Dominoes(object):
+class ZeroSumGame():
+    def __init__(self):
+        pass
+    def is_end(self):
+        raise NotImplemented('literally what the fuck')
+    def make_move(self, player, move):
+        raise NotImplemented('literally what the fuck')
+    def undo_move(self, player, move):
+        raise NotImplemented('literally what the fuck')
+    def possible_actions(self, player):
+        raise NotImplemented('literally what the fuck')
+    def evaluate(self, player):
+        raise NotImplemented('literally what the fuck')
+    def get_next_player(self, player):
+        raise NotImplemented('literally what the fuck')
+
+class Dominoes(ZeroSumGame):
     def __init__(self, game_tiles, my_tiles, starter, start_tile):
         '''
         @params:
@@ -119,17 +135,37 @@ class Dominoes(object):
         '''
         return self.ends[0] in t or self.ends[1] in t
 
-    def actions(self):
+    def actions(self, curr_player=None):
         '''
         @returns
             - returns possible moves (list of Dominos)
             that could be placed given the open ends of dominoes on the table.
         '''
+        if curr_player is None:
+            curr_player = self.curr_player
+        if curr_player == 0:
+            possible_moves = []
+            for t in self.my_tiles:
+                if self._is_valid(t) and self.probabilities[t][self.curr_player] > 0:
+                    possible_moves.append(t)
+            return possible_moves + [PASS_DOMINO]
+
         possible_moves = []
         for t in self.tiles:
             if self._is_valid(t) and self.probabilities[t][self.curr_player] > 0:
                 possible_moves.append(t)
-        return possible_moves
+        return possible_moves + [PASS_DOMINO]
+
+    def _assign_prob(self, domino, player):
+        return self.probabilities[domino][player] if domino is not None else 1
+
+    def probability_actions(self, curr_player=None):
+        if curr_player is None:
+            curr_player = self.curr_player
+        possible_moves = self.actions(curr_player)
+        def ap(d):
+            return (d, self._assign_prob(d, curr_player))
+        return map(ap, possible_moves)
 
     def is_end(self):
         '''
@@ -143,6 +179,10 @@ class Dominoes(object):
                            self.dominos_played[self.last_play-3:self.last_play+1]))
         return False
 
+    def win(self, team):
+        if not self.is_end():
+            return False
+
     def update(self, move, placement=None):
         '''
         @params
@@ -152,6 +192,7 @@ class Dominoes(object):
         '''
         if type(move) == tuple:
             move = Domino(*move)
+        assert type(move)==Domino
         if move == PASS_DOMINO:
             possible_moves = self.actions()
             for t in possible_moves:
@@ -175,3 +216,23 @@ class Dominoes(object):
         self.curr_player = (self.curr_player+1)%4
         self.last_play += 1
 
+MAX_SCORE = 1000
+class NegaMax:
+    def __init__(self, curr_game, MAX_DEPTH = 10):
+        self.curr_game = curr_game
+        assert isinstance(curr_game, ZeroSumGame)
+
+    def negamax(self, depth, player):
+        cg = self.curr_game
+        if depth==0 or cg.is_end():
+            return None, cg.evaluate(player)
+
+        max_move, max_score = None, None
+        for move in cg.possible_actions(player):
+            cg.make_move(player, move)
+            curr_move, curr_score = self.negamax(depth-1, cg.get_next_player(player))
+            curr_score = -curr_score
+            if max_score is None or curr_score > max_score:
+                max_move, max_score = move, curr_score
+            cg.undo_move(player, move)
+        return max_move, max_score

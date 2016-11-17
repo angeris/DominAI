@@ -21,14 +21,14 @@ def setupGame():
         for j in range(i, 7):
             tiles.append((i, j))
     while True:
-        my_tiles_input = raw_input('Enter my tiles (e.g. 4-5) seperated by spaces: ').split()
+        my_tiles_input = raw_input('Enter my tiles (e.g. 45) seperated by spaces: ').split()
         if len(my_tiles_input) == 7:
             break
         else:
             print "I need 7 tiles!"
     my_tiles = []
     for t in my_tiles_input:
-        my_tiles.append(tuple([int(num) for num in t.split('-')]))
+        my_tiles.append(tuple([int(num) for num in t]))
     print 'I have:', my_tiles
     print
     print 'Players are numbered as the following:'
@@ -42,9 +42,9 @@ def setupGame():
             print "Not valid, try again"
     print "Player " + str(starter) + " is starting."
     if starter > 0:
-        print 'Write down your move (e.g. 2-3):'
+        print 'Write down your move (e.g. 23):'
         move = raw_input("").strip()
-        start_tile = tuple([int(v) for v in move.split('-')])
+        start_tile = tuple([int(v) for v in move])
     else:
         start_tile = greedyStarts(my_tiles)
         print "I placed a " + str(start_tile)
@@ -61,13 +61,13 @@ def humanPlays(game, player):
     actions = game.actions()
     while True:
         try: # lol this is dangerous
-            print 'Write down your move (e.g. 2-3)'
+            print 'Write down your move (e.g. 23)'
             move = raw_input("").strip()
             if move == PASS_STR:
                 game.update(PASS_DOMINO)
                 print "You just passed."
                 return
-            move = move.split('-')
+            move = list(move)
             move = tuple([int(v) for v in move])
         except KeyboardInterrupt:
             raise
@@ -130,7 +130,6 @@ if __name__ == '__main__':
     Plays one game.
     '''
     game = setupGame()
-    game.debugging_fml()
     while not game.is_end():
         player = game.curr_player
         humanPlays(game, player) if player > 0 else greedyPlays(game)
