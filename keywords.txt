@@ -1,1 +1,7 @@
-game playing, dominoes, expectation, minimax, sampling theory, negamax, game theory
+game playing
+dominoes
+expectation
+minimax
+sampling theory
+negamax
+game theory
