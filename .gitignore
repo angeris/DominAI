@@ -93,4 +93,4 @@ ENV/
 *.swo
 
 # Compiled files
-#*.pyc
+*.pyc
