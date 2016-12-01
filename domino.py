@@ -1,4 +1,4 @@
-from copy import copy
+from copy import copy, deepcopy
 from itertools import product
 from algorithms.negamax import ZeroSumGame, NegaMax
 from algorithms.p_negamax import ZeroSumBayesGame, ProbabilisticNegaMax
@@ -24,7 +24,9 @@ class Domino():
     def __hash__(self):
         return self.curr_hash
     def __eq__(self, other):
-        if other == PASS_STR: return self.vals[0] < 0
+        if other is None: return False
+        if other == PASS_STR or other == PASS_DOMINO:
+            return self.vals[0] < 0
         return self.vals == other.vals
     def __leq__(self, other):
         if self.vals[0] < 0:
@@ -111,44 +113,31 @@ class Dominoes(ZeroSumBayesGame):
 
     def make_probabilistic_move(self, player, move, placement=None):
         # WARNING no support for placement = not None yet!!!!
-        assert type(move)==Domino
-        self.undoable_ends.append(self.ends)
+        assert isinstance(move, Domino)
+        self.undoable_ends.append(copy(self.ends))
         old_probs = {}
+        prob_of_move = self._assign_prob(move, player)
         if move == PASS_DOMINO:
             possible_moves = self.possible_actions()
             for t in possible_moves:
                 if t is not PASS_DOMINO:
-                    old_probs[(t, player)] = self.probabilities[t][player]
-                    self.probabilities[t][player] = 0
-                    self.probabilities[t] = _renormalize(self.probabilities[t])
-            self.dominos_played[self.last_play + 1] = PASS_DOMINO
+                    old_probs[t] = self.probabilities[t]
         else:
-            assert self._is_valid(move)
-            self.dominos_played[self.last_play + 1] = move
-            for p in self.probabilities[move]:
-                old_probs[(move, p)] = self.probabilities[move][p]
-            self.probabilities[move] = [0]*4
-            self.probabilities[move][player] = 1
-            if placement is None:
-                assert (self.ends[0] in move)^(self.ends[1] in move) \
-                    &(self.ends[0] != self.ends[1]), "Placement"
-                if self.ends[0] in move:
-                    self.ends[0] = move._get_other(self.ends[0])
-                else:
-                    self.ends[1] = move._get_other(self.ends[1])
-            else:
-                self.ends[placement] = move._get_other(self.ends[placement])
-            self.tiles.remove(move)
-        self.last_play += 1
-        return self.probability_actions[move]
+            old_probs[move] = self.probabilities[move]
+        self.update(move, player)
+        self.undoable_probs.append(old_probs)
+        return prob_of_move
         
     def undo_move(self, player, move):
         self.dominos_played[self.last_play] = None
         if move != PASS_DOMINO:
             self.tiles.add(move)
-        self.last_play -= 1
-        # put back old_probs
+        old_probs = self.undoable_probs.pop()
+        for t in old_probs:
+            self.probabilities[t] = old_probs[t]
         self.ends = self.undoable_ends.pop()
+        self.curr_player = (self.curr_player-1)%4
+        self.last_play -= 1
 
     def possible_actions(self, curr_player=None):
         '''
@@ -161,7 +150,7 @@ class Dominoes(ZeroSumBayesGame):
         if curr_player == 0:
             possible_moves = []
             for t in self.my_tiles:
-                if self._is_valid(t) and self.probabilities[t][self.curr_player] > 0:
+                if self._is_valid(t) and self.probabilities[t][curr_player] > 0:
                     possible_moves.append(t)
             return possible_moves + [PASS_DOMINO]
 
@@ -215,12 +204,12 @@ class Dominoes(ZeroSumBayesGame):
         return self.ends[0] in t or self.ends[1] in t
 
     def _assign_prob(self, domino, player):
-        return self.probabilities[domino][player] if domino is not None else 1
+        return self.probabilities[domino][player] if domino in self.probabilities else 1
 
     def probability_actions(self, curr_player=None):
         if curr_player is None:
             curr_player = self.curr_player
-        possible_moves = self.actions(curr_player)
+        possible_moves = self.possible_actions(curr_player)
         def ap(d):
             return (d, self._assign_prob(d, curr_player))
         return map(ap, possible_moves)
@@ -229,27 +218,37 @@ class Dominoes(ZeroSumBayesGame):
         if not self.is_end():
             return False
 
-    def update(self, move, placement=None):
+    def update(self, move, curr_player=None, placement=None):
         '''
         @params
             - move (tuple): valid move e.g. (2, 3) or 'PASS'/(-1, -1)
             - placement: if there are multiple options for placement
             specify which index
         '''
+        if curr_player is None: curr_player = self.curr_player
         if type(move) == tuple:
             move = Domino(*move)
-        assert type(move)==Domino
+        assert isinstance(move, Domino)
+        '''
+        warning/note for after I finish some other stuff:
+        once you renormalize probabilities for a domino d, e.g to [0, 0, 0.5, 0.5] 
+        and player 3 has 7 dominoes with probability 1, then you can infer 
+        that player 2 must have d
+        so like the probabilities for one domino can affect 
+        the probabilities for other ones
+        '''
         if move == PASS_DOMINO:
-            possible_moves = self.actions()
+            possible_moves = self.possible_actions()
             for t in possible_moves:
-                self.probabilities[t][self.curr_player] = 0
-                self.probabilities[t] = _renormalize(self.probabilities[t])
+                if t != PASS_DOMINO:
+                    self.probabilities[t][curr_player] = 0
+                    self.probabilities[t] = _renormalize(self.probabilities[t])
             self.dominos_played[self.last_play + 1] = PASS_DOMINO
         else:
             assert self._is_valid(move)
             self.dominos_played[self.last_play + 1] = move
             self.probabilities[move] = [0]*4
-            self.probabilities[move][self.curr_player] = 1
+            self.probabilities[move][curr_player] = 1
             if placement is None:
                 assert (self.ends[0] in move)^(self.ends[1] in move) \
                     &(self.ends[0] != self.ends[1]), "Placement"
@@ -260,6 +259,44 @@ class Dominoes(ZeroSumBayesGame):
             else:
                 self.ends[placement] = move._get_other(self.ends[placement])
             self.tiles.remove(move)
-        self.curr_player = (self.curr_player+1)%4
+        self.curr_player = (curr_player+1)%4
         self.last_play += 1
+
+    def is_equal(self, other):
+        for i in range(len(self.dominos_played)):
+            assert self.dominos_played[i] == other.dominos_played[i], "dominos_played don't match"
+        for i in self.tiles:
+            assert i in other.tiles, "tiles don't match"
+        assert self.last_play == other.last_play, "last plays don't match"
+        assert self.ends == other.ends, "ends don't match"
+        assert self.curr_player == other.curr_player, "curr_players don't match"
+        assert self.undoable_probs == other.undoable_probs, "undoable probs don't match"
+        assert self.undoable_ends == other.undoable_ends, "undoable ends don't match"
+
+if __name__ == '__main__':
+    '''
+    Just for simulating a game and checking that I am not a total mess
+    '''
+    game_tiles = []
+    for i in range(7):
+        for j in range(i, 7):
+            game_tiles.append((i, j))
+    my_tiles_input = ['12', '34', '22', '00', '55', '33', '23']
+    my_tiles = []
+    for t in my_tiles_input:
+        my_tiles.append(tuple([int(num) for num in t]))
+    starter = 3
+    start_tile = (6, 6)
+    test = Dominoes(game_tiles, my_tiles, starter, start_tile)
+    pnm = ProbabilisticNegaMax(test)
+    max_move, max_score = pnm.p_negamax(10, 0)
+    print max_move
+    # c = deepcopy(test)
+    # prob = test.make_probabilistic_move(0, PASS_DOMINO)
+    # print prob
+    # prob = test.make_probabilistic_move(1, Domino(4, 6))
+    # print prob
+    # test.undo_move(0, Domino(4,6))
+    # test.undo_move(0, PASS_DOMINO)
+    # c.is_equal(test)
 

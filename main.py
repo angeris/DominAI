@@ -58,13 +58,13 @@ def humanPlays(game, player):
         - player (int)
     '''
     print 'Now, player ' + str(player) + ' is playing.'
-    actions = game.actions()
+    actions = game.possible_actions()
     while True:
         try: # lol this is dangerous
             print 'Write down your move (e.g. 23)'
             move = raw_input("").strip()
             if move == PASS_STR:
-                game.update(PASS_DOMINO)
+                game.update(PASS_DOMINO, player)
                 print "You just passed."
                 return
             move = list(move)
@@ -81,12 +81,12 @@ def humanPlays(game, player):
                 placement = int(raw_input("").strip())
                 if placement == 0 or placement == 1:
                     print "You played a " + str(move)
-                    game.update(move, placement)
+                    game.update(move, player, placement)
                     return
         if game.ends[0] in move or game.ends[1] in move:
             if Domino(*move) in actions:
                 print "You played a " + str(move)
-                game.update(move)
+                game.update(move, player)
                 return
         print "Move not valid"
 
@@ -105,11 +105,10 @@ def greedyPlays(game):
         - game (Dominoes)
     '''
     print "My turn! :D"
-    actions = game.actions()   # list of moves
-    possible_moves = [d for d in actions if d in game.my_tiles]
+    possible_moves = game.possible_actions()   # list of moves
     if not possible_moves:
         print "I passed. :("
-        game.update(PASS_DOMINO)
+        game.update(PASS_DOMINO, 0)
         return
     maximum = 0
     ret = possible_moves[0]
@@ -119,9 +118,9 @@ def greedyPlays(game):
             ret = domino
     if (game.ends[0] in ret and game.ends[1] in ret and game.ends[0] != game.ends[1]):
         placement = random.choice((0, 1))
-        game.update(ret, placement)
+        game.update(ret, 0, placement)
     else:
-        game.update(ret)
+        game.update(ret, 0)
     print "I played a " + str(ret) + " , yay!"
 
 

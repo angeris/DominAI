@@ -21,6 +21,7 @@ class ProbabilisticNegaMax:
         assert isinstance(curr_game, ZeroSumBayesGame)
 
     def p_negamax(self, depth, player):
+        # TODO: alpha-beta pruning
         cg = self.curr_game
         if depth==0 or cg.is_end():
             return None, cg.evaluate(player)
