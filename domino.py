@@ -1,6 +1,7 @@
 from copy import copy
 from itertools import product
 from algorithms.negamax import ZeroSumGame, NegaMax
+from algorithms.p_negamax import ZeroSumBayesGame, ProbabilisticNegaMax
 
 '''
 Implemention of game, version 2.0
@@ -55,7 +56,7 @@ def _renormalize(arr):
     return map(lambda x:x/total, arr)
 
 
-class Dominoes(ZeroSumGame):
+class Dominoes(ZeroSumBayesGame):
     def __init__(self, game_tiles, my_tiles, starter, start_tile):
         '''
         @params:
@@ -92,6 +93,51 @@ class Dominoes(ZeroSumGame):
         self.curr_player = (starter+1)%4
         self.tiles.remove(self.dominos_played[0])
 
+    def is_end(self):
+        '''
+        @returns: is the game over?
+        '''
+        if len(self.tiles)==0:
+            return True
+        if self.last_play >= 3:
+            # everyone has passed
+            return all(map(lambda x:x==PASS_DOMINO,
+                           self.dominos_played[self.last_play-3:self.last_play+1]))
+        return False
+
+    def make_probabilistic_move(self, player, move):
+        raise NotImplemented('literally what the fuck')
+        
+    def undo_move(self, player, move):
+        raise NotImplemented('literally what the fuck')
+
+    def possible_actions(self, curr_player=None):
+        '''
+        @returns
+            - returns possible moves (list of Dominos)
+            that could be placed given the open ends of dominoes on the table.
+        '''
+        if curr_player is None:
+            curr_player = self.curr_player
+        if curr_player == 0:
+            possible_moves = []
+            for t in self.my_tiles:
+                if self._is_valid(t) and self.probabilities[t][self.curr_player] > 0:
+                    possible_moves.append(t)
+            return possible_moves + [PASS_DOMINO]
+
+        possible_moves = []
+        for t in self.tiles:
+            if self._is_valid(t) and self.probabilities[t][self.curr_player] > 0:
+                possible_moves.append(t)
+        return possible_moves + [PASS_DOMINO]
+
+    def evaluate(self, player):
+        raise NotImplemented('literally what the fuck')
+
+    def get_next_player(self, player):
+        return (self.curr_player+1)%4
+
     def debugging_fml(self):
         # prints things so that I can see everything that is wrong
         print "Tiles left:"
@@ -121,27 +167,6 @@ class Dominoes(ZeroSumGame):
         '''
         return self.ends[0] in t or self.ends[1] in t
 
-    def actions(self, curr_player=None):
-        '''
-        @returns
-            - returns possible moves (list of Dominos)
-            that could be placed given the open ends of dominoes on the table.
-        '''
-        if curr_player is None:
-            curr_player = self.curr_player
-        if curr_player == 0:
-            possible_moves = []
-            for t in self.my_tiles:
-                if self._is_valid(t) and self.probabilities[t][self.curr_player] > 0:
-                    possible_moves.append(t)
-            return possible_moves + [PASS_DOMINO]
-
-        possible_moves = []
-        for t in self.tiles:
-            if self._is_valid(t) and self.probabilities[t][self.curr_player] > 0:
-                possible_moves.append(t)
-        return possible_moves + [PASS_DOMINO]
-
     def _assign_prob(self, domino, player):
         return self.probabilities[domino][player] if domino is not None else 1
 
@@ -152,18 +177,6 @@ class Dominoes(ZeroSumGame):
         def ap(d):
             return (d, self._assign_prob(d, curr_player))
         return map(ap, possible_moves)
-
-    def is_end(self):
-        '''
-        @returns: is the game over?
-        '''
-        if len(self.tiles)==0:
-            return True
-        if self.last_play >= 3:
-            # everyone has passed
-            return all(map(lambda x:x==PASS_DOMINO,
-                           self.dominos_played[self.last_play-3:self.last_play+1]))
-        return False
 
     def win(self, team):
         if not self.is_end():
