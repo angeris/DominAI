@@ -106,6 +106,8 @@ class Dominoes(ZeroSumBayesGame):
         return False
 
     def make_probabilistic_move(self, player, move):
+    	self.update(move) # what about placement in the multiple option situation
+    	return self.probability_actions[move]
         raise NotImplemented('literally what the fuck')
         
     def undo_move(self, player, move):
@@ -133,6 +135,7 @@ class Dominoes(ZeroSumBayesGame):
         return possible_moves + [PASS_DOMINO]
 
     def evaluate(self, player):
+    	
         raise NotImplemented('literally what the fuck')
 
     def get_next_player(self, player):
