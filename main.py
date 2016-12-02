@@ -47,7 +47,7 @@ def setupGame():
         move = raw_input("").strip()
         start_tile = tuple([int(v) for v in move])
     else:
-        start_tile = greedyStarts(my_tiles)
+        start_tile = greedyStarts(my_tiles) # TODO: change
         print "I placed a " + str(start_tile)
     print
     return Dominoes(tiles, my_tiles, starter, start_tile)

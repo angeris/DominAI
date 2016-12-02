@@ -102,7 +102,10 @@ class Dominoes(ZeroSumBayesGame):
     def is_end(self):
         '''
         @returns: is the game over?
+        NOTE: Doesn't the game end when there's nothing left to play for some player?
         '''
+        if self.last_play >= len(self.dominos_played):
+            return True
         if len(self.tiles)==0:
             return True
         if self.last_play >= 3:
@@ -182,17 +185,17 @@ class Dominoes(ZeroSumBayesGame):
 
     def debugging_fml(self):
         # prints things so that I can see everything that is wrong
-        #print "Tiles left:"
-        #print self.tiles
-        #print "\nDominos_played:"
-        #print self.dominos_played
-        #print "\nEnds on table:"
-        #print self.ends
-        #print "\nProbabilities:"
+        print "Tiles left:"
+        print self.tiles
+        print "\nDominos_played:"
+        print self.dominos_played
+        print "\nEnds on table:"
+        print self.ends
+        print "\nProbabilities:"
         for d in self.probabilities:
             print d, self.probabilities[d]
-        #print "\nCurrent player:"
-        #print self.curr_player
+        print "\nCurrent player:"
+        print self.curr_player
         print
 
     def get_player(self, curr_play):
