@@ -1,3 +1,5 @@
+from copy import deepcopy
+
 class ZeroSumBayesGame:
     def __init__(self):
         pass
@@ -28,6 +30,7 @@ class ProbabilisticNegaMax:
 
         max_move, max_score = None, None
         for move in cg.possible_actions(player):
+            #cop = deepcopy(cg)
             prob = cg.make_probabilistic_move(player, move)
 
             curr_move, curr_score = self.p_negamax(depth-1, cg.get_next_player(player))
@@ -36,4 +39,6 @@ class ProbabilisticNegaMax:
             if max_score is None or curr_score > max_score:
                 max_move, max_score = move, curr_score
             cg.undo_move(player, move)
+
+            #cop.is_equal(cg)
         return max_move, max_score

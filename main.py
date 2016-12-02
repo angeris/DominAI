@@ -1,5 +1,6 @@
 from domino import Dominoes, Domino
 import random
+from algorithms.p_negamax import ProbabilisticNegaMax
 
 PASS_STR = 'PASS'
 PASS_DOMINO = Domino(-1,-1)
@@ -58,7 +59,7 @@ def humanPlays(game, player):
         - player (int)
     '''
     print 'Now, player ' + str(player) + ' is playing.'
-    actions = game.possible_actions()
+    actions = game.possible_actions(None, False)
     while True:
         try: # lol this is dangerous
             print 'Write down your move (e.g. 23)'
@@ -105,11 +106,7 @@ def greedyPlays(game):
         - game (Dominoes)
     '''
     print "My turn! :D"
-    possible_moves = game.possible_actions()   # list of moves
-    if not possible_moves:
-        print "I passed. :("
-        game.update(PASS_DOMINO, 0)
-        return
+    possible_moves = game.possible_actions(None, False)   # list of moves
     maximum = 0
     ret = possible_moves[0]
     for domino in possible_moves:
@@ -121,8 +118,18 @@ def greedyPlays(game):
         game.update(ret, 0, placement)
     else:
         game.update(ret, 0)
-    print "I played a " + str(ret) + " , yay!"
+    print "I played a " + str(ret) + ", yay!"
 
+def smartPlays(game):
+    actions = game.possible_actions(0)
+    if len(actions) == 1:
+        game.update(actions[0][0])
+        print "I played a " + str(actions[0][0]) + ", yay!"
+    else:
+        pnm = ProbabilisticNegaMax(game)
+        max_move, max_score = pnm.p_negamax(5, 0)
+        game.update(max_move[0], placement=max_move[1])
+        print "I played a " + str(max_move[0]) + ", yay!"
 
 if __name__ == '__main__':
     '''
@@ -131,7 +138,7 @@ if __name__ == '__main__':
     game = setupGame()
     while not game.is_end():
         player = game.curr_player
-        humanPlays(game, player) if player > 0 else greedyPlays(game)
+        humanPlays(game, player) if player > 0 else smartPlays(game)
         print "Player " + str(player) + " just played, ends of tiles " + \
             "are " + str(game.ends[0]) + " and " + str(game.ends[1])
         print

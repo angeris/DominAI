@@ -117,15 +117,15 @@ class Dominoes(ZeroSumBayesGame):
         assert isinstance(move, Domino)
         self.undoable_ends.append(copy(self.ends))
         old_probs = {}
-        # probability of putting that domino down ... or should it be prob of that move? 
+        # probability of putting that domino down ... or should it be prob of that move?
         prob_of_move = self._assign_prob(move, player)
         if move == PASS_DOMINO:
             possible_moves = self.possible_actions(placements_included=False)
             for t in possible_moves:
                 if t is not PASS_DOMINO:
-                    old_probs[t] = self.probabilities[t]
+                    old_probs[t] = copy(self.probabilities[t])
         else:
-            old_probs[move] = self.probabilities[move]
+            old_probs[move] = copy(self.probabilities[move])
         self.update(move, player, placement)
         self.undoable_probs.append(old_probs)
         return prob_of_move
@@ -139,7 +139,7 @@ class Dominoes(ZeroSumBayesGame):
         for t in old_probs:
             self.probabilities[t] = old_probs[t]
         self.ends = self.undoable_ends.pop()
-        self.curr_player = (self.curr_player-1)%4
+        self.curr_player = player
         self.last_play -= 1
 
     def possible_actions(self, curr_player=None, placements_included=True):
@@ -182,17 +182,17 @@ class Dominoes(ZeroSumBayesGame):
 
     def debugging_fml(self):
         # prints things so that I can see everything that is wrong
-        print "Tiles left:"
-        print self.tiles
-        print "\nDominos_played:"
-        print self.dominos_played
-        print "\nEnds on table:"
-        print self.ends
-        print "\nProbabilities:"
+        #print "Tiles left:"
+        #print self.tiles
+        #print "\nDominos_played:"
+        #print self.dominos_played
+        #print "\nEnds on table:"
+        #print self.ends
+        #print "\nProbabilities:"
         for d in self.probabilities:
             print d, self.probabilities[d]
-        print "\nCurrent player:"
-        print self.curr_player
+        #print "\nCurrent player:"
+        #print self.curr_player
         print
 
     def get_player(self, curr_play):
@@ -231,6 +231,7 @@ class Dominoes(ZeroSumBayesGame):
             specify which index
         '''
         if curr_player is None: curr_player = self.curr_player
+        assert(curr_player == self.curr_player)
         if type(move) == tuple:
             move = Domino(*move)
         assert isinstance(move, Domino)
@@ -242,7 +243,6 @@ class Dominoes(ZeroSumBayesGame):
             possible_moves = self.possible_actions(placements_included=False)
             for t in possible_moves:
                 if t != PASS_DOMINO and self.probabilities[t][curr_player] != 1:
-                    print self.probabilities[t]
                     self.probabilities[t][curr_player] = 0
                     self.probabilities[t] = _renormalize(self.probabilities[t])
             self.dominos_played[self.last_play + 1] = PASS_DOMINO
@@ -279,6 +279,7 @@ if __name__ == '__main__':
     '''
     Just for simulating a game and checking that I am not a total mess
     '''
+
     game_tiles = []
     for i in range(7):
         for j in range(i, 7):
@@ -287,12 +288,13 @@ if __name__ == '__main__':
     my_tiles = []
     for t in my_tiles_input:
         my_tiles.append(tuple([int(num) for num in t]))
-    starter = 2
+    starter = 3
     start_tile = (6, 6)
     test = Dominoes(game_tiles, my_tiles, starter, start_tile)
     pnm = ProbabilisticNegaMax(test)
-    max_move, max_score = pnm.p_negamax(10, 0)
+    max_move, max_score = pnm.p_negamax(6, 0)
     print max_move
+
     # print test.curr_player
     # c = deepcopy(test)
     # prob = test.make_probabilistic_move(3, (PASS_DOMINO,None))
