@@ -1,6 +1,7 @@
 '''
 TODO:
 Fix list assignment index out of range
+    dominos_played can be of any length!! 
 Who won the game? Say it
 '''
 
@@ -21,15 +22,10 @@ def greedyPlays(game, tiles):
     player = game.curr_player
     actions = game.possible_actions(None, False)
     my_tiles = tiles[player]
-    print my_tiles
     possible_moves = [PASS_DOMINO]
-    print actions
     for t in my_tiles:
         if t in actions:
-            print "ADDING"
-            print t
             possible_moves.append(t)
-    print possible_moves
     maximum = 0
     ret = possible_moves[0]
     for domino in possible_moves:
@@ -58,21 +54,14 @@ def smartPlays(game, tiles):
         print "I played a " + str(max_move[0]) + ", yay!"
     return tiles
 
-def setupGame():
+def setupGame(r):
     print 'Welcome.'
     tiles = []
     for i in range(7):
         for j in range(i, 7):
             tiles.append((i, j))
-    while True:
-        my_tiles_input = raw_input('Enter my tiles (e.g. 45) seperated by spaces: ').split()
-        if len(my_tiles_input) == 7:
-            break
-        else:
-            print "I need 7 tiles!"
-    my_tiles = []
-    for t in my_tiles_input:
-        my_tiles.append(tuple([int(num) for num in t]))
+    random.shuffle(tiles)
+    my_tiles = tiles[:7]
     print 'I have:', my_tiles
     print
     print 'Players are numbered as the following:'
@@ -80,22 +69,10 @@ def setupGame():
     print '2 = partner across from me, 3 = opponent on my left)'
     players_tiles = {}
     for i in range(1, 4):
-        while True:
-            my_tiles_input = raw_input('Enter my tiles (e.g. 45) seperated by spaces: ').split()
-            if len(my_tiles_input) == 7:
-                break
-            else:
-                print "I need 7 tiles!"
-        this_players_tiles = []
-        for t in my_tiles_input:
-            this_players_tiles.append(tuple([int(num) for num in t]))
+        this_players_tiles = tiles[7*i:7*(i+1)]
+        print 'Player ' + str(i) + ' has:', this_players_tiles
         players_tiles[i] = set(map(lambda x:Domino(*x), this_players_tiles))
-    while True:
-        starter = int(raw_input('Who is starting? '))
-        if starter < 4 and starter >= 0:
-            break
-        else:
-            print "Not valid, try again"
+    starter = r % 4
     print "Player " + str(starter) + " is starting."
     if starter > 0:
         start_tile = greedyStarts(players_tiles[starter])
@@ -105,24 +82,56 @@ def setupGame():
     else:
         start_tile = greedyStarts(my_tiles)
         print "I placed a " + str(start_tile)
+        start_tile = start_tile.vals
     print
     return (Dominoes(tiles, my_tiles, starter, start_tile), players_tiles)
 
 def greedyStarts(my_tiles):
     maximum = 0
     for domino in my_tiles:
+        if type(domino) == tuple:
+            domino = Domino(*domino)
         if domino.vals[1] + domino.vals[0] > maximum:
             maximum = domino.vals[1] + domino.vals[0]
             ret = domino
     return ret
 
+def computeScore(game, players_tiles):
+    score_opp = 0
+    score_us = 0
+    for t in game.my_tiles:
+        if t not in game.dominos_played:
+            score_us += sum(t.vals)
+    for i in range(1, 4):
+        for t in players_tiles[i]:
+            if t not in game.dominos_played:
+                if i % 2 == 0:
+                    score_us += sum(t.vals)
+                else:
+                    score_opp += sum(t.vals)
+    if score_us > score_opp:
+        return "won"
+    elif score_opp < score_us:
+        return "lost"
+    else:
+        return "tie"
+
 if __name__ == '__main__':
-    game, players_tiles = setupGame()
-    while not game.is_end():
-        player = game.curr_player
-        tiles = greedyPlays(game, players_tiles) if player > 0 else smartPlays(game, players_tiles)
-        print "Player " + str(player) + " just played, ends of tiles " + \
-            "are " + str(game.ends[0]) + " and " + str(game.ends[1])
-        print
-        game.debugging_fml()
-    print "Game ended."
+    results = []
+    random.seed(10)
+    for r in range(24):
+        print "----PLAYING ROUND---- ", r
+        game, players_tiles = setupGame(r)
+        while not game.is_end():
+            player = game.curr_player
+            tiles = greedyPlays(game, players_tiles) if player > 0 else smartPlays(game, players_tiles)
+            print "Player " + str(player) + " just played, ends of tiles " + \
+                "are " + str(game.ends[0]) + " and " + str(game.ends[1])
+            print
+            #game.debugging_fml()
+        results.append(computeScore(game, players_tiles))
+        print "Game ended."
+    print "---STATS YAY---"
+    print "Number of wins:", results.count("won")
+    print "Number of losses:", results.count("lost")
+    print "Number of ties:", results.count("tie")

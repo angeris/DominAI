@@ -77,8 +77,8 @@ class Dominoes(ZeroSumBayesGame):
         self.tiles = set(map(lambda x:Domino(*x), game_tiles))
         self.my_tiles = set(map(lambda x:Domino(*x), my_tiles))
 
-        self.dominos_played = [None for i in range(len(self.tiles))]
-        self.dominos_played[0] = Domino(*start_tile)
+        self.dominos_played = []
+        self.dominos_played.append(Domino(*start_tile))
         self.last_play = 0
 
         self.ends = [start_tile[0], start_tile[1]]
@@ -104,8 +104,6 @@ class Dominoes(ZeroSumBayesGame):
         @returns: is the game over?
         NOTE: Doesn't the game end when there's nothing left to play for some player?
         '''
-        if self.last_play >= len(self.dominos_played):
-            return True
         if len(self.tiles)==0:
             return True
         if self.last_play >= 3:
@@ -135,7 +133,7 @@ class Dominoes(ZeroSumBayesGame):
         
     def undo_move(self, player, move):
         move = move[0]
-        self.dominos_played[self.last_play] = None
+        self.dominos_played.pop()
         if move != PASS_DOMINO:
             self.tiles.add(move)
         old_probs = self.undoable_probs.pop()
@@ -248,10 +246,10 @@ class Dominoes(ZeroSumBayesGame):
                 if t != PASS_DOMINO and self.probabilities[t][curr_player] != 1:
                     self.probabilities[t][curr_player] = 0
                     self.probabilities[t] = _renormalize(self.probabilities[t])
-            self.dominos_played[self.last_play + 1] = PASS_DOMINO
+            self.dominos_played.append(PASS_DOMINO)
         else:
             assert self._is_valid(move)
-            self.dominos_played[self.last_play + 1] = move
+            self.dominos_played.append(move)
             self.probabilities[move] = [0]*4
             self.probabilities[move][curr_player] = 1
             if placement is None:
