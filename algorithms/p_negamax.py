@@ -22,24 +22,37 @@ class ProbabilisticNegaMax:
         self.curr_game = curr_game
         assert isinstance(curr_game, ZeroSumBayesGame)
 
-    def p_negamax_ab(self, depth, alpha, beta, player):
+    def p_negamax_ab(self, initial, depth, alpha, beta, player):
         # TODO: alpha-beta pruning
         cg = self.curr_game
         if depth==0 or cg.is_end():
+            # print "AFTER SIMULATING"
+            # for d in cg.probabilities:
+            #     print d, cg.probabilities[d]
             return None, cg.evaluate(player)
 
         max_move, max_score = None, None
         for move in cg.possible_actions(player):
             #cop = deepcopy(cg)
+            # if depth == initial:
+            #     print "BEFORE"
+            #     for d in cg.probabilities:
+            #         print d, cg.probabilities[d]
+            # print "Move:", move, "Player:", player, "Ends:", cg.ends
             prob = cg.make_probabilistic_move(player, move)
-
-            curr_move, curr_score = self.p_negamax(depth-1, -beta, -alpha, cg.get_next_player(player))
+            curr_move, curr_score = self.p_negamax_ab(initial, depth-1, -beta, -alpha, cg.get_next_player(player))
             curr_score = -prob*curr_score
+            if depth == initial:
+                print "Player", player, "Move", move, "how good it is:", curr_score
 
             if max_score is None or curr_score > max_score:
                 max_move, max_score = move, curr_score
             alpha = max(alpha, curr_score)
             cg.undo_move(player, move)
+            # if depth == initial:
+            #     print "AFTER UNDOING"
+            #     for d in cg.probabilities:
+            #         print d, cg.probabilities[d]
             if alpha >= beta:
                 break
             #cop.is_equal(cg)

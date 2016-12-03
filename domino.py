@@ -180,8 +180,8 @@ class Dominoes(ZeroSumBayesGame):
             if d not in self.dominos_played:
                 probs = self.probabilities[d]
                 value = sum(d.vals)
-                expectation_opp = value*probs[1] + value*probs[3]
-                expectation_us = value*probs[0] + value*probs[2]
+                expectation_opp = value*probs[(player + 1)%4] + value*probs[(player + 3)%4]
+                expectation_us = value*probs[player] + value*probs[(player + 2)%4]
         return expectation_opp - expectation_us
 
     def get_next_player(self, player):

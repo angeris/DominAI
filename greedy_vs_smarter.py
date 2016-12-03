@@ -9,6 +9,8 @@ Who won the game? Say it
 from domino import Dominoes, Domino
 from algorithms.p_negamax import ProbabilisticNegaMax
 import random
+from copy import deepcopy
+import sys
 
 PASS_STR = 'PASS'
 PASS_DOMINO = Domino(-1,-1)
@@ -49,8 +51,10 @@ def smartPlays(game, tiles):
         print "I played a " + str(actions[0][0]) + ", yay!"
     else:
         pnm = ProbabilisticNegaMax(game)
-        #max_move, max_score = pnm.p_negamax(5, -float("inf"), float("inf"), 0)
-        max_move, max_score = pnm.p_negamax(5, 0)
+        depth = int(5*(2**(1./5*int(len(game.dominos_played)/4))))
+        print "DEPTH"
+        print depth
+        max_move, max_score = pnm.p_negamax_ab(depth, depth, -float("inf"), float("inf"), 0)
         game.update(max_move[0], placement=max_move[1])
         print "I played a " + str(max_move[0]) + ", yay!"
     return tiles
@@ -123,8 +127,7 @@ def computeScore(game, players_tiles):
 
 if __name__ == '__main__':
     results = []
-    random.seed(0)
-    for r in range(8):
+    for r in range(1):
         print "----PLAYING ROUND---- ", r
         game, players_tiles = setupGame(r)
         while not game.is_end():
@@ -133,7 +136,6 @@ if __name__ == '__main__':
             print "Player " + str(player) + " just played, ends of tiles " + \
                 "are " + str(game.ends[0]) + " and " + str(game.ends[1])
             print
-            game.debugging_fml()
         results.append(computeScore(game, players_tiles))
         print "Game ended."
     print "---STATS YAY---"
