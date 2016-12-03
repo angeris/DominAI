@@ -102,9 +102,17 @@ class Dominoes(ZeroSumBayesGame):
     def is_end(self):
         '''
         @returns: is the game over?
-        NOTE: Doesn't the game end when there's nothing left to play for some player?
         '''
-        if len(self.tiles)==0:
+        # check if player has placed all dominoes:
+        zero = self.dominos_played[0::4]
+        one = self.dominos_played[1::4]
+        two = self.dominos_played[2::4]
+        three = self.dominos_played[3::4]
+        if len(zero) - zero.count(PASS_DOMINO) == 7: return True
+        if len(one) - one.count(PASS_DOMINO) == 7: return True
+        if len(two) - two.count(PASS_DOMINO) == 7: return True
+        if len(three) - three.count(PASS_DOMINO) == 7: return True
+        if len(self.tiles) == 0:
             return True
         if self.last_play >= 3:
             # everyone has passed

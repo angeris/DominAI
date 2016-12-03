@@ -68,6 +68,7 @@ def setupGame(r):
     print '(0 = me, 1 = opponent on my right,'
     print '2 = partner across from me, 3 = opponent on my left)'
     players_tiles = {}
+    players_tiles[0] = set(map(lambda x:Domino(*x), my_tiles))
     for i in range(1, 4):
         this_players_tiles = tiles[7*i:7*(i+1)]
         print 'Player ' + str(i) + ' has:', this_players_tiles
@@ -109,7 +110,12 @@ def computeScore(game, players_tiles):
                     score_us += sum(t.vals)
                 else:
                     score_opp += sum(t.vals)
-    if score_us > score_opp:
+    print "SCORES:"
+    print "smart + greedy", score_us
+    print "greedy + greedy", score_opp
+    print game.tiles
+    print game.my_tiles
+    if score_us < score_opp:
         return "won"
     elif score_opp < score_us:
         return "lost"
@@ -118,7 +124,7 @@ def computeScore(game, players_tiles):
 
 if __name__ == '__main__':
     results = []
-    random.seed(10)
+    random.seed(0)
     for r in range(24):
         print "----PLAYING ROUND---- ", r
         game, players_tiles = setupGame(r)
