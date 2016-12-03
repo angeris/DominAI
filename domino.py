@@ -174,16 +174,14 @@ class Dominoes(ZeroSumBayesGame):
         return possible_moves + [(PASS_DOMINO, None)] if placements_included else possible_moves + [PASS_DOMINO]
 
     def evaluate(self, player):
-        opp1 = (player + 1) % 4
-        partner = (opp1 + 1) % 4
-        opp2 = (partner + 1) % 4
         expectation_opp = 0
         expectation_us = 0
         for d in self.probabilities:
-            probs = self.probabilities[d]
-            value = sum(d.vals)
-            expectation_opp = value*probs[opp1] + value*probs[opp2]
-            expectation_us = value*probs[player] + value*probs[partner]
+            if d not in self.dominos_played:
+                probs = self.probabilities[d]
+                value = sum(d.vals)
+                expectation_opp = value*probs[1] + value*probs[3]
+                expectation_us = value*probs[0] + value*probs[2]
         return expectation_opp - expectation_us
 
     def get_next_player(self, player):

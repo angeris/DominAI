@@ -49,6 +49,7 @@ def smartPlays(game, tiles):
         print "I played a " + str(actions[0][0]) + ", yay!"
     else:
         pnm = ProbabilisticNegaMax(game)
+        #max_move, max_score = pnm.p_negamax(5, -float("inf"), float("inf"), 0)
         max_move, max_score = pnm.p_negamax(5, 0)
         game.update(max_move[0], placement=max_move[1])
         print "I played a " + str(max_move[0]) + ", yay!"
@@ -123,7 +124,7 @@ def computeScore(game, players_tiles):
 if __name__ == '__main__':
     results = []
     random.seed(0)
-    for r in range(24):
+    for r in range(8):
         print "----PLAYING ROUND---- ", r
         game, players_tiles = setupGame(r)
         while not game.is_end():
@@ -132,7 +133,7 @@ if __name__ == '__main__':
             print "Player " + str(player) + " just played, ends of tiles " + \
                 "are " + str(game.ends[0]) + " and " + str(game.ends[1])
             print
-            #game.debugging_fml()
+            game.debugging_fml()
         results.append(computeScore(game, players_tiles))
         print "Game ended."
     print "---STATS YAY---"
