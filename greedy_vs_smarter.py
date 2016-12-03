@@ -113,8 +113,6 @@ def computeScore(game, players_tiles):
     print "SCORES:"
     print "smart + greedy", score_us
     print "greedy + greedy", score_opp
-    print game.tiles
-    print game.my_tiles
     if score_us < score_opp:
         return "won"
     elif score_opp < score_us:
