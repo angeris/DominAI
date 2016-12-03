@@ -1,4 +1,5 @@
 from domino import NegaMax, ZeroSumGame
+import random
 
 class WeirdGame(ZeroSumGame):
     def __init__(self, nums=10):
@@ -16,22 +17,33 @@ class WeirdGame(ZeroSumGame):
     def get_next_player(self, player):
         return 1^player
 
-game = WeirdGame()
-nm = NegaMax(game)
 
-while not game.is_end():
-    print 'current pile {}'.format(game.pile)
-    c = int(raw_input())
-    if c not in game.possible_actions(0):
-        print 'how about no'
-        continue
-    game.make_move(0, c)
-    if game.is_end():
-        print 'you win, asshole'
-        break
-    move, score = nm.negamax(11, 0)
-    print 'performing move {} with score {}'.format(move, score)
-    game.make_move(0, move)
-    if game.is_end():
-        print 'I win, you suck'
-        break
+alpha = -1000
+beta = 1000
+DEPTH = 20
+
+random.seed(1)
+
+for i in range(100):
+    game = WeirdGame(random.randint(0,100))
+    nm = NegaMax(game)
+
+    while not game.is_end():
+        print 'current pile {}'.format(game.pile)
+        c = 1
+        if c not in game.possible_actions(0):
+            print 'how about no'
+            continue
+        game.make_move(0, c)
+        if game.is_end():
+            print 'you win, asshole'
+            break
+        move, score = nm.negamax(DEPTH, 0)
+        ab_move, ab_score = nm.negamax_ab(DEPTH, alpha, beta, 0)
+        print 'normal score = {} | ab score = {}'.format(score, ab_score)
+        print 'performing move {} with score {}'.format(move, score)
+        assert score == ab_score
+        game.make_move(0, move)
+        if game.is_end():
+            print 'I win, you suck'
+            break

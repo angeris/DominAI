@@ -22,28 +22,28 @@ class ProbabilisticNegaMax:
         self.curr_game = curr_game
         assert isinstance(curr_game, ZeroSumBayesGame)
 
-    # def p_negamax(self, depth, alpha, beta, player):
-    #     # TODO: alpha-beta pruning
-    #     cg = self.curr_game
-    #     if depth==0 or cg.is_end():
-    #         return None, cg.evaluate(player)
+    def p_negamax_ab(self, depth, alpha, beta, player):
+        # TODO: alpha-beta pruning
+        cg = self.curr_game
+        if depth==0 or cg.is_end():
+            return None, cg.evaluate(player)
 
-    #     max_move, max_score = None, None
-    #     for move in cg.possible_actions(player):
-    #         #cop = deepcopy(cg)
-    #         prob = cg.make_probabilistic_move(player, move)
+        max_move, max_score = None, None
+        for move in cg.possible_actions(player):
+            #cop = deepcopy(cg)
+            prob = cg.make_probabilistic_move(player, move)
 
-    #         curr_move, curr_score = self.p_negamax(depth-1, -beta, -alpha, cg.get_next_player(player))
-    #         curr_score = -prob*curr_score
+            curr_move, curr_score = self.p_negamax(depth-1, -beta, -alpha, cg.get_next_player(player))
+            curr_score = -prob*curr_score
 
-    #         if max_score is None or curr_score > max_score:
-    #             max_move, max_score = move, curr_score
-    #         alpha = max(alpha, curr_score)
-    #         cg.undo_move(player, move)
-    #         if alpha >= beta:
-    #             break
-    #         #cop.is_equal(cg)
-    #     return max_move, max_score
+            if max_score is None or curr_score > max_score:
+                max_move, max_score = move, curr_score
+            alpha = max(alpha, curr_score)
+            cg.undo_move(player, move)
+            if alpha >= beta:
+                break
+            #cop.is_equal(cg)
+        return max_move, max_score
 
     def p_negamax(self, depth, player):
         # TODO: alpha-beta pruning
