@@ -104,14 +104,9 @@ class Dominoes(ZeroSumBayesGame):
         @returns: is the game over?
         '''
         # check if player has placed all dominoes:
-        zero = self.dominos_played[0::4]
-        one = self.dominos_played[1::4]
-        two = self.dominos_played[2::4]
-        three = self.dominos_played[3::4]
-        if len(zero) - zero.count(PASS_DOMINO) == 7: return True
-        if len(one) - one.count(PASS_DOMINO) == 7: return True
-        if len(two) - two.count(PASS_DOMINO) == 7: return True
-        if len(three) - three.count(PASS_DOMINO) == 7: return True
+        for i in range(4):
+            if self._dom_played(i)==7:
+                return True
         if len(self.tiles) == 0:
             return True
         if self.last_play > 3:
@@ -150,7 +145,7 @@ class Dominoes(ZeroSumBayesGame):
             curr_player = self.curr_player
         possible_moves = []
         for t in self.tiles:
-            if self._is_valid(t) and self.probabilities[t][curr_player] > 1e-4:
+            if self._is_valid(t) and self.probabilities[t][curr_player] > 0:
                 if placements_included:
                     if not (self.ends[0] in t)^(self.ends[1] in t) \
                             & (self.ends[0] != self.ends[1]):

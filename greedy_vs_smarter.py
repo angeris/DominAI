@@ -46,8 +46,8 @@ def greedyPlays(game, tiles):
 
 def smartPlays(game, tiles):
     actions = game.possible_actions(1)
-    if len(actions) == 2:
-        game.update(actions[1][0])
+    if len(actions) == 1:
+        game.update(actions[0][0])
         # print "I played a " + str(actions[1][0]) + ", yay!"
     else:
         pnm = ProbabilisticNegaMax(game)
