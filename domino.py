@@ -150,10 +150,10 @@ class Dominoes(ZeroSumBayesGame):
             curr_player = self.curr_player
         possible_moves = []
         for t in self.tiles:
-            if self._is_valid(t) and self.probabilities[t][curr_player] > 0:
+            if self._is_valid(t) and self.probabilities[t][curr_player] > 1e-4:
                 if placements_included:
                     if not (self.ends[0] in t)^(self.ends[1] in t) \
-                            &(self.ends[0] != self.ends[1]):
+                            & (self.ends[0] != self.ends[1]):
                                 possible_moves.append((t, 0))
                                 possible_moves.append((t, 1))
                     else:
@@ -174,8 +174,8 @@ class Dominoes(ZeroSumBayesGame):
                 value = sum(d.vals)
                 expectation_opp += value*probs[(player + 1)%4] + value*probs[(player + 3)%4]
                 expectation_us += value*probs[player] + value*probs[(player + 2)%4]
-        p_total = self._count_pieces(player)
-        return expectation_opp - expectation_us# + 6*(p_total[1] - p_total[0])
+        # p_total = self._count_pieces(player)
+        return expectation_opp - expectation_us #+ 6*(p_total[1] - p_total[0])
 
     def _count_pieces(self, player):
         rel_players = [(player + i - self.starter)%4 for i in range(4)]
@@ -225,9 +225,11 @@ class Dominoes(ZeroSumBayesGame):
         return map(ap, possible_moves)
 
     def _dom_played(self, l):
+        l = self.dominos_played[l::4]
         return sum(map(lambda x:x!=PASS_DOMINO, l))
 
     def _get_score(self, player):
+        # Gets opposing team score
         expectation_opp = 0
         for d in self.probabilities:
             if d not in self.dominos_played:
@@ -239,10 +241,19 @@ class Dominoes(ZeroSumBayesGame):
     def win_score(self, player):
         if not self.is_end():
             return False
-        rel_players = [(player + i - self.starter)%4 for i in range(4)]
-        for i, p in enumerate(rel_players):
-            if self._dom_played(self.dominos_played[p::4]) == 7:
-                return (1-2*((player-i)%2==0))*self._get_score(i)
+        # rel_players = [(player + i - self.starter)%4 for i in range(4)]
+        # for i, p in enumerate(rel_players):
+            # if self._dom_played(self.dominos_played[p::4]) == 7:
+                # return (1-2*((player-i)%2==0))*self._get_score(i)
+        player_me = player
+        player_teammate = (player+2)%4
+        player_opp1 = (player+1)%4
+        player_opp2 = (player+3)%4
+
+        if self._dom_played(player_me)==7 or self._dom_played(player_teammate)==7:
+            return self._get_score(player_me)
+        if self._dom_played(player_opp1)==7 or self._dom_played(player_opp2)==7:
+            return -self._get_score(player_opp1)
 
     def _update_probs(self, move, curr_player):
         def uncertain(d):
@@ -313,6 +324,9 @@ class Dominoes(ZeroSumBayesGame):
         assert self.curr_player == other.curr_player, "curr_players don't match"
         assert self.undoable_probs == other.undoable_probs, "undoable probs don't match"
         assert self.undoable_ends == other.undoable_ends, "undoable ends don't match"
+        for d in self.probabilities:
+            assert self.probabilities[d] == other.probabilities[d], 'probabilities don\'t match'
+
 
 if __name__ == '__main__':
     '''

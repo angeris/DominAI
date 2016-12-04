@@ -55,6 +55,7 @@ def smartPlays(game, tiles):
         print "DEPTH"
         print depth
         max_move, max_score = pnm.p_negamax_ab(depth, depth, -float("inf"), float("inf"), 0)
+        # max_move, max_score = pnm.p_negamax(6,0)
         game.update(max_move[0], placement=max_move[1])
         print "I played a " + str(max_move[0]) + ", yay!"
     return tiles
@@ -129,11 +130,19 @@ def computeScore(game, players_tiles):
             return "tie"
     return 'won' if q>0 else 'lost'
 
-random.seed(12)
+def get_dominoes_list(game, player, player_tiles):
+    if player == 0:
+        my_tiles = []
+        for t in game.my_tiles:
+            if t not in game.dominos_played:
+                my_tiles.append(t)
+        return my_tiles
+    return [t for t in player_tiles[player] if t not in game.dominos_played]
+random.seed(123)
 
 if __name__ == '__main__':
     results = []
-    for r in range(24):
+    for r in range(20):
         print "----PLAYING ROUND---- ", r
         game, players_tiles = setupGame(r)
         while not game.is_end():
@@ -141,6 +150,7 @@ if __name__ == '__main__':
             tiles = greedyPlays(game, players_tiles) if player > 0 else smartPlays(game, players_tiles)
             print "Player " + str(player) + " just played, ends of tiles " + \
                 "are " + str(game.ends[0]) + " and " + str(game.ends[1])
+            print 'Remaining dominoes : {}'.format(get_dominoes_list(game, player, players_tiles))
             print
             game.debugging_fml()
         results.append(computeScore(game, players_tiles))

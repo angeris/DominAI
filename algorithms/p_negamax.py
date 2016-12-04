@@ -38,13 +38,19 @@ class ProbabilisticNegaMax:
 
         max_move, max_score = None, None
         for move in cg.possible_actions(player):
-            #cop = deepcopy(cg)
+            cop = deepcopy(cg)
             # if depth == initial:
             #     print "BEFORE"
             #     for d in cg.probabilities:
             #         print d, cg.probabilities[d]
             # print "Move:", move, "Player:", player, "Ends:", cg.ends
+            curr_pos = cg.possible_actions(player)
+            if move[0] in cg.probabilities:
+                print 'probability of {} is {}'.format(move[0], cg.probabilities[move[0]][player])
             prob = cg.make_probabilistic_move(player, move)
+            if not prob > 0:
+                print 'possible actions : {}'.format(curr_pos)
+            assert prob > 0
             curr_move, curr_score = self.p_negamax_ab(initial, depth-1, -beta, -alpha, cg.get_next_player(player))
             curr_score = -prob*curr_score
             if depth == initial:
@@ -60,7 +66,7 @@ class ProbabilisticNegaMax:
             #         print d, cg.probabilities[d]
             if alpha >= beta:
                 break
-            #cop.is_equal(cg)
+            cop.is_equal(cg)
         return max_move, max_score
 
     def p_negamax(self, depth, player):
@@ -75,7 +81,7 @@ class ProbabilisticNegaMax:
             prob = cg.make_probabilistic_move(player, move)
 
             curr_move, curr_score = self.p_negamax(depth-1, cg.get_next_player(player))
-            curr_score = -curr_score
+            curr_score = -prob*curr_score
 
             if max_score is None or curr_score > max_score:
                 max_move, max_score = move, curr_score
