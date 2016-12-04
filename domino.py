@@ -127,7 +127,7 @@ class Dominoes(ZeroSumBayesGame):
         self.undoable_ends.append(copy(self.ends))
         prob_of_move = self._assign_prob(move, player)
         self.update(move, player, placement)
-        self.undoable_probs.append(copy(self.probabilities))
+        self.undoable_probs.append(deepcopy(self.probabilities))
         return prob_of_move
 
     def undo_move(self, player, move):
@@ -163,7 +163,6 @@ class Dominoes(ZeroSumBayesGame):
         if not possible_moves:
             return [(PASS_DOMINO, None)] if placements_included else [PASS_DOMINO]
         return possible_moves
-
 
     def evaluate(self, player):
         expectation_opp = 0
@@ -322,11 +321,13 @@ class Dominoes(ZeroSumBayesGame):
         assert self.last_play == other.last_play, "last plays don't match"
         assert self.ends == other.ends, "ends don't match"
         assert self.curr_player == other.curr_player, "curr_players don't match"
-        assert self.undoable_probs == other.undoable_probs, "undoable probs don't match"
         assert self.undoable_ends == other.undoable_ends, "undoable ends don't match"
+        assert self.undoable_probs == other.undoable_probs, "undoable probs don't match"
         for d in self.probabilities:
+            print d
+            print self.probabilities[d]
+            print other.probabilities[d]
             assert self.probabilities[d] == other.probabilities[d], 'probabilities don\'t match'
-
 
 if __name__ == '__main__':
     '''

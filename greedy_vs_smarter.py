@@ -142,7 +142,7 @@ random.seed(123)
 
 if __name__ == '__main__':
     results = []
-    for r in range(20):
+    for r in range(1):
         print "----PLAYING ROUND---- ", r
         game, players_tiles = setupGame(r)
         while not game.is_end():
