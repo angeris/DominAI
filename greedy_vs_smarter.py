@@ -51,7 +51,7 @@ def smartPlays(game, tiles):
         print "I played a " + str(actions[0][0]) + ", yay!"
     else:
         pnm = ProbabilisticNegaMax(game)
-        depth = int(5*(2**(1./5*int(len(game.dominos_played)/4))))
+        depth = int(4*(2**(1./2*int(len(game.dominos_played)/4))))
         print "DEPTH"
         print depth
         max_move, max_score = pnm.p_negamax_ab(depth, depth, -float("inf"), float("inf"), 0)
@@ -105,29 +105,35 @@ def greedyStarts(my_tiles):
 def computeScore(game, players_tiles):
     score_opp = 0
     score_us = 0
-    for t in game.my_tiles:
-        if t not in game.dominos_played:
-            score_us += sum(t.vals)
-    for i in range(1, 4):
-        for t in players_tiles[i]:
+    q = game.win_score(0)
+    if not q:
+        # count tiles of each player
+        for t in game.my_tiles:
             if t not in game.dominos_played:
-                if i % 2 == 0:
-                    score_us += sum(t.vals)
-                else:
-                    score_opp += sum(t.vals)
-    print "SCORES:"
-    print "smart + greedy", score_us
-    print "greedy + greedy", score_opp
-    if score_us < score_opp:
-        return "won"
-    elif score_opp < score_us:
-        return "lost"
-    else:
-        return "tie"
+                score_us += sum(t.vals)
+        for i in range(1, 4):
+            for t in players_tiles[i]:
+                if t not in game.dominos_played:
+                    if i % 2 == 0:
+                        score_us += sum(t.vals)
+                    else:
+                        score_opp += sum(t.vals)
+        print "SCORES:"
+        print "smart + greedy", score_us
+        print "greedy + greedy", score_opp
+        if score_us < score_opp:
+            return "won"
+        elif score_opp < score_us:
+            return "lost"
+        else:
+            return "tie"
+    return 'won' if q>0 else 'lost'
+
+random.seed(12)
 
 if __name__ == '__main__':
     results = []
-    for r in range(1):
+    for r in range(20):
         print "----PLAYING ROUND---- ", r
         game, players_tiles = setupGame(r)
         while not game.is_end():

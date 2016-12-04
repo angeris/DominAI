@@ -20,7 +20,7 @@ class WeirdGame(ZeroSumGame):
 
 alpha = -1000
 beta = 1000
-DEPTH = 20
+DEPTH = 40
 
 random.seed(1)
 
@@ -38,11 +38,11 @@ for i in range(100):
         if game.is_end():
             print 'you win, asshole'
             break
-        move, score = nm.negamax(DEPTH, 0)
-        ab_move, ab_score = nm.negamax_ab(DEPTH, alpha, beta, 0)
-        print 'normal score = {} | ab score = {}'.format(score, ab_score)
+        # move, score = nm.negamax(DEPTH, 0)
+        move, score = nm.negamax_ab(DEPTH, alpha, beta, 0)
+        # print 'normal score = {} | ab score = {}'.format(score, ab_score)
         print 'performing move {} with score {}'.format(move, score)
-        assert score == ab_score
+        # assert score == ab_score
         game.make_move(0, move)
         if game.is_end():
             print 'I win, you suck'

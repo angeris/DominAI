@@ -98,6 +98,7 @@ class Dominoes(ZeroSumBayesGame):
         # push and pop from this to get dictionaries of changed probabilities during negamax
         self.undoable_probs = []
         self.undoable_ends = [] # list of old self.ends
+        self.starter = starter
 
     def is_end(self):
         '''
@@ -114,10 +115,10 @@ class Dominoes(ZeroSumBayesGame):
         if len(three) - three.count(PASS_DOMINO) == 7: return True
         if len(self.tiles) == 0:
             return True
-        if self.last_play >= 3:
+        if self.last_play > 3:
             # everyone has passed
             return all(map(lambda x:x==PASS_DOMINO,
-                           self.dominos_played[self.last_play-3:self.last_play+1]))
+                       self.dominos_played[self.last_play-3:self.last_play+1]))
         return False
 
     def make_probabilistic_move(self, player, move):
@@ -138,7 +139,7 @@ class Dominoes(ZeroSumBayesGame):
         self.update(move, player, placement)
         self.undoable_probs.append(old_probs)
         return prob_of_move
-        
+
     def undo_move(self, player, move):
         move = move[0]
         self.dominos_played.pop()
@@ -171,7 +172,10 @@ class Dominoes(ZeroSumBayesGame):
                         possible_moves.append((t, None))
                 else:
                     possible_moves.append(t)
-        return possible_moves + [(PASS_DOMINO, None)] if placements_included else possible_moves + [PASS_DOMINO]
+        if not possible_moves:
+            return [(PASS_DOMINO, None)] if placements_included else [PASS_DOMINO]
+        return possible_moves
+
 
     def evaluate(self, player):
         expectation_opp = 0
@@ -180,9 +184,15 @@ class Dominoes(ZeroSumBayesGame):
             if d not in self.dominos_played:
                 probs = self.probabilities[d]
                 value = sum(d.vals)
-                expectation_opp = value*probs[(player + 1)%4] + value*probs[(player + 3)%4]
-                expectation_us = value*probs[player] + value*probs[(player + 2)%4]
-        return expectation_opp - expectation_us
+                expectation_opp += value*probs[(player + 1)%4] + value*probs[(player + 3)%4]
+                expectation_us += value*probs[player] + value*probs[(player + 2)%4]
+        p_total = self._count_pieces(player)
+        return expectation_opp - expectation_us# + 6*(p_total[1] - p_total[0])
+
+    def _count_pieces(self, player):
+        rel_players = [(player + i - self.starter)%4 for i in range(4)]
+        pieces_player = [self._dom_played(self.dominos_played[p::4]) for p in rel_players]
+        return (pieces_player[0] + pieces_player[2], pieces_player[1] + pieces_player[3])
 
     def get_next_player(self, player):
         return (player + 1) % 4
@@ -226,9 +236,26 @@ class Dominoes(ZeroSumBayesGame):
             return (d, self._assign_prob(d[0], curr_player))
         return map(ap, possible_moves)
 
-    def win(self, team):
+    def _dom_played(self, l):
+        return sum(map(lambda x:x!=PASS_DOMINO, l))
+
+    def _get_score(self, player):
+        expectation_opp = 0
+        for d in self.probabilities:
+            if d not in self.dominos_played:
+                probs = self.probabilities[d]
+                value = sum(d.vals)
+                expectation_opp += value*(probs[(player+1)%4]+probs[(player+3)%4])
+        return expectation_opp
+
+    def win_score(self, player):
         if not self.is_end():
             return False
+        rel_players = [(player + i - self.starter)%4 for i in range(4)]
+        for i, p in enumerate(rel_players):
+            if self._dom_played(self.dominos_played[p::4]) == 7:
+                return (1-2*((player-i)%2==0))*self._get_score(i)
+
 
     def update(self, move, curr_player=None, placement=None):
         '''
