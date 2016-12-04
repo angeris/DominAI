@@ -40,7 +40,7 @@ class ProbabilisticNegaMax:
         for move in cg.possible_actions(player):
             # print "CG.PROBs"
             # print cg.probabilities
-            cop = deepcopy(cg)
+            # cop = deepcopy(cg)
             # print "COP PROBS"
             # print cop.probabilities
             # if depth == initial:
@@ -72,9 +72,9 @@ class ProbabilisticNegaMax:
             #         print d, cg.probabilities[d]
             # print "PROBS AFTER POPPING"
             # print cg.probabilities
-            # print "PROBS OF COP"
+            # print "PROBS OF COP changed and shit"
             # print cop.probabilities
-            cop.is_equal(cg)
+            # cop.is_equal(cg)
             if alpha >= beta:
                 break
         return max_move, max_score
