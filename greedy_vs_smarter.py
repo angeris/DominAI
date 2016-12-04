@@ -133,7 +133,7 @@ random.seed(12)
 
 if __name__ == '__main__':
     results = []
-    for r in range(20):
+    for r in range(24):
         print "----PLAYING ROUND---- ", r
         game, players_tiles = setupGame(r)
         while not game.is_end():
@@ -142,6 +142,7 @@ if __name__ == '__main__':
             print "Player " + str(player) + " just played, ends of tiles " + \
                 "are " + str(game.ends[0]) + " and " + str(game.ends[1])
             print
+            game.debugging_fml()
         results.append(computeScore(game, players_tiles))
         print "Game ended."
     print "---STATS YAY---"
