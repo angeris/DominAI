@@ -1,7 +1,7 @@
 '''
 TODO:
 Fix list assignment index out of range
-    dominos_played can be of any length!! 
+    dominos_played can be of any length!!
 Who won the game? Say it
 '''
 

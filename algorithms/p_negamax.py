@@ -4,17 +4,17 @@ class ZeroSumBayesGame:
     def __init__(self):
         pass
     def is_end(self):
-        raise NotImplemented('literally what the fuck')
+        raise NotImplemented()
     def make_probabilistic_move(self, player, move):
-        raise NotImplemented('literally what the fuck')
+        raise NotImplemented()
     def undo_move(self, player, move):
-        raise NotImplemented('literally what the fuck')
+        raise NotImplemented()
     def possible_actions(self, player):
-        raise NotImplemented('literally what the fuck')
+        raise NotImplemented()
     def evaluate(self, player):
-        raise NotImplemented('literally what the fuck')
+        raise NotImplemented()
     def get_next_player(self, player):
-        raise NotImplemented('literally what the fuck')
+        raise NotImplemented()
 
 # Simple probabilistic idea thingie
 class ProbabilisticNegaMax:
@@ -23,12 +23,8 @@ class ProbabilisticNegaMax:
         assert isinstance(curr_game, ZeroSumBayesGame)
 
     def p_negamax_ab(self, initial, depth, alpha, beta, player):
-        # TODO: alpha-beta pruning
         cg = self.curr_game
         if depth==0 or cg.is_end():
-            # print "AFTER SIMULATING"
-            # for d in cg.probabilities:
-            #     print d, cg.probabilities[d]
             if cg.is_end():
                 q = cg.win_score(player)
                 if not q:
@@ -37,23 +33,8 @@ class ProbabilisticNegaMax:
             return None, cg.evaluate(player)
 
         max_move, max_score = None, None
-        for move in cg.possible_actions(player):
-            # print "CG.PROBs"
-            # print cg.probabilities
-            # cop = deepcopy(cg)
-            # print "COP PROBS"
-            # print cop.probabilities
-            # if depth == initial:
-            #     print "BEFORE"
-            #     for d in cg.probabilities:
-            #         print d, cg.probabilities[d]
-            # print "Move:", move, "Player:", player, "Ends:", cg.ends
-            #curr_pos = cg.possible_actions(player)
-            # if move[0] in cg.probabilities:
-            #     print 'probability of {} is {}'.format(move[0], cg.probabilities[move[0]][player])
+        for move in sorted(cg.possible_actions(player), key=lambda x:-sum(x[0].vals)):
             prob = cg.make_probabilistic_move(player, move)
-            # if not prob > 0:
-            #     print 'possible actions : {}'.format(curr_pos)
             assert prob > 0
             curr_move, curr_score = self.p_negamax_ab(initial, depth-1, -beta, -alpha, cg.get_next_player(player))
             curr_score = -prob*curr_score
@@ -63,18 +44,7 @@ class ProbabilisticNegaMax:
             if max_score is None or curr_score > max_score:
                 max_move, max_score = move, curr_score
             alpha = max(alpha, curr_score)
-            # print "WHAT I AM GONNA POP OUT and assign to cg.probabilities"
-            # print cg.undoable_probs[-1]
             cg.undo_move(player, move)
-            # if depth == initial:
-            #     print "AFTER UNDOING"
-            #     for d in cg.probabilities:
-            #         print d, cg.probabilities[d]
-            # print "PROBS AFTER POPPING"
-            # print cg.probabilities
-            # print "PROBS OF COP changed and shit"
-            # print cop.probabilities
-            # cop.is_equal(cg)
             if alpha >= beta:
                 break
         return max_move, max_score

@@ -94,3 +94,6 @@ ENV/
 
 # Compiled files
 *.pyc
+
+# MacOS BS
+.DS_Store

@@ -25,7 +25,9 @@ class Domino():
         return self.curr_hash
     def __eq__(self, other):
         if other is None: return False
-        if other == PASS_STR or other == PASS_DOMINO:
+        if type(other) is tuple:
+            other = Domino(*other)
+        if other == PASS_STR or other.vals[0] < 0:
             return self.vals[0] < 0
         return self.vals == other.vals
     def __leq__(self, other):
@@ -59,7 +61,7 @@ def _renormalize(arr):
 
 
 class Dominoes(ZeroSumBayesGame):
-    def __init__(self, game_tiles, my_tiles, starter, start_tile):
+    def __init__(self, game_tiles, my_tiles, starter):
         '''
         @params:
             - game_tiles (set of tuples of ints): each tuple has two
@@ -79,10 +81,9 @@ class Dominoes(ZeroSumBayesGame):
         self.starter = starter
 
         self.dominos_played = []
-        self.dominos_played.append(Domino(*start_tile))
         self.last_play = 0
 
-        self.ends = [start_tile[0], start_tile[1]]
+        self.ends = [None, None]
 
         u_third = [0,1./3,1./3,1./3]    # starting probabilities of tiles I don't have
         u_one = [1,0,0,0]   # probabilities of tiles I do have
@@ -90,10 +91,7 @@ class Dominoes(ZeroSumBayesGame):
         self.probabilities = {d:(copy(u_third) if d not in self.my_tiles else
                                  copy(u_one)) for d in self.tiles}
 
-        self._update_probs(self.dominos_played[0], starter)
-
-        self.curr_player = (starter+1)%4
-        self.tiles.remove(self.dominos_played[0])
+        self.curr_player = (starter)%4
 
         # push and pop from this to get dictionaries of changed probabilities during negamax
         self.undoable_probs = []
@@ -146,6 +144,9 @@ class Dominoes(ZeroSumBayesGame):
         possible_moves = []
         for t in self.tiles:
             if self._is_valid(t) and self.probabilities[t][curr_player] > 0:
+                if not self.dominos_played:
+                    possible_moves.append((t, None))
+                    continue
                 if placements_included:
                     if not (self.ends[0] in t)^(self.ends[1] in t) \
                             & (self.ends[0] != self.ends[1]):
@@ -205,7 +206,7 @@ class Dominoes(ZeroSumBayesGame):
         '''
         @returns: is the move valid?
         '''
-        return self.ends[0] in t or self.ends[1] in t
+        return self.ends[0] in t or self.ends[1] in t or len(self.dominos_played)==0
 
     def _assign_prob(self, domino, player):
         return self.probabilities[domino][player] if domino in self.probabilities else 1
@@ -293,8 +294,10 @@ class Dominoes(ZeroSumBayesGame):
             self.dominos_played.append(PASS_DOMINO)
         else:
             assert self._is_valid(move)
-            self.dominos_played.append(move)
-            if placement is None:
+            if not self.dominos_played:
+                self.ends[0] = move.vals[0]
+                self.ends[1] = move.vals[1]
+            elif placement is None:
                 assert (self.ends[0] in move)^(self.ends[1] in move) \
                     &(self.ends[0] != self.ends[1]), "Placement"
                 if self.ends[0] in move:
@@ -303,6 +306,8 @@ class Dominoes(ZeroSumBayesGame):
                     self.ends[1] = move._get_other(self.ends[1])
             else:
                 self.ends[placement] = move._get_other(self.ends[placement])
+
+            self.dominos_played.append(move)
             self.tiles.remove(move)
         self._update_probs(move, curr_player)
         self.curr_player = (curr_player+1)%4

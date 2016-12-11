@@ -1,0 +1,4176 @@
+# SEED: 100
+# ROUNDS RUN: 24
+
+
+----PLAYING ROUND----  0
+Welcome.
+I have: [(3, 6), (1, 1), (3, 3), (5, 5), (2, 2), (5, 6), (0, 6)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(2, 3), (0, 3), (1, 4), (3, 4), (0, 2), (4, 4), (6, 6)]
+Player 2 has: [(0, 5), (2, 5), (2, 4), (0, 0), (1, 2), (0, 1), (1, 5)]
+Player 3 has: [(4, 5), (1, 3), (4, 6), (2, 6), (3, 5), (1, 6), (0, 4)]
+Player 0 is starting.
+I placed a (5, 6)
+
+1's turn!
+I played a (6, 6), yay!
+Player 1 just played, ends of tiles are 5 and 6
+Remaining dominoes : [(2, 3), (0, 3), (1, 4), (3, 4), (0, 2), (4, 4)]
+
+DEPTH
+5
+Player 0 Move ((2, 5), None) how good it is: 0.585139318885
+Player 0 Move ((1, 5), None) how good it is: 0.606811145511
+Player 0 Move ((0, 5), None) how good it is: 0.579721362229
+I played a (1, 5), yay!
+Player 2 just played, ends of tiles are 1 and 6
+Remaining dominoes : [(0, 5), (2, 5), (2, 4), (0, 0), (1, 2), (0, 1)]
+
+3's turn!
+I played a (4, 6), yay!
+Player 3 just played, ends of tiles are 1 and 4
+Remaining dominoes : [(4, 5), (1, 3), (2, 6), (3, 5), (1, 6), (0, 4)]
+
+I played a (1, 1), yay!
+Player 0 just played, ends of tiles are 1 and 4
+Remaining dominoes : [(3, 6), (3, 3), (5, 5), (2, 2), (5, 6), (0, 6)]
+
+1's turn!
+I played a (4, 4), yay!
+Player 1 just played, ends of tiles are 1 and 4
+Remaining dominoes : [(2, 3), (0, 3), (1, 4), (3, 4), (0, 2)]
+
+DEPTH
+7
+Player 0 Move ((1, 2), None) how good it is: 0.0369422244422
+Player 0 Move ((0, 1), None) how good it is: 0.0437062937063
+Player 0 Move ((2, 4), None) how good it is: 0.051510989011
+I played a (2, 4), yay!
+Player 2 just played, ends of tiles are 1 and 2
+Remaining dominoes : [(0, 5), (2, 5), (0, 0), (1, 2), (0, 1)]
+
+3's turn!
+I played a (2, 6), yay!
+Player 3 just played, ends of tiles are 1 and 6
+Remaining dominoes : [(4, 5), (1, 3), (3, 5), (1, 6), (0, 4)]
+
+DEPTH
+10
+Player 0 Move ((3, 6), None) how good it is: -0.00148000148
+Player 0 Move ((0, 6), None) how good it is: -0.000555000555001
+I played a (0, 6), yay!
+Player 0 just played, ends of tiles are 1 and 0
+Remaining dominoes : [(3, 6), (3, 3), (5, 5), (2, 2), (5, 6)]
+
+1's turn!
+I played a (1, 4), yay!
+Player 1 just played, ends of tiles are 4 and 0
+Remaining dominoes : [(2, 3), (0, 3), (3, 4), (0, 2)]
+
+DEPTH
+10
+Player 0 Move ((0, 0), None) how good it is: -0.002997002997
+Player 0 Move ((0, 1), None) how good it is: -0.000333000333
+Player 0 Move ((0, 5), None) how good it is: 0.000333000333
+I played a (0, 5), yay!
+Player 2 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(2, 5), (0, 0), (1, 2), (0, 1)]
+
+3's turn!
+I played a (4, 5), yay!
+Player 3 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(1, 3), (3, 5), (1, 6), (0, 4)]
+
+I played a (5, 5), yay!
+Player 0 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(3, 6), (3, 3), (2, 2), (5, 6)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(2, 3), (0, 3), (3, 4), (0, 2)]
+
+I played a (2, 5), yay!
+Player 2 just played, ends of tiles are 2 and 5
+Remaining dominoes : [(0, 0), (1, 2), (0, 1)]
+
+3's turn!
+I played a (3, 5), yay!
+Player 3 just played, ends of tiles are 2 and 3
+Remaining dominoes : [(1, 3), (1, 6), (0, 4)]
+
+DEPTH
+20
+Player 0 Move ((3, 6), None) how good it is: -0.00285714285714
+Player 0 Move ((3, 3), None) how good it is: -0.00285714285714
+Player 0 Move ((2, 2), None) how good it is: -0.00285714285714
+I played a (3, 6), yay!
+Player 0 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(3, 3), (2, 2), (5, 6)]
+
+1's turn!
+I played a (2, 3), yay!
+Player 1 just played, ends of tiles are 3 and 6
+Remaining dominoes : [(0, 3), (3, 4), (0, 2)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 3 and 6
+Remaining dominoes : [(0, 0), (1, 2), (0, 1)]
+
+3's turn!
+I played a (1, 6), yay!
+Player 3 just played, ends of tiles are 3 and 1
+Remaining dominoes : [(1, 3), (0, 4)]
+
+I played a (3, 3), yay!
+Player 0 just played, ends of tiles are 3 and 1
+Remaining dominoes : [(2, 2), (5, 6)]
+
+1's turn!
+I played a (3, 4), yay!
+Player 1 just played, ends of tiles are 4 and 1
+Remaining dominoes : [(0, 3), (0, 2)]
+
+DEPTH
+28
+Player 0 Move ((1, 2), None) how good it is: 0.9
+Player 0 Move ((0, 1), None) how good it is: 1.0
+I played a (0, 1), yay!
+Player 2 just played, ends of tiles are 4 and 0
+Remaining dominoes : [(0, 0), (1, 2)]
+
+3's turn!
+I played a (0, 4), yay!
+Player 3 just played, ends of tiles are 4 and 4
+Remaining dominoes : [(1, 3)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 4 and 4
+Remaining dominoes : [(2, 2), (5, 6)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 4 and 4
+Remaining dominoes : [(0, 3), (0, 2)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 4 and 4
+Remaining dominoes : [(0, 0), (1, 2)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 4 and 4
+Remaining dominoes : [(1, 3)]
+
+Player 0 has pips 4
+Player 1 has pips 5
+Player 2 has pips 3
+Player 3 has pips 4
+I win!
+Game ended.
+----PLAYING ROUND----  1
+Welcome.
+I have: [(5, 6), (1, 3), (0, 6), (0, 1), (1, 6), (5, 5), (6, 6)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(3, 5), (2, 5), (0, 5), (2, 6), (2, 3), (1, 1), (4, 5)]
+Player 2 has: [(3, 6), (0, 2), (2, 4), (1, 5), (1, 2), (4, 4), (4, 6)]
+Player 3 has: [(3, 3), (0, 4), (2, 2), (3, 4), (1, 4), (0, 0), (0, 3)]
+Player 1 is starting.
+I placed a (4, 5)
+
+DEPTH
+5
+Player 0 Move ((4, 4), None) how good it is: -0.0429824561404
+Player 0 Move ((1, 5), None) how good it is: -0.0530959752322
+Player 0 Move ((4, 6), None) how good it is: -0.0278121775026
+Player 0 Move ((2, 4), None) how good it is: -0.0707946336429
+I played a (4, 6), yay!
+Player 2 just played, ends of tiles are 6 and 5
+Remaining dominoes : [(1, 2), (2, 4), (0, 2), (1, 5), (3, 6), (4, 4)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 6 and 5
+Remaining dominoes : [(0, 3), (2, 2), (0, 0), (1, 4), (3, 3), (3, 4), (0, 4)]
+
+DEPTH
+5
+Player 0 Move ((6, 6), None) how good it is: -0.686274509804
+Player 0 Move ((5, 6), 0) how good it is: -0.772058823529
+Player 0 Move ((5, 6), 1) how good it is: -0.686274509804
+Player 0 Move ((1, 6), None) how good it is: -1.39828431373
+Player 0 Move ((5, 5), None) how good it is: -0.772058823529
+Player 0 Move ((0, 6), None) how good it is: -0.758513931889
+I played a (6, 6), yay!
+Player 0 just played, ends of tiles are 6 and 5
+Remaining dominoes : [(0, 6), (1, 3), (5, 6), (0, 1), (5, 5), (1, 6)]
+
+1's turn!
+I played a (2, 6), yay!
+Player 1 just played, ends of tiles are 2 and 5
+Remaining dominoes : [(2, 3), (3, 5), (1, 1), (0, 5), (2, 5)]
+
+DEPTH
+7
+Player 0 Move ((1, 2), None) how good it is: -0.101338612368
+Player 0 Move ((1, 5), None) how good it is: -0.0664592760181
+Player 0 Move ((2, 4), None) how good it is: -0.0693815987934
+Player 0 Move ((0, 2), None) how good it is: -0.100395927602
+I played a (1, 5), yay!
+Player 2 just played, ends of tiles are 2 and 1
+Remaining dominoes : [(1, 2), (2, 4), (0, 2), (3, 6), (4, 4)]
+
+3's turn!
+I played a (1, 4), yay!
+Player 3 just played, ends of tiles are 2 and 4
+Remaining dominoes : [(0, 3), (2, 2), (0, 0), (3, 3), (3, 4), (0, 4)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 2 and 4
+Remaining dominoes : [(0, 6), (1, 3), (5, 6), (0, 1), (5, 5), (1, 6)]
+
+1's turn!
+I played a (2, 5), yay!
+Player 1 just played, ends of tiles are 5 and 4
+Remaining dominoes : [(2, 3), (3, 5), (1, 1), (0, 5)]
+
+DEPTH
+10
+Player 0 Move ((4, 4), None) how good it is: -0.027195027195
+Player 0 Move ((2, 4), None) how good it is: -0.0113029827316
+I played a (2, 4), yay!
+Player 2 just played, ends of tiles are 5 and 2
+Remaining dominoes : [(1, 2), (0, 2), (3, 6), (4, 4)]
+
+3's turn!
+I played a (2, 2), yay!
+Player 3 just played, ends of tiles are 5 and 2
+Remaining dominoes : [(0, 3), (0, 0), (3, 3), (3, 4), (0, 4)]
+
+DEPTH
+10
+Player 0 Move ((5, 6), None) how good it is: -0.00584415584416
+Player 0 Move ((5, 5), None) how good it is: -0.00599400599401
+I played a (5, 6), yay!
+Player 0 just played, ends of tiles are 6 and 2
+Remaining dominoes : [(0, 6), (1, 3), (0, 1), (5, 5), (1, 6)]
+
+1's turn!
+I played a (2, 3), yay!
+Player 1 just played, ends of tiles are 6 and 3
+Remaining dominoes : [(3, 5), (1, 1), (0, 5)]
+
+DEPTH
+14
+Player 0 Move ((3, 6), 0) how good it is: -0.184458398744
+Player 0 Move ((3, 6), 1) how good it is: -0.0401515151515
+I played a (3, 6), yay!
+Player 2 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(1, 2), (0, 2), (4, 4)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(0, 3), (0, 0), (3, 3), (3, 4), (0, 4)]
+
+DEPTH
+14
+Player 0 Move ((1, 6), None) how good it is: -0.015367965368
+Player 0 Move ((0, 6), None) how good it is: -0.0238095238095
+I played a (1, 6), yay!
+Player 0 just played, ends of tiles are 1 and 6
+Remaining dominoes : [(0, 6), (1, 3), (0, 1), (5, 5)]
+
+1's turn!
+I played a (1, 1), yay!
+Player 1 just played, ends of tiles are 1 and 6
+Remaining dominoes : [(3, 5), (0, 5)]
+
+I played a (1, 2), yay!
+Player 2 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(0, 2), (4, 4)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(0, 3), (0, 0), (3, 3), (3, 4), (0, 4)]
+
+I played a (0, 6), yay!
+Player 0 just played, ends of tiles are 2 and 0
+Remaining dominoes : [(1, 3), (0, 1), (5, 5)]
+
+1's turn!
+I played a (0, 5), yay!
+Player 1 just played, ends of tiles are 2 and 5
+Remaining dominoes : [(3, 5)]
+
+I played a (0, 2), yay!
+Player 2 just played, ends of tiles are 0 and 5
+Remaining dominoes : [(4, 4)]
+
+3's turn!
+I played a (0, 4), yay!
+Player 3 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(0, 3), (0, 0), (3, 3), (3, 4)]
+
+I played a (5, 5), yay!
+Player 0 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(1, 3), (0, 1)]
+
+1's turn!
+I played a (3, 5), yay!
+Player 1 just played, ends of tiles are 4 and 3
+Remaining dominoes : []
+
+Player 0 has pips 5
+Player 1 has pips 0
+Player 2 has pips 8
+Player 3 has pips 16
+I win!
+Game ended.
+----PLAYING ROUND----  2
+Welcome.
+I have: [(0, 4), (2, 3), (1, 1), (5, 6), (1, 5), (0, 3), (2, 2)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(3, 6), (0, 5), (0, 0), (0, 1), (1, 2), (3, 3), (6, 6)]
+Player 2 has: [(1, 6), (2, 6), (0, 2), (3, 4), (1, 3), (1, 4), (5, 5)]
+Player 3 has: [(2, 4), (4, 5), (3, 5), (0, 6), (2, 5), (4, 6), (4, 4)]
+Player 2 is starting.
+I placed a (5, 5)
+
+3's turn!
+I played a (4, 5), yay!
+Player 3 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(4, 4), (2, 4), (2, 5), (4, 6), (0, 6), (3, 5)]
+
+DEPTH
+5
+Player 0 Move ((5, 6), None) how good it is: 0.325077399381
+Player 0 Move ((1, 5), None) how good it is: 0.270897832817
+Player 0 Move ((0, 4), None) how good it is: 0.314241486068
+I played a (5, 6), yay!
+Player 0 just played, ends of tiles are 4 and 6
+Remaining dominoes : [(0, 4), (0, 3), (1, 5), (2, 2), (2, 3), (1, 1)]
+
+1's turn!
+I played a (6, 6), yay!
+Player 1 just played, ends of tiles are 4 and 6
+Remaining dominoes : [(0, 1), (3, 6), (0, 0), (3, 3), (1, 2), (0, 5)]
+
+DEPTH
+7
+Player 0 Move ((2, 6), None) how good it is: 0.00484809308339
+Player 0 Move ((1, 6), None) how good it is: 0.00363606981254
+Player 0 Move ((1, 4), None) how good it is: 0.00121202327085
+Player 0 Move ((3, 4), None) how good it is: 0.00282805429864
+I played a (2, 6), yay!
+Player 2 just played, ends of tiles are 4 and 2
+Remaining dominoes : [(1, 6), (3, 4), (1, 3), (0, 2), (1, 4)]
+
+3's turn!
+I played a (4, 6), yay!
+Player 3 just played, ends of tiles are 6 and 2
+Remaining dominoes : [(4, 4), (2, 4), (2, 5), (0, 6), (3, 5)]
+
+DEPTH
+7
+Player 0 Move ((2, 2), None) how good it is: 0.0286172161172
+Player 0 Move ((2, 3), None) how good it is: 0.0213328338328
+I played a (2, 2), yay!
+Player 0 just played, ends of tiles are 6 and 2
+Remaining dominoes : [(0, 4), (0, 3), (1, 5), (2, 3), (1, 1)]
+
+1's turn!
+I played a (3, 6), yay!
+Player 1 just played, ends of tiles are 3 and 2
+Remaining dominoes : [(0, 1), (0, 0), (3, 3), (1, 2), (0, 5)]
+
+DEPTH
+10
+Player 0 Move ((1, 3), None) how good it is: -0.001295001295
+Player 0 Move ((0, 2), None) how good it is: -0.000555000555001
+Player 0 Move ((3, 4), None) how good it is: -0.00037000037
+I played a (3, 4), yay!
+Player 2 just played, ends of tiles are 4 and 2
+Remaining dominoes : [(1, 6), (1, 3), (0, 2), (1, 4)]
+
+3's turn!
+I played a (4, 4), yay!
+Player 3 just played, ends of tiles are 4 and 2
+Remaining dominoes : [(2, 4), (2, 5), (0, 6), (3, 5)]
+
+DEPTH
+10
+Player 0 Move ((0, 4), None) how good it is: -0.000333000333
+Player 0 Move ((2, 3), None) how good it is: -0.000333000333
+I played a (2, 3), yay!
+Player 0 just played, ends of tiles are 4 and 3
+Remaining dominoes : [(0, 4), (0, 3), (1, 5), (1, 1)]
+
+1's turn!
+I played a (3, 3), yay!
+Player 1 just played, ends of tiles are 4 and 3
+Remaining dominoes : [(0, 1), (0, 0), (1, 2), (0, 5)]
+
+DEPTH
+14
+Player 0 Move ((1, 3), None) how good it is: -0.00031746031746
+Player 0 Move ((1, 4), None) how good it is: -0.00017316017316
+I played a (1, 4), yay!
+Player 2 just played, ends of tiles are 1 and 3
+Remaining dominoes : [(1, 6), (1, 3), (0, 2)]
+
+3's turn!
+I played a (3, 5), yay!
+Player 3 just played, ends of tiles are 1 and 5
+Remaining dominoes : [(2, 4), (2, 5), (0, 6)]
+
+DEPTH
+14
+Player 0 Move ((1, 5), 0) how good it is: -1.26882631386e-18
+Player 0 Move ((1, 5), 1) how good it is: -1.26882631386e-18
+Player 0 Move ((1, 1), None) how good it is: -0.00190476190476
+I played a (1, 5), yay!
+Player 0 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(0, 4), (0, 3), (1, 1)]
+
+1's turn!
+I played a (0, 5), yay!
+Player 1 just played, ends of tiles are 0 and 5
+Remaining dominoes : [(0, 1), (0, 0), (1, 2)]
+
+I played a (0, 2), yay!
+Player 2 just played, ends of tiles are 2 and 5
+Remaining dominoes : [(1, 6), (1, 3)]
+
+3's turn!
+I played a (2, 5), yay!
+Player 3 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(2, 4), (0, 6)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(0, 4), (0, 3), (1, 1)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(0, 1), (0, 0), (1, 2)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(1, 6), (1, 3)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(2, 4), (0, 6)]
+
+Player 0 has pips 9
+Player 1 has pips 4
+Player 2 has pips 11
+Player 3 has pips 12
+I lose :(
+Game ended.
+----PLAYING ROUND----  3
+Welcome.
+I have: [(1, 3), (4, 5), (2, 4), (0, 4), (0, 6), (6, 6), (1, 1)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(2, 6), (5, 5), (0, 1), (0, 0), (1, 6), (3, 4), (0, 2)]
+Player 2 has: [(1, 4), (2, 5), (3, 6), (4, 6), (1, 5), (2, 3), (4, 4)]
+Player 3 has: [(3, 5), (1, 2), (5, 6), (3, 3), (2, 2), (0, 5), (0, 3)]
+Player 3 is starting.
+I placed a (5, 6)
+
+DEPTH
+5
+Player 0 Move ((6, 6), None) how good it is: 0.00252837977296
+Player 0 Move ((4, 5), None) how good it is: -0.00252837977296
+Player 0 Move ((0, 6), None) how good it is: -0.0176986584107
+I played a (6, 6), yay!
+Player 0 just played, ends of tiles are 5 and 6
+Remaining dominoes : [(1, 3), (2, 4), (1, 1), (0, 4), (0, 6), (4, 5)]
+
+1's turn!
+I played a (5, 5), yay!
+Player 1 just played, ends of tiles are 5 and 6
+Remaining dominoes : [(0, 2), (3, 4), (0, 0), (1, 6), (0, 1), (2, 6)]
+
+DEPTH
+5
+Player 0 Move ((2, 5), None) how good it is: -0.691176470588
+Player 0 Move ((1, 5), None) how good it is: -0.529411764706
+Player 0 Move ((3, 6), None) how good it is: -0.441176470588
+Player 0 Move ((4, 6), None) how good it is: -0.411764705882
+I played a (4, 6), yay!
+Player 2 just played, ends of tiles are 5 and 4
+Remaining dominoes : [(4, 4), (1, 5), (2, 3), (2, 5), (1, 4), (3, 6)]
+
+3's turn!
+I played a (3, 5), yay!
+Player 3 just played, ends of tiles are 3 and 4
+Remaining dominoes : [(1, 2), (3, 3), (0, 5), (0, 3), (2, 2)]
+
+DEPTH
+7
+Player 0 Move ((1, 3), None) how good it is: -0.0181803490627
+Player 0 Move ((0, 4), None) how good it is: -0.00404007756949
+Player 0 Move ((4, 5), None) how good it is: 0.00202003878474
+Player 0 Move ((2, 4), None) how good it is: 0.00202003878474
+I played a (4, 5), yay!
+Player 0 just played, ends of tiles are 3 and 5
+Remaining dominoes : [(1, 3), (2, 4), (1, 1), (0, 4), (0, 6)]
+
+1's turn!
+I played a (3, 4), yay!
+Player 1 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(0, 2), (0, 0), (1, 6), (0, 1), (2, 6)]
+
+DEPTH
+7
+Player 0 Move ((2, 5), None) how good it is: -0.0765900765901
+Player 0 Move ((4, 4), None) how good it is: -0.03885003885
+Player 0 Move ((1, 5), None) how good it is: -0.04662004662
+Player 0 Move ((1, 4), None) how good it is: -0.04662004662
+I played a (4, 4), yay!
+Player 2 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(1, 5), (2, 3), (2, 5), (1, 4), (3, 6)]
+
+3's turn!
+I played a (0, 5), yay!
+Player 3 just played, ends of tiles are 4 and 0
+Remaining dominoes : [(1, 2), (3, 3), (0, 3), (2, 2)]
+
+DEPTH
+10
+Player 0 Move ((0, 4), 0) how good it is: -0.00142714428429
+Player 0 Move ((0, 4), 1) how good it is: 0.04995004995
+Player 0 Move ((2, 4), None) how good it is: -0.000594643451786
+Player 0 Move ((0, 6), None) how good it is: 0.00444000444
+I played a (0, 4), yay!
+Player 0 just played, ends of tiles are 4 and 4
+Remaining dominoes : [(1, 3), (2, 4), (1, 1), (0, 6)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 4 and 4
+Remaining dominoes : [(0, 2), (0, 0), (1, 6), (0, 1), (2, 6)]
+
+I played a (1, 4), yay!
+Player 2 just played, ends of tiles are 1 and 4
+Remaining dominoes : [(1, 5), (2, 3), (2, 5), (3, 6)]
+
+3's turn!
+I played a (1, 2), yay!
+Player 3 just played, ends of tiles are 2 and 4
+Remaining dominoes : [(3, 3), (0, 3), (2, 2)]
+
+DEPTH
+14
+Player 0 Move ((2, 4), 0) how good it is: 7.33333333333
+Player 0 Move ((2, 4), 1) how good it is: 0.01443001443
+I played a (2, 4), yay!
+Player 0 just played, ends of tiles are 4 and 4
+Remaining dominoes : [(1, 3), (1, 1), (0, 6)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 4 and 4
+Remaining dominoes : [(0, 2), (0, 0), (1, 6), (0, 1), (2, 6)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 4 and 4
+Remaining dominoes : [(1, 5), (2, 3), (2, 5), (3, 6)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 4 and 4
+Remaining dominoes : [(3, 3), (0, 3), (2, 2)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 4 and 4
+Remaining dominoes : [(1, 3), (1, 1), (0, 6)]
+
+Player 0 has pips 12
+Player 1 has pips 18
+Player 2 has pips 27
+Player 3 has pips 13
+I lose :(
+Game ended.
+----PLAYING ROUND----  4
+Welcome.
+I have: [(0, 1), (5, 6), (0, 0), (2, 3), (3, 4), (3, 6), (3, 3)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(5, 5), (4, 6), (4, 4), (2, 6), (0, 2), (1, 3), (3, 5)]
+Player 2 has: [(0, 6), (6, 6), (1, 4), (2, 5), (1, 1), (4, 5), (0, 3)]
+Player 3 has: [(0, 5), (2, 2), (0, 4), (1, 5), (1, 2), (1, 6), (2, 4)]
+Player 0 is starting.
+I placed a (5, 6)
+
+1's turn!
+I played a (5, 5), yay!
+Player 1 just played, ends of tiles are 5 and 6
+Remaining dominoes : [(1, 3), (4, 6), (2, 6), (3, 5), (4, 4), (0, 2)]
+
+DEPTH
+5
+Player 0 Move ((6, 6), None) how good it is: 0.0433436532508
+Player 0 Move ((2, 5), None) how good it is: 0.0216718266254
+Player 0 Move ((4, 5), None) how good it is: 0.0270897832817
+Player 0 Move ((0, 6), None) how good it is: 0.0433436532508
+I played a (6, 6), yay!
+Player 2 just played, ends of tiles are 5 and 6
+Remaining dominoes : [(1, 1), (1, 4), (0, 3), (2, 5), (4, 5), (0, 6)]
+
+3's turn!
+I played a (1, 6), yay!
+Player 3 just played, ends of tiles are 5 and 1
+Remaining dominoes : [(0, 5), (2, 2), (1, 2), (0, 4), (2, 4), (1, 5)]
+
+I played a (0, 1), yay!
+Player 0 just played, ends of tiles are 5 and 0
+Remaining dominoes : [(5, 6), (0, 0), (3, 6), (2, 3), (3, 3), (3, 4)]
+
+1's turn!
+I played a (3, 5), yay!
+Player 1 just played, ends of tiles are 3 and 0
+Remaining dominoes : [(1, 3), (4, 6), (2, 6), (4, 4), (0, 2)]
+
+DEPTH
+7
+Player 0 Move ((0, 3), 0) how good it is: 0.0171703296703
+Player 0 Move ((0, 3), 1) how good it is: 0.0145687645688
+Player 0 Move ((0, 6), None) how good it is: 0.0114468864469
+I played a (0, 3), yay!
+Player 2 just played, ends of tiles are 0 and 0
+Remaining dominoes : [(1, 1), (1, 4), (2, 5), (4, 5), (0, 6)]
+
+3's turn!
+I played a (0, 5), yay!
+Player 3 just played, ends of tiles are 5 and 0
+Remaining dominoes : [(2, 2), (1, 2), (0, 4), (2, 4), (1, 5)]
+
+I played a (0, 0), yay!
+Player 0 just played, ends of tiles are 5 and 0
+Remaining dominoes : [(5, 6), (3, 6), (2, 3), (3, 3), (3, 4)]
+
+1's turn!
+I played a (0, 2), yay!
+Player 1 just played, ends of tiles are 5 and 2
+Remaining dominoes : [(1, 3), (4, 6), (2, 6), (4, 4)]
+
+DEPTH
+10
+Player 0 Move ((2, 5), 0) how good it is: -0.001332001332
+Player 0 Move ((2, 5), 1) how good it is: 0.000666000666001
+Player 0 Move ((4, 5), None) how good it is: 0.000666000666001
+I played a (2, 5), yay!
+Player 2 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(1, 1), (1, 4), (4, 5), (0, 6)]
+
+3's turn!
+I played a (1, 5), yay!
+Player 3 just played, ends of tiles are 1 and 5
+Remaining dominoes : [(2, 2), (1, 2), (0, 4), (2, 4)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 1 and 5
+Remaining dominoes : [(5, 6), (3, 6), (2, 3), (3, 3), (3, 4)]
+
+1's turn!
+I played a (1, 3), yay!
+Player 1 just played, ends of tiles are 3 and 5
+Remaining dominoes : [(4, 6), (2, 6), (4, 4)]
+
+I played a (4, 5), yay!
+Player 2 just played, ends of tiles are 3 and 4
+Remaining dominoes : [(1, 1), (1, 4), (0, 6)]
+
+3's turn!
+I played a (2, 4), yay!
+Player 3 just played, ends of tiles are 3 and 2
+Remaining dominoes : [(2, 2), (1, 2), (0, 4)]
+
+DEPTH
+20
+Player 0 Move ((3, 3), None) how good it is: -0.00892857142857
+Player 0 Move ((3, 6), None) how good it is: -0.00952380952381
+Player 0 Move ((2, 3), 0) how good it is: -0.0107142857143
+Player 0 Move ((2, 3), 1) how good it is: 1.0
+Player 0 Move ((3, 4), None) how good it is: -0.0130952380952
+I played a (2, 3), yay!
+Player 0 just played, ends of tiles are 3 and 3
+Remaining dominoes : [(5, 6), (3, 6), (3, 3), (3, 4)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 3 and 3
+Remaining dominoes : [(4, 6), (2, 6), (4, 4)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 3 and 3
+Remaining dominoes : [(1, 1), (1, 4), (0, 6)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 3 and 3
+Remaining dominoes : [(2, 2), (1, 2), (0, 4)]
+
+DEPTH
+28
+Player 0 Move ((3, 3), None) how good it is: 1.0
+Player 0 Move ((3, 6), None) how good it is: 0.052380952381
+Player 0 Move ((3, 4), None) how good it is: 0.052380952381
+I played a (3, 3), yay!
+Player 0 just played, ends of tiles are 3 and 3
+Remaining dominoes : [(5, 6), (3, 6), (3, 4)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 3 and 3
+Remaining dominoes : [(4, 6), (2, 6), (4, 4)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 3 and 3
+Remaining dominoes : [(1, 1), (1, 4), (0, 6)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 3 and 3
+Remaining dominoes : [(2, 2), (1, 2), (0, 4)]
+
+DEPTH
+40
+Player 0 Move ((3, 6), None) how good it is: 0.964285714286
+Player 0 Move ((3, 4), None) how good it is: 1.0
+I played a (3, 4), yay!
+Player 0 just played, ends of tiles are 4 and 3
+Remaining dominoes : [(5, 6), (3, 6)]
+
+1's turn!
+I played a (4, 6), yay!
+Player 1 just played, ends of tiles are 6 and 3
+Remaining dominoes : [(2, 6), (4, 4)]
+
+I played a (0, 6), yay!
+Player 2 just played, ends of tiles are 0 and 3
+Remaining dominoes : [(1, 1), (1, 4)]
+
+3's turn!
+I played a (0, 4), yay!
+Player 3 just played, ends of tiles are 4 and 3
+Remaining dominoes : [(2, 2), (1, 2)]
+
+I played a (3, 6), yay!
+Player 0 just played, ends of tiles are 4 and 6
+Remaining dominoes : [(5, 6)]
+
+Player 0 has pips 0
+Player 1 has pips 16
+Player 2 has pips 7
+Player 3 has pips 7
+I win!
+Game ended.
+----PLAYING ROUND----  5
+Welcome.
+I have: [(3, 4), (6, 6), (1, 6), (4, 4), (3, 6), (1, 5), (2, 6)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(0, 5), (0, 6), (4, 6), (4, 5), (0, 1), (1, 4), (0, 4)]
+Player 2 has: [(1, 3), (0, 0), (5, 5), (0, 3), (2, 2), (5, 6), (2, 3)]
+Player 3 has: [(1, 1), (3, 3), (3, 5), (2, 4), (2, 5), (1, 2), (0, 2)]
+Player 1 is starting.
+I placed a (4, 6)
+
+I played a (5, 6), yay!
+Player 2 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(5, 5), (1, 3), (0, 0), (0, 3), (2, 2), (2, 3)]
+
+3's turn!
+I played a (3, 5), yay!
+Player 3 just played, ends of tiles are 4 and 3
+Remaining dominoes : [(2, 5), (1, 1), (2, 4), (3, 3), (0, 2), (1, 2)]
+
+DEPTH
+5
+Player 0 Move ((4, 4), None) how good it is: -0.867647058824
+Player 0 Move ((3, 6), None) how good it is: -0.691176470588
+Player 0 Move ((3, 4), 0) how good it is: -0.867647058824
+Player 0 Move ((3, 4), 1) how good it is: -0.852941176471
+I played a (3, 6), yay!
+Player 0 just played, ends of tiles are 4 and 6
+Remaining dominoes : [(3, 4), (1, 5), (4, 4), (1, 6), (6, 6), (2, 6)]
+
+1's turn!
+I played a (4, 5), yay!
+Player 1 just played, ends of tiles are 5 and 6
+Remaining dominoes : [(0, 6), (0, 1), (1, 4), (0, 5), (0, 4)]
+
+I played a (5, 5), yay!
+Player 2 just played, ends of tiles are 5 and 6
+Remaining dominoes : [(1, 3), (0, 0), (0, 3), (2, 2), (2, 3)]
+
+3's turn!
+I played a (2, 5), yay!
+Player 3 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(1, 1), (2, 4), (3, 3), (0, 2), (1, 2)]
+
+DEPTH
+7
+Player 0 Move ((6, 6), None) how good it is: -0.0754800754801
+Player 0 Move ((1, 6), None) how good it is: -0.0854700854701
+Player 0 Move ((2, 6), 0) how good it is: -0.0621600621601
+Player 0 Move ((2, 6), 1) how good it is: -0.0876900876901
+I played a (2, 6), yay!
+Player 0 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(3, 4), (1, 5), (4, 4), (1, 6), (6, 6)]
+
+1's turn!
+I played a (0, 6), yay!
+Player 1 just played, ends of tiles are 0 and 6
+Remaining dominoes : [(0, 1), (1, 4), (0, 5), (0, 4)]
+
+DEPTH
+10
+Player 0 Move ((0, 0), None) how good it is: -0.00725465011179
+Player 0 Move ((0, 3), None) how good it is: -0.00273535987822
+I played a (0, 3), yay!
+Player 2 just played, ends of tiles are 3 and 6
+Remaining dominoes : [(1, 3), (0, 0), (2, 2), (2, 3)]
+
+3's turn!
+I played a (3, 3), yay!
+Player 3 just played, ends of tiles are 3 and 6
+Remaining dominoes : [(1, 1), (2, 4), (0, 2), (1, 2)]
+
+DEPTH
+10
+Player 0 Move ((6, 6), None) how good it is: -0.00831168831169
+Player 0 Move ((1, 6), None) how good it is: -0.012987012987
+Player 0 Move ((3, 4), None) how good it is: -0.00883116883117
+I played a (6, 6), yay!
+Player 0 just played, ends of tiles are 3 and 6
+Remaining dominoes : [(3, 4), (1, 5), (4, 4), (1, 6)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 3 and 6
+Remaining dominoes : [(0, 1), (1, 4), (0, 5), (0, 4)]
+
+DEPTH
+14
+Player 0 Move ((1, 3), None) how good it is: -0.070303030303
+Player 0 Move ((2, 3), None) how good it is: -0.0004329004329
+I played a (2, 3), yay!
+Player 2 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(1, 3), (0, 0), (2, 2)]
+
+3's turn!
+I played a (2, 4), yay!
+Player 3 just played, ends of tiles are 4 and 6
+Remaining dominoes : [(1, 1), (0, 2), (1, 2)]
+
+DEPTH
+14
+Player 0 Move ((1, 6), None) how good it is: -0.242857142857
+Player 0 Move ((4, 4), None) how good it is: 0.005
+Player 0 Move ((3, 4), None) how good it is: -0.0142857142857
+I played a (4, 4), yay!
+Player 0 just played, ends of tiles are 4 and 6
+Remaining dominoes : [(3, 4), (1, 5), (1, 6)]
+
+1's turn!
+I played a (1, 4), yay!
+Player 1 just played, ends of tiles are 1 and 6
+Remaining dominoes : [(0, 1), (0, 5), (0, 4)]
+
+I played a (1, 3), yay!
+Player 2 just played, ends of tiles are 3 and 6
+Remaining dominoes : [(0, 0), (2, 2)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 3 and 6
+Remaining dominoes : [(1, 1), (0, 2), (1, 2)]
+
+DEPTH
+20
+Player 0 Move ((1, 6), None) how good it is: 0.0
+Player 0 Move ((3, 4), None) how good it is: 0.05
+I played a (3, 4), yay!
+Player 0 just played, ends of tiles are 4 and 6
+Remaining dominoes : [(1, 5), (1, 6)]
+
+1's turn!
+I played a (0, 4), yay!
+Player 1 just played, ends of tiles are 0 and 6
+Remaining dominoes : [(0, 1), (0, 5)]
+
+I played a (0, 0), yay!
+Player 2 just played, ends of tiles are 0 and 6
+Remaining dominoes : [(2, 2)]
+
+3's turn!
+I played a (0, 2), yay!
+Player 3 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(1, 1), (1, 2)]
+
+I played a (1, 6), yay!
+Player 0 just played, ends of tiles are 2 and 1
+Remaining dominoes : [(1, 5)]
+
+1's turn!
+I played a (0, 1), yay!
+Player 1 just played, ends of tiles are 2 and 0
+Remaining dominoes : [(0, 5)]
+
+I played a (2, 2), yay!
+Player 2 just played, ends of tiles are 2 and 0
+Remaining dominoes : []
+
+Player 0 has pips 6
+Player 1 has pips 5
+Player 2 has pips 0
+Player 3 has pips 5
+I win!
+Game ended.
+----PLAYING ROUND----  6
+Welcome.
+I have: [(1, 2), (2, 2), (0, 4), (3, 4), (5, 6), (5, 5), (0, 1)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(3, 5), (2, 6), (1, 5), (0, 0), (1, 4), (2, 5), (0, 6)]
+Player 2 has: [(3, 3), (4, 4), (1, 3), (6, 6), (0, 5), (0, 2), (3, 6)]
+Player 3 has: [(1, 6), (0, 3), (4, 6), (2, 4), (1, 1), (2, 3), (4, 5)]
+Player 2 is starting.
+I placed a (6, 6)
+
+3's turn!
+I played a (4, 6), yay!
+Player 3 just played, ends of tiles are 4 and 6
+Remaining dominoes : [(0, 3), (1, 1), (2, 4), (4, 5), (1, 6), (2, 3)]
+
+DEPTH
+5
+Player 0 Move ((5, 6), None) how good it is: 0.205882352941
+Player 0 Move ((0, 4), None) how good it is: 0.0975232198142
+Player 0 Move ((3, 4), None) how good it is: 0.0487616099071
+I played a (5, 6), yay!
+Player 0 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(2, 2), (3, 4), (0, 4), (0, 1), (5, 5), (1, 2)]
+
+1's turn!
+I played a (3, 5), yay!
+Player 1 just played, ends of tiles are 4 and 3
+Remaining dominoes : [(1, 4), (0, 0), (2, 5), (1, 5), (0, 6), (2, 6)]
+
+DEPTH
+7
+Player 0 Move ((1, 3), None) how good it is: -0.0016160310278
+Player 0 Move ((4, 4), None) how good it is: 0.00282805429864
+Player 0 Move ((3, 6), None) how good it is: 0.00242404654169
+Player 0 Move ((3, 3), None) how good it is: 0.000808015513898
+I played a (4, 4), yay!
+Player 2 just played, ends of tiles are 4 and 3
+Remaining dominoes : [(0, 5), (0, 2), (3, 3), (1, 3), (3, 6)]
+
+3's turn!
+I played a (4, 5), yay!
+Player 3 just played, ends of tiles are 5 and 3
+Remaining dominoes : [(0, 3), (1, 1), (2, 4), (1, 6), (2, 3)]
+
+DEPTH
+7
+Player 0 Move ((5, 5), None) how good it is: 0.0135281385281
+Player 0 Move ((3, 4), None) how good it is: 0.0135281385281
+I played a (5, 5), yay!
+Player 0 just played, ends of tiles are 5 and 3
+Remaining dominoes : [(2, 2), (3, 4), (0, 4), (0, 1), (1, 2)]
+
+1's turn!
+I played a (2, 5), yay!
+Player 1 just played, ends of tiles are 2 and 3
+Remaining dominoes : [(1, 4), (0, 0), (1, 5), (0, 6), (2, 6)]
+
+DEPTH
+10
+Player 0 Move ((1, 3), None) how good it is: -0.001295001295
+Player 0 Move ((3, 6), None) how good it is: -0.000185000185
+Player 0 Move ((3, 3), None) how good it is: -0.000185000185
+Player 0 Move ((0, 2), None) how good it is: -0.000185000185
+I played a (3, 6), yay!
+Player 2 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(0, 5), (0, 2), (3, 3), (1, 3)]
+
+3's turn!
+I played a (1, 6), yay!
+Player 3 just played, ends of tiles are 2 and 1
+Remaining dominoes : [(0, 3), (1, 1), (2, 4), (2, 3)]
+
+DEPTH
+10
+Player 0 Move ((1, 2), 0) how good it is: -0.000666000666001
+Player 0 Move ((1, 2), 1) how good it is: -0.000333000333
+Player 0 Move ((2, 2), None) how good it is: -0.000333000333
+Player 0 Move ((0, 1), None) how good it is: -0.000333000333
+I played a (2, 2), yay!
+Player 0 just played, ends of tiles are 2 and 1
+Remaining dominoes : [(3, 4), (0, 4), (0, 1), (1, 2)]
+
+1's turn!
+I played a (2, 6), yay!
+Player 1 just played, ends of tiles are 6 and 1
+Remaining dominoes : [(1, 4), (0, 0), (1, 5), (0, 6)]
+
+I played a (1, 3), yay!
+Player 2 just played, ends of tiles are 6 and 3
+Remaining dominoes : [(0, 5), (0, 2), (3, 3)]
+
+3's turn!
+I played a (2, 3), yay!
+Player 3 just played, ends of tiles are 6 and 2
+Remaining dominoes : [(0, 3), (1, 1), (2, 4)]
+
+I played a (1, 2), yay!
+Player 0 just played, ends of tiles are 6 and 1
+Remaining dominoes : [(3, 4), (0, 4), (0, 1)]
+
+1's turn!
+I played a (0, 6), yay!
+Player 1 just played, ends of tiles are 0 and 1
+Remaining dominoes : [(1, 4), (0, 0), (1, 5)]
+
+DEPTH
+20
+Player 0 Move ((0, 5), None) how good it is: -0.333333333333
+Player 0 Move ((0, 2), None) how good it is: -0.05
+I played a (0, 2), yay!
+Player 2 just played, ends of tiles are 2 and 1
+Remaining dominoes : [(0, 5), (3, 3)]
+
+3's turn!
+I played a (2, 4), yay!
+Player 3 just played, ends of tiles are 4 and 1
+Remaining dominoes : [(0, 3), (1, 1)]
+
+DEPTH
+20
+Player 0 Move ((0, 4), None) how good it is: 0.047619047619
+Player 0 Move ((0, 1), None) how good it is: 0.0190476190476
+Player 0 Move ((3, 4), None) how good it is: 0.047619047619
+I played a (0, 4), yay!
+Player 0 just played, ends of tiles are 0 and 1
+Remaining dominoes : [(3, 4), (0, 1)]
+
+1's turn!
+I played a (1, 5), yay!
+Player 1 just played, ends of tiles are 0 and 5
+Remaining dominoes : [(1, 4), (0, 0)]
+
+DEPTH
+28
+Player 0 Move ((0, 5), 0) how good it is: -0.0
+Player 0 Move ((0, 5), 1) how good it is: -0.166666666667
+I played a (0, 5), yay!
+Player 2 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(3, 3)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(0, 3), (1, 1)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(3, 4), (0, 1)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(1, 4), (0, 0)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(3, 3)]
+
+Player 0 has pips 8
+Player 1 has pips 5
+Player 2 has pips 6
+Player 3 has pips 5
+I lose :(
+Game ended.
+----PLAYING ROUND----  7
+Welcome.
+I have: [(4, 5), (0, 5), (5, 5), (0, 6), (0, 2), (4, 4), (1, 3)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(0, 0), (1, 6), (3, 5), (1, 2), (5, 6), (1, 5), (1, 4)]
+Player 2 has: [(2, 2), (3, 3), (4, 6), (2, 4), (0, 1), (2, 6), (1, 1)]
+Player 3 has: [(2, 5), (3, 6), (0, 4), (2, 3), (3, 4), (0, 3), (6, 6)]
+Player 3 is starting.
+I placed a (6, 6)
+
+I played a (0, 6), yay!
+Player 0 just played, ends of tiles are 0 and 6
+Remaining dominoes : [(0, 5), (0, 2), (1, 3), (5, 5), (4, 4), (4, 5)]
+
+1's turn!
+I played a (5, 6), yay!
+Player 1 just played, ends of tiles are 0 and 5
+Remaining dominoes : [(0, 0), (3, 5), (1, 2), (1, 5), (1, 4), (1, 6)]
+
+I played a (0, 1), yay!
+Player 2 just played, ends of tiles are 1 and 5
+Remaining dominoes : [(2, 4), (4, 6), (2, 6), (2, 2), (3, 3), (1, 1)]
+
+3's turn!
+I played a (2, 5), yay!
+Player 3 just played, ends of tiles are 1 and 2
+Remaining dominoes : [(3, 6), (0, 3), (0, 4), (2, 3), (3, 4)]
+
+DEPTH
+7
+Player 0 Move ((1, 3), None) how good it is: -0.0424208144796
+Player 0 Move ((0, 2), None) how good it is: -0.0282805429864
+I played a (0, 2), yay!
+Player 0 just played, ends of tiles are 1 and 0
+Remaining dominoes : [(0, 5), (1, 3), (5, 5), (4, 4), (4, 5)]
+
+1's turn!
+I played a (1, 6), yay!
+Player 1 just played, ends of tiles are 6 and 0
+Remaining dominoes : [(0, 0), (3, 5), (1, 2), (1, 5), (1, 4)]
+
+DEPTH
+7
+Player 0 Move ((2, 6), None) how good it is: -0.00222000222
+Player 0 Move ((4, 6), None) how good it is: -0.00222000222
+I played a (2, 6), yay!
+Player 2 just played, ends of tiles are 2 and 0
+Remaining dominoes : [(2, 4), (4, 6), (2, 2), (3, 3), (1, 1)]
+
+3's turn!
+I played a (2, 3), yay!
+Player 3 just played, ends of tiles are 3 and 0
+Remaining dominoes : [(3, 6), (0, 3), (0, 4), (3, 4)]
+
+DEPTH
+10
+Player 0 Move ((1, 3), None) how good it is: -0.00820607963465
+Player 0 Move ((0, 5), None) how good it is: -0.00654107796965
+I played a (0, 5), yay!
+Player 0 just played, ends of tiles are 3 and 5
+Remaining dominoes : [(1, 3), (5, 5), (4, 4), (4, 5)]
+
+1's turn!
+I played a (3, 5), yay!
+Player 1 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(0, 0), (1, 2), (1, 5), (1, 4)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(2, 4), (4, 6), (2, 2), (3, 3), (1, 1)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(3, 6), (0, 3), (0, 4), (3, 4)]
+
+DEPTH
+14
+Player 0 Move ((4, 5), None) how good it is: -0.018648018648
+Player 0 Move ((5, 5), None) how good it is: -0.0012987012987
+I played a (5, 5), yay!
+Player 0 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(1, 3), (4, 4), (4, 5)]
+
+1's turn!
+I played a (1, 5), yay!
+Player 1 just played, ends of tiles are 1 and 5
+Remaining dominoes : [(0, 0), (1, 2), (1, 4)]
+
+I played a (1, 1), yay!
+Player 2 just played, ends of tiles are 1 and 5
+Remaining dominoes : [(2, 4), (4, 6), (2, 2), (3, 3)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 1 and 5
+Remaining dominoes : [(3, 6), (0, 3), (0, 4), (3, 4)]
+
+DEPTH
+20
+Player 0 Move ((1, 3), None) how good it is: -0.0228571428571
+Player 0 Move ((4, 5), None) how good it is: -0.0238095238095
+I played a (1, 3), yay!
+Player 0 just played, ends of tiles are 3 and 5
+Remaining dominoes : [(4, 4), (4, 5)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 3 and 5
+Remaining dominoes : [(0, 0), (1, 2), (1, 4)]
+
+I played a (3, 3), yay!
+Player 2 just played, ends of tiles are 3 and 5
+Remaining dominoes : [(2, 4), (4, 6), (2, 2)]
+
+3's turn!
+I played a (3, 6), yay!
+Player 3 just played, ends of tiles are 6 and 5
+Remaining dominoes : [(0, 3), (0, 4), (3, 4)]
+
+I played a (4, 5), yay!
+Player 0 just played, ends of tiles are 6 and 4
+Remaining dominoes : [(4, 4)]
+
+1's turn!
+I played a (1, 4), yay!
+Player 1 just played, ends of tiles are 6 and 1
+Remaining dominoes : [(0, 0), (1, 2)]
+
+I played a (4, 6), yay!
+Player 2 just played, ends of tiles are 4 and 1
+Remaining dominoes : [(2, 4), (2, 2)]
+
+3's turn!
+I played a (3, 4), yay!
+Player 3 just played, ends of tiles are 3 and 1
+Remaining dominoes : [(0, 3), (0, 4)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 3 and 1
+Remaining dominoes : [(4, 4)]
+
+1's turn!
+I played a (1, 2), yay!
+Player 1 just played, ends of tiles are 3 and 2
+Remaining dominoes : [(0, 0)]
+
+DEPTH
+40
+Player 0 Move ((2, 2), None) how good it is: 4.0
+Player 0 Move ((2, 4), None) how good it is: 4.0
+I played a (2, 2), yay!
+Player 2 just played, ends of tiles are 3 and 2
+Remaining dominoes : [(2, 4)]
+
+3's turn!
+I played a (0, 3), yay!
+Player 3 just played, ends of tiles are 0 and 2
+Remaining dominoes : [(0, 4)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 0 and 2
+Remaining dominoes : [(4, 4)]
+
+1's turn!
+I played a (0, 0), yay!
+Player 1 just played, ends of tiles are 0 and 2
+Remaining dominoes : []
+
+Player 0 has pips 8
+Player 1 has pips 0
+Player 2 has pips 6
+Player 3 has pips 4
+I lose :(
+Game ended.
+----PLAYING ROUND----  8
+Welcome.
+I have: [(1, 4), (1, 1), (3, 3), (2, 6), (5, 6), (0, 4), (0, 6)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(1, 2), (4, 5), (5, 5), (2, 4), (0, 2), (2, 5), (4, 6)]
+Player 2 has: [(0, 3), (1, 3), (3, 6), (1, 6), (6, 6), (3, 4), (1, 5)]
+Player 3 has: [(0, 0), (2, 2), (3, 5), (4, 4), (0, 1), (0, 5), (2, 3)]
+Player 0 is starting.
+I placed a (5, 6)
+
+1's turn!
+I played a (5, 5), yay!
+Player 1 just played, ends of tiles are 5 and 6
+Remaining dominoes : [(1, 2), (4, 6), (4, 5), (2, 4), (0, 2), (2, 5)]
+
+DEPTH
+5
+Player 0 Move ((6, 6), None) how good it is: -0.0216718266254
+Player 0 Move ((1, 6), None) how good it is: -0.0216718266254
+Player 0 Move ((1, 5), None) how good it is: -0.0812693498452
+Player 0 Move ((3, 6), None) how good it is: -0.0216718266254
+I played a (6, 6), yay!
+Player 2 just played, ends of tiles are 5 and 6
+Remaining dominoes : [(3, 4), (3, 6), (1, 6), (1, 3), (1, 5), (0, 3)]
+
+3's turn!
+I played a (3, 5), yay!
+Player 3 just played, ends of tiles are 3 and 6
+Remaining dominoes : [(0, 0), (0, 1), (2, 2), (0, 5), (4, 4), (2, 3)]
+
+DEPTH
+7
+Player 0 Move ((3, 3), None) how good it is: 0.00202003878474
+Player 0 Move ((2, 6), None) how good it is: 0.00484809308339
+Player 0 Move ((0, 6), None) how good it is: 0.0105042016807
+I played a (0, 6), yay!
+Player 0 just played, ends of tiles are 3 and 0
+Remaining dominoes : [(1, 4), (5, 6), (1, 1), (3, 3), (0, 4), (2, 6)]
+
+1's turn!
+I played a (0, 2), yay!
+Player 1 just played, ends of tiles are 3 and 2
+Remaining dominoes : [(1, 2), (4, 6), (4, 5), (2, 4), (2, 5)]
+
+DEPTH
+7
+Player 0 Move ((1, 3), None) how good it is: -0.00260156510157
+Player 0 Move ((0, 3), None) how good it is: -0.00104062604063
+Player 0 Move ((3, 6), None) how good it is: 0.000520313020313
+Player 0 Move ((3, 4), None) how good it is: -0.0041625041625
+I played a (3, 6), yay!
+Player 2 just played, ends of tiles are 6 and 2
+Remaining dominoes : [(3, 4), (1, 6), (1, 3), (1, 5), (0, 3)]
+
+3's turn!
+I played a (2, 3), yay!
+Player 3 just played, ends of tiles are 6 and 3
+Remaining dominoes : [(0, 0), (0, 1), (2, 2), (0, 5), (4, 4)]
+
+DEPTH
+10
+Player 0 Move ((2, 6), None) how good it is: -0.000185000185
+Player 0 Move ((3, 3), None) how good it is: -0.000185000185
+I played a (2, 6), yay!
+Player 0 just played, ends of tiles are 2 and 3
+Remaining dominoes : [(1, 4), (5, 6), (1, 1), (3, 3), (0, 4)]
+
+1's turn!
+I played a (2, 5), yay!
+Player 1 just played, ends of tiles are 5 and 3
+Remaining dominoes : [(1, 2), (4, 6), (4, 5), (2, 4)]
+
+DEPTH
+10
+Player 0 Move ((1, 3), None) how good it is: -0.002664002664
+Player 0 Move ((0, 3), None) how good it is: -0.003663003663
+Player 0 Move ((1, 5), None) how good it is: -0.000333000333
+Player 0 Move ((3, 4), None) how good it is: -0.000333000333
+I played a (1, 5), yay!
+Player 2 just played, ends of tiles are 1 and 3
+Remaining dominoes : [(3, 4), (1, 6), (1, 3), (0, 3)]
+
+3's turn!
+I played a (0, 1), yay!
+Player 3 just played, ends of tiles are 0 and 3
+Remaining dominoes : [(0, 0), (2, 2), (0, 5), (4, 4)]
+
+DEPTH
+14
+Player 0 Move ((3, 3), None) how good it is: -0.00031746031746
+Player 0 Move ((0, 4), None) how good it is: -0.00023088023088
+I played a (0, 4), yay!
+Player 0 just played, ends of tiles are 4 and 3
+Remaining dominoes : [(1, 4), (5, 6), (1, 1), (3, 3)]
+
+1's turn!
+I played a (4, 6), yay!
+Player 1 just played, ends of tiles are 6 and 3
+Remaining dominoes : [(1, 2), (4, 5), (2, 4)]
+
+DEPTH
+14
+Player 0 Move ((1, 3), None) how good it is: 0.000952380952381
+Player 0 Move ((1, 6), None) how good it is: 0.000952380952381
+Player 0 Move ((0, 3), None) how good it is: 0.000952380952381
+Player 0 Move ((3, 4), None) how good it is: 0.00190476190476
+I played a (3, 4), yay!
+Player 2 just played, ends of tiles are 6 and 4
+Remaining dominoes : [(1, 6), (1, 3), (0, 3)]
+
+3's turn!
+I played a (4, 4), yay!
+Player 3 just played, ends of tiles are 6 and 4
+Remaining dominoes : [(0, 0), (2, 2), (0, 5)]
+
+I played a (1, 4), yay!
+Player 0 just played, ends of tiles are 6 and 1
+Remaining dominoes : [(5, 6), (1, 1), (3, 3)]
+
+1's turn!
+I played a (1, 2), yay!
+Player 1 just played, ends of tiles are 6 and 2
+Remaining dominoes : [(4, 5), (2, 4)]
+
+I played a (1, 6), yay!
+Player 2 just played, ends of tiles are 1 and 2
+Remaining dominoes : [(1, 3), (0, 3)]
+
+3's turn!
+I played a (2, 2), yay!
+Player 3 just played, ends of tiles are 1 and 2
+Remaining dominoes : [(0, 0), (0, 5)]
+
+I played a (1, 1), yay!
+Player 0 just played, ends of tiles are 1 and 2
+Remaining dominoes : [(5, 6), (3, 3)]
+
+1's turn!
+I played a (2, 4), yay!
+Player 1 just played, ends of tiles are 1 and 4
+Remaining dominoes : [(4, 5)]
+
+I played a (1, 3), yay!
+Player 2 just played, ends of tiles are 3 and 4
+Remaining dominoes : [(0, 3)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 3 and 4
+Remaining dominoes : [(0, 0), (0, 5)]
+
+I played a (3, 3), yay!
+Player 0 just played, ends of tiles are 3 and 4
+Remaining dominoes : [(5, 6)]
+
+Player 0 has pips 0
+Player 1 has pips 9
+Player 2 has pips 3
+Player 3 has pips 5
+I win!
+Game ended.
+----PLAYING ROUND----  9
+Welcome.
+I have: [(4, 5), (1, 6), (4, 4), (6, 6), (3, 3), (0, 6), (2, 4)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(0, 3), (1, 5), (1, 3), (3, 5), (5, 6), (5, 5), (1, 4)]
+Player 2 has: [(0, 2), (2, 3), (0, 0), (3, 4), (1, 2), (2, 2), (0, 5)]
+Player 3 has: [(0, 4), (1, 1), (0, 1), (2, 6), (4, 6), (2, 5), (3, 6)]
+Player 1 is starting.
+I placed a (5, 6)
+
+I played a (0, 5), yay!
+Player 2 just played, ends of tiles are 0 and 6
+Remaining dominoes : [(3, 4), (0, 0), (1, 2), (2, 3), (0, 2), (2, 2)]
+
+3's turn!
+I played a (4, 6), yay!
+Player 3 just played, ends of tiles are 0 and 4
+Remaining dominoes : [(0, 4), (2, 6), (0, 1), (1, 1), (3, 6), (2, 5)]
+
+DEPTH
+5
+Player 0 Move ((4, 4), None) how good it is: -0.558823529412
+Player 0 Move ((4, 5), None) how good it is: -0.485294117647
+Player 0 Move ((2, 4), None) how good it is: -0.544117647059
+Player 0 Move ((0, 6), None) how good it is: -0.617647058824
+I played a (4, 5), yay!
+Player 0 just played, ends of tiles are 0 and 5
+Remaining dominoes : [(6, 6), (0, 6), (3, 3), (1, 6), (4, 4), (2, 4)]
+
+1's turn!
+I played a (5, 5), yay!
+Player 1 just played, ends of tiles are 0 and 5
+Remaining dominoes : [(1, 3), (3, 5), (1, 4), (0, 3), (1, 5)]
+
+DEPTH
+7
+Player 0 Move ((0, 0), None) how good it is: 0.0101001939237
+Player 0 Move ((0, 2), None) how good it is: 0.0101001939237
+I played a (0, 0), yay!
+Player 2 just played, ends of tiles are 0 and 5
+Remaining dominoes : [(3, 4), (1, 2), (2, 3), (0, 2), (2, 2)]
+
+3's turn!
+I played a (2, 5), yay!
+Player 3 just played, ends of tiles are 0 and 2
+Remaining dominoes : [(0, 4), (2, 6), (0, 1), (1, 1), (3, 6)]
+
+DEPTH
+7
+Player 0 Move ((0, 6), None) how good it is: -0.0699300699301
+Player 0 Move ((2, 4), None) how good it is: -0.0566100566101
+I played a (2, 4), yay!
+Player 0 just played, ends of tiles are 0 and 4
+Remaining dominoes : [(6, 6), (0, 6), (3, 3), (1, 6), (4, 4)]
+
+1's turn!
+I played a (1, 4), yay!
+Player 1 just played, ends of tiles are 0 and 1
+Remaining dominoes : [(1, 3), (3, 5), (0, 3), (1, 5)]
+
+DEPTH
+10
+Player 0 Move ((1, 2), None) how good it is: -0.0024975024975
+Player 0 Move ((0, 2), None) how good it is: -0.000713572142144
+I played a (0, 2), yay!
+Player 2 just played, ends of tiles are 2 and 1
+Remaining dominoes : [(3, 4), (1, 2), (2, 3), (2, 2)]
+
+3's turn!
+I played a (2, 6), yay!
+Player 3 just played, ends of tiles are 6 and 1
+Remaining dominoes : [(0, 4), (0, 1), (1, 1), (3, 6)]
+
+DEPTH
+10
+Player 0 Move ((6, 6), None) how good it is: -0.00900432900433
+Player 0 Move ((1, 6), 0) how good it is: -0.00865800865801
+Player 0 Move ((1, 6), 1) how good it is: -0.00658008658009
+Player 0 Move ((0, 6), None) how good it is: -0.00692640692641
+I played a (1, 6), yay!
+Player 0 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(6, 6), (0, 6), (3, 3), (4, 4)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(1, 3), (3, 5), (0, 3), (1, 5)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(3, 4), (1, 2), (2, 3), (2, 2)]
+
+3's turn!
+I played a (3, 6), yay!
+Player 3 just played, ends of tiles are 3 and 6
+Remaining dominoes : [(0, 4), (0, 1), (1, 1)]
+
+DEPTH
+14
+Player 0 Move ((6, 6), None) how good it is: -0.027012987013
+Player 0 Move ((3, 3), None) how good it is: -0.00190476190476
+Player 0 Move ((0, 6), None) how good it is: -0.0025974025974
+I played a (3, 3), yay!
+Player 0 just played, ends of tiles are 3 and 6
+Remaining dominoes : [(6, 6), (0, 6), (4, 4)]
+
+1's turn!
+I played a (3, 5), yay!
+Player 1 just played, ends of tiles are 5 and 6
+Remaining dominoes : [(1, 3), (0, 3), (1, 5)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 5 and 6
+Remaining dominoes : [(3, 4), (1, 2), (2, 3), (2, 2)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 5 and 6
+Remaining dominoes : [(0, 4), (0, 1), (1, 1)]
+
+DEPTH
+20
+Player 0 Move ((6, 6), None) how good it is: -0.0301587301587
+Player 0 Move ((0, 6), None) how good it is: -0.0533333333333
+I played a (6, 6), yay!
+Player 0 just played, ends of tiles are 5 and 6
+Remaining dominoes : [(0, 6), (4, 4)]
+
+1's turn!
+I played a (1, 5), yay!
+Player 1 just played, ends of tiles are 1 and 6
+Remaining dominoes : [(1, 3), (0, 3)]
+
+I played a (1, 2), yay!
+Player 2 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(3, 4), (2, 3), (2, 2)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(0, 4), (0, 1), (1, 1)]
+
+I played a (0, 6), yay!
+Player 0 just played, ends of tiles are 2 and 0
+Remaining dominoes : [(4, 4)]
+
+1's turn!
+I played a (0, 3), yay!
+Player 1 just played, ends of tiles are 2 and 3
+Remaining dominoes : [(1, 3)]
+
+DEPTH
+40
+Player 0 Move ((2, 2), None) how good it is: 2.1
+Player 0 Move ((2, 3), 0) how good it is: 2.1
+Player 0 Move ((2, 3), 1) how good it is: 4.4
+Player 0 Move ((3, 4), None) how good it is: 1.05
+I played a (2, 3), yay!
+Player 2 just played, ends of tiles are 2 and 2
+Remaining dominoes : [(3, 4), (2, 2)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 2 and 2
+Remaining dominoes : [(0, 4), (0, 1), (1, 1)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 2 and 2
+Remaining dominoes : [(4, 4)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 2 and 2
+Remaining dominoes : [(1, 3)]
+
+I played a (2, 2), yay!
+Player 2 just played, ends of tiles are 2 and 2
+Remaining dominoes : [(3, 4)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 2 and 2
+Remaining dominoes : [(0, 4), (0, 1), (1, 1)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 2 and 2
+Remaining dominoes : [(4, 4)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 2 and 2
+Remaining dominoes : [(1, 3)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 2 and 2
+Remaining dominoes : [(3, 4)]
+
+Player 0 has pips 8
+Player 1 has pips 4
+Player 2 has pips 7
+Player 3 has pips 7
+I lose :(
+Game ended.
+----PLAYING ROUND----  10
+Welcome.
+I have: [(2, 5), (2, 3), (2, 4), (1, 1), (3, 6), (1, 5), (1, 6)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(3, 5), (3, 4), (6, 6), (4, 5), (0, 4), (2, 6), (1, 4)]
+Player 2 has: [(0, 5), (1, 3), (0, 2), (4, 4), (0, 1), (2, 2), (0, 3)]
+Player 3 has: [(3, 3), (5, 5), (0, 0), (0, 6), (5, 6), (4, 6), (1, 2)]
+Player 2 is starting.
+I placed a (4, 4)
+
+3's turn!
+I played a (4, 6), yay!
+Player 3 just played, ends of tiles are 6 and 4
+Remaining dominoes : [(5, 6), (0, 0), (3, 3), (1, 2), (0, 6), (5, 5)]
+
+DEPTH
+5
+Player 0 Move ((1, 6), None) how good it is: 0.157120743034
+Player 0 Move ((3, 6), None) how good it is: 0.124613003096
+Player 0 Move ((2, 4), None) how good it is: 0.108359133127
+I played a (1, 6), yay!
+Player 0 just played, ends of tiles are 1 and 4
+Remaining dominoes : [(2, 4), (2, 3), (1, 1), (3, 6), (2, 5), (1, 5)]
+
+1's turn!
+I played a (4, 5), yay!
+Player 1 just played, ends of tiles are 1 and 5
+Remaining dominoes : [(3, 5), (2, 6), (3, 4), (6, 6), (1, 4), (0, 4)]
+
+DEPTH
+7
+Player 0 Move ((1, 3), None) how good it is: 0.0525210084034
+Player 0 Move ((0, 5), None) how good it is: 0.0678733031674
+Player 0 Move ((0, 1), None) how good it is: 0.0610051712993
+I played a (0, 5), yay!
+Player 2 just played, ends of tiles are 1 and 0
+Remaining dominoes : [(0, 3), (0, 1), (2, 2), (1, 3), (0, 2)]
+
+3's turn!
+I played a (0, 6), yay!
+Player 3 just played, ends of tiles are 1 and 6
+Remaining dominoes : [(5, 6), (0, 0), (3, 3), (1, 2), (5, 5)]
+
+DEPTH
+7
+Player 0 Move ((1, 5), None) how good it is: -0.00104062604063
+Player 0 Move ((3, 6), None) how good it is: 0.00572344322344
+Player 0 Move ((1, 1), None) how good it is: -0.00156093906094
+I played a (3, 6), yay!
+Player 0 just played, ends of tiles are 1 and 3
+Remaining dominoes : [(2, 4), (2, 3), (1, 1), (2, 5), (1, 5)]
+
+1's turn!
+I played a (3, 5), yay!
+Player 1 just played, ends of tiles are 1 and 5
+Remaining dominoes : [(2, 6), (3, 4), (6, 6), (1, 4), (0, 4)]
+
+DEPTH
+10
+Player 0 Move ((1, 3), None) how good it is: 0.00037000037
+Player 0 Move ((0, 1), None) how good it is: 0.00037000037
+I played a (1, 3), yay!
+Player 2 just played, ends of tiles are 3 and 5
+Remaining dominoes : [(0, 3), (0, 1), (2, 2), (0, 2)]
+
+3's turn!
+I played a (5, 6), yay!
+Player 3 just played, ends of tiles are 3 and 6
+Remaining dominoes : [(0, 0), (3, 3), (1, 2), (5, 5)]
+
+I played a (2, 3), yay!
+Player 0 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(2, 4), (1, 1), (2, 5), (1, 5)]
+
+1's turn!
+I played a (6, 6), yay!
+Player 1 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(2, 6), (3, 4), (1, 4), (0, 4)]
+
+DEPTH
+14
+Player 0 Move ((2, 2), None) how good it is: -0.00034632034632
+Player 0 Move ((0, 2), None) how good it is: -0.00023088023088
+I played a (0, 2), yay!
+Player 2 just played, ends of tiles are 0 and 6
+Remaining dominoes : [(0, 3), (0, 1), (2, 2)]
+
+3's turn!
+I played a (0, 0), yay!
+Player 3 just played, ends of tiles are 0 and 6
+Remaining dominoes : [(3, 3), (1, 2), (5, 5)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 0 and 6
+Remaining dominoes : [(2, 4), (1, 1), (2, 5), (1, 5)]
+
+1's turn!
+I played a (2, 6), yay!
+Player 1 just played, ends of tiles are 0 and 2
+Remaining dominoes : [(3, 4), (1, 4), (0, 4)]
+
+DEPTH
+20
+Player 0 Move ((0, 3), None) how good it is: -0.0154166666667
+Player 0 Move ((2, 2), None) how good it is: -0.0148571428571
+Player 0 Move ((0, 1), None) how good it is: -0.01625
+I played a (2, 2), yay!
+Player 2 just played, ends of tiles are 0 and 2
+Remaining dominoes : [(0, 3), (0, 1)]
+
+3's turn!
+I played a (1, 2), yay!
+Player 3 just played, ends of tiles are 0 and 1
+Remaining dominoes : [(3, 3), (5, 5)]
+
+DEPTH
+20
+Player 0 Move ((1, 5), None) how good it is: 0.0952380952381
+Player 0 Move ((1, 1), None) how good it is: 0.0952380952381
+I played a (1, 5), yay!
+Player 0 just played, ends of tiles are 0 and 5
+Remaining dominoes : [(2, 4), (1, 1), (2, 5)]
+
+1's turn!
+I played a (0, 4), yay!
+Player 1 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(3, 4), (1, 4)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(0, 3), (0, 1)]
+
+3's turn!
+I played a (5, 5), yay!
+Player 3 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(3, 3)]
+
+DEPTH
+28
+Player 0 Move ((2, 5), None) how good it is: -1.22222222222
+Player 0 Move ((2, 4), None) how good it is: 12.0
+I played a (2, 4), yay!
+Player 0 just played, ends of tiles are 2 and 5
+Remaining dominoes : [(1, 1), (2, 5)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 2 and 5
+Remaining dominoes : [(3, 4), (1, 4)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 2 and 5
+Remaining dominoes : [(0, 3), (0, 1)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 2 and 5
+Remaining dominoes : [(3, 3)]
+
+DEPTH
+40
+Player 0 Move ((2, 5), 0) how good it is: 12.0
+Player 0 Move ((2, 5), 1) how good it is: 12.0
+I played a (2, 5), yay!
+Player 0 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(1, 1)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(3, 4), (1, 4)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(0, 3), (0, 1)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(3, 3)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(1, 1)]
+
+Player 0 has pips 2
+Player 1 has pips 12
+Player 2 has pips 4
+Player 3 has pips 6
+I win!
+Game ended.
+----PLAYING ROUND----  11
+Welcome.
+I have: [(0, 0), (2, 3), (0, 5), (1, 4), (0, 6), (2, 6), (0, 2)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(3, 3), (1, 6), (4, 4), (4, 6), (3, 5), (2, 2), (5, 6)]
+Player 2 has: [(0, 3), (0, 1), (1, 2), (0, 4), (1, 5), (2, 4), (4, 5)]
+Player 3 has: [(6, 6), (3, 6), (5, 5), (1, 3), (1, 1), (3, 4), (2, 5)]
+Player 3 is starting.
+I placed a (6, 6)
+
+DEPTH
+5
+Player 0 Move ((2, 6), None) how good it is: 0.326160990712
+Player 0 Move ((0, 6), None) how good it is: 0.265479876161
+I played a (2, 6), yay!
+Player 0 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(0, 6), (1, 4), (0, 0), (2, 3), (0, 5), (0, 2)]
+
+1's turn!
+I played a (5, 6), yay!
+Player 1 just played, ends of tiles are 2 and 5
+Remaining dominoes : [(2, 2), (3, 3), (1, 6), (4, 4), (3, 5), (4, 6)]
+
+DEPTH
+5
+Player 0 Move ((1, 2), None) how good it is: 0.0588235294118
+Player 0 Move ((1, 5), None) how good it is: 0.191176470588
+Player 0 Move ((4, 5), None) how good it is: 0.308823529412
+Player 0 Move ((2, 4), None) how good it is: 0.25
+I played a (4, 5), yay!
+Player 2 just played, ends of tiles are 2 and 4
+Remaining dominoes : [(0, 4), (0, 3), (1, 5), (2, 4), (1, 2), (0, 1)]
+
+3's turn!
+I played a (2, 5), yay!
+Player 3 just played, ends of tiles are 5 and 4
+Remaining dominoes : [(3, 6), (1, 1), (1, 3), (5, 5), (3, 4)]
+
+DEPTH
+7
+Player 0 Move ((1, 4), None) how good it is: 0.0181803490627
+Player 0 Move ((0, 5), None) how good it is: 0.016160310278
+I played a (1, 4), yay!
+Player 0 just played, ends of tiles are 5 and 1
+Remaining dominoes : [(0, 6), (0, 0), (2, 3), (0, 5), (0, 2)]
+
+1's turn!
+I played a (3, 5), yay!
+Player 1 just played, ends of tiles are 3 and 1
+Remaining dominoes : [(2, 2), (3, 3), (1, 6), (4, 4), (4, 6)]
+
+DEPTH
+7
+Player 0 Move ((0, 3), None) how good it is: 0.00888000888001
+Player 0 Move ((1, 2), None) how good it is: 0.01221001221
+Player 0 Move ((1, 5), None) how good it is: 0.01221001221
+Player 0 Move ((0, 1), None) how good it is: 0.00333000333
+I played a (1, 2), yay!
+Player 2 just played, ends of tiles are 3 and 2
+Remaining dominoes : [(0, 4), (0, 3), (1, 5), (2, 4), (0, 1)]
+
+3's turn!
+I played a (3, 6), yay!
+Player 3 just played, ends of tiles are 6 and 2
+Remaining dominoes : [(1, 1), (1, 3), (5, 5), (3, 4)]
+
+DEPTH
+10
+Player 0 Move ((2, 3), None) how good it is: -0.000832500832501
+Player 0 Move ((0, 6), None) how good it is: -0.000118928690357
+Player 0 Move ((0, 2), None) how good it is: -0.000118928690357
+I played a (0, 6), yay!
+Player 0 just played, ends of tiles are 0 and 2
+Remaining dominoes : [(0, 0), (2, 3), (0, 5), (0, 2)]
+
+1's turn!
+I played a (2, 2), yay!
+Player 1 just played, ends of tiles are 0 and 2
+Remaining dominoes : [(3, 3), (1, 6), (4, 4), (4, 6)]
+
+DEPTH
+10
+Player 0 Move ((0, 3), None) how good it is: -0.0017316017316
+Player 0 Move ((0, 4), None) how good it is: -0.000865800865801
+Player 0 Move ((0, 1), None) how good it is: -0.00155844155844
+Player 0 Move ((2, 4), None) how good it is: -0.00017316017316
+I played a (2, 4), yay!
+Player 2 just played, ends of tiles are 0 and 4
+Remaining dominoes : [(0, 4), (0, 3), (1, 5), (0, 1)]
+
+3's turn!
+I played a (3, 4), yay!
+Player 3 just played, ends of tiles are 0 and 3
+Remaining dominoes : [(1, 1), (1, 3), (5, 5)]
+
+DEPTH
+14
+Player 0 Move ((0, 0), None) how good it is: -0.00242424242424
+Player 0 Move ((0, 5), None) how good it is: -0.000952380952381
+Player 0 Move ((0, 2), None) how good it is: -0.00138528138528
+Player 0 Move ((2, 3), None) how good it is: -0.000606060606061
+I played a (2, 3), yay!
+Player 0 just played, ends of tiles are 0 and 2
+Remaining dominoes : [(0, 0), (0, 5), (0, 2)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 0 and 2
+Remaining dominoes : [(3, 3), (1, 6), (4, 4), (4, 6)]
+
+DEPTH
+14
+Player 0 Move ((0, 3), None) how good it is: -0.0111428571429
+Player 0 Move ((0, 4), None) how good it is: -0.0108333333333
+Player 0 Move ((0, 1), None) how good it is: -0.0116666666667
+I played a (0, 4), yay!
+Player 2 just played, ends of tiles are 4 and 2
+Remaining dominoes : [(0, 3), (1, 5), (0, 1)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 4 and 2
+Remaining dominoes : [(1, 1), (1, 3), (5, 5)]
+
+I played a (0, 2), yay!
+Player 0 just played, ends of tiles are 4 and 0
+Remaining dominoes : [(0, 0), (0, 5)]
+
+1's turn!
+I played a (4, 6), yay!
+Player 1 just played, ends of tiles are 6 and 0
+Remaining dominoes : [(3, 3), (1, 6), (4, 4)]
+
+DEPTH
+20
+Player 0 Move ((0, 3), None) how good it is: 0.0696428571429
+Player 0 Move ((0, 1), None) how good it is: 0.0892857142857
+I played a (0, 1), yay!
+Player 2 just played, ends of tiles are 6 and 1
+Remaining dominoes : [(0, 3), (1, 5)]
+
+3's turn!
+I played a (1, 3), yay!
+Player 3 just played, ends of tiles are 6 and 3
+Remaining dominoes : [(1, 1), (5, 5)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 6 and 3
+Remaining dominoes : [(0, 0), (0, 5)]
+
+1's turn!
+I played a (1, 6), yay!
+Player 1 just played, ends of tiles are 1 and 3
+Remaining dominoes : [(3, 3), (4, 4)]
+
+DEPTH
+28
+Player 0 Move ((0, 3), None) how good it is: 1.0
+Player 0 Move ((1, 5), None) how good it is: 0.79012345679
+I played a (0, 3), yay!
+Player 2 just played, ends of tiles are 1 and 0
+Remaining dominoes : [(1, 5)]
+
+3's turn!
+I played a (1, 1), yay!
+Player 3 just played, ends of tiles are 1 and 0
+Remaining dominoes : [(5, 5)]
+
+DEPTH
+40
+Player 0 Move ((0, 0), None) how good it is: 2.33333333333
+Player 0 Move ((0, 5), None) how good it is: 2.33333333333
+I played a (0, 0), yay!
+Player 0 just played, ends of tiles are 1 and 0
+Remaining dominoes : [(0, 5)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 1 and 0
+Remaining dominoes : [(3, 3), (4, 4)]
+
+I played a (1, 5), yay!
+Player 2 just played, ends of tiles are 5 and 0
+Remaining dominoes : []
+
+Player 0 has pips 5
+Player 1 has pips 14
+Player 2 has pips 0
+Player 3 has pips 10
+I win!
+Game ended.
+----PLAYING ROUND----  12
+Welcome.
+I have: [(2, 3), (4, 6), (1, 4), (1, 1), (0, 3), (3, 5), (2, 5)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(0, 4), (0, 6), (0, 2), (0, 5), (5, 6), (3, 6), (2, 4)]
+Player 2 has: [(0, 1), (1, 5), (1, 6), (1, 3), (2, 6), (6, 6), (0, 0)]
+Player 3 has: [(4, 5), (5, 5), (1, 2), (3, 3), (4, 4), (2, 2), (3, 4)]
+Player 0 is starting.
+I placed a (4, 6)
+
+1's turn!
+I played a (5, 6), yay!
+Player 1 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(3, 6), (0, 2), (0, 5), (0, 4), (0, 6), (2, 4)]
+
+I played a (1, 5), yay!
+Player 2 just played, ends of tiles are 4 and 1
+Remaining dominoes : [(0, 1), (0, 0), (2, 6), (1, 3), (1, 6), (6, 6)]
+
+3's turn!
+I played a (4, 5), yay!
+Player 3 just played, ends of tiles are 5 and 1
+Remaining dominoes : [(3, 3), (3, 4), (4, 4), (2, 2), (5, 5), (1, 2)]
+
+DEPTH
+7
+Player 0 Move ((2, 5), None) how good it is: 0.0230284421461
+Player 0 Move ((1, 1), None) how good it is: 0.00808015513898
+Player 0 Move ((1, 4), None) how good it is: 0.0185843568197
+Player 0 Move ((3, 5), None) how good it is: 0.0262605042017
+I played a (3, 5), yay!
+Player 0 just played, ends of tiles are 3 and 1
+Remaining dominoes : [(1, 1), (4, 6), (1, 4), (2, 5), (0, 3), (2, 3)]
+
+1's turn!
+I played a (3, 6), yay!
+Player 1 just played, ends of tiles are 6 and 1
+Remaining dominoes : [(0, 2), (0, 5), (0, 4), (0, 6), (2, 4)]
+
+DEPTH
+7
+Player 0 Move ((1, 3), None) how good it is: -0.00156093906094
+Player 0 Move ((6, 6), None) how good it is: 0.0312187812188
+Player 0 Move ((2, 6), None) how good it is: 0.00884532134532
+Player 0 Move ((1, 6), 0) how good it is: 0.0254953379953
+Player 0 Move ((1, 6), 1) how good it is: 0.0608766233766
+Player 0 Move ((0, 1), None) how good it is: 0.01665001665
+I played a (1, 6), yay!
+Player 2 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(0, 1), (0, 0), (2, 6), (1, 3), (6, 6)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(3, 3), (3, 4), (4, 4), (2, 2), (5, 5), (1, 2)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(1, 1), (4, 6), (1, 4), (2, 5), (0, 3), (2, 3)]
+
+1's turn!
+I played a (0, 6), yay!
+Player 1 just played, ends of tiles are 0 and 6
+Remaining dominoes : [(0, 2), (0, 5), (0, 4), (2, 4)]
+
+DEPTH
+10
+Player 0 Move ((6, 6), None) how good it is: 0.002442002442
+Player 0 Move ((2, 6), None) how good it is: 0.0
+Player 0 Move ((0, 0), None) how good it is: 0.00222000222
+Player 0 Move ((0, 1), None) how good it is: 0.001776001776
+I played a (6, 6), yay!
+Player 2 just played, ends of tiles are 0 and 6
+Remaining dominoes : [(0, 1), (0, 0), (2, 6), (1, 3)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 0 and 6
+Remaining dominoes : [(3, 3), (3, 4), (4, 4), (2, 2), (5, 5), (1, 2)]
+
+I played a (0, 3), yay!
+Player 0 just played, ends of tiles are 3 and 6
+Remaining dominoes : [(1, 1), (4, 6), (1, 4), (2, 5), (2, 3)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 3 and 6
+Remaining dominoes : [(0, 2), (0, 5), (0, 4), (2, 4)]
+
+DEPTH
+14
+Player 0 Move ((1, 3), None) how good it is: 0.0001998001998
+Player 0 Move ((2, 6), None) how good it is: 9.32400932401e-05
+I played a (1, 3), yay!
+Player 2 just played, ends of tiles are 1 and 6
+Remaining dominoes : [(0, 1), (0, 0), (2, 6)]
+
+3's turn!
+I played a (1, 2), yay!
+Player 3 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(3, 3), (3, 4), (4, 4), (2, 2), (5, 5)]
+
+DEPTH
+20
+Player 0 Move ((2, 5), None) how good it is: 0.132653061224
+Player 0 Move ((2, 3), None) how good it is: 1.82142857143
+I played a (2, 3), yay!
+Player 0 just played, ends of tiles are 3 and 6
+Remaining dominoes : [(1, 1), (4, 6), (1, 4), (2, 5)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 3 and 6
+Remaining dominoes : [(0, 2), (0, 5), (0, 4), (2, 4)]
+
+I played a (2, 6), yay!
+Player 2 just played, ends of tiles are 3 and 2
+Remaining dominoes : [(0, 1), (0, 0)]
+
+3's turn!
+I played a (3, 4), yay!
+Player 3 just played, ends of tiles are 4 and 2
+Remaining dominoes : [(3, 3), (4, 4), (2, 2), (5, 5)]
+
+DEPTH
+28
+Player 0 Move ((2, 5), None) how good it is: 0.0722222222222
+Player 0 Move ((1, 4), None) how good it is: 0.6
+I played a (1, 4), yay!
+Player 0 just played, ends of tiles are 1 and 2
+Remaining dominoes : [(1, 1), (4, 6), (2, 5)]
+
+1's turn!
+I played a (2, 4), yay!
+Player 1 just played, ends of tiles are 1 and 4
+Remaining dominoes : [(0, 2), (0, 5), (0, 4)]
+
+I played a (0, 1), yay!
+Player 2 just played, ends of tiles are 0 and 4
+Remaining dominoes : [(0, 0)]
+
+3's turn!
+I played a (4, 4), yay!
+Player 3 just played, ends of tiles are 0 and 4
+Remaining dominoes : [(3, 3), (2, 2), (5, 5)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 0 and 4
+Remaining dominoes : [(1, 1), (4, 6), (2, 5)]
+
+1's turn!
+I played a (0, 5), yay!
+Player 1 just played, ends of tiles are 5 and 4
+Remaining dominoes : [(0, 2), (0, 4)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 5 and 4
+Remaining dominoes : [(0, 0)]
+
+3's turn!
+I played a (5, 5), yay!
+Player 3 just played, ends of tiles are 5 and 4
+Remaining dominoes : [(3, 3), (2, 2)]
+
+I played a (2, 5), yay!
+Player 0 just played, ends of tiles are 2 and 4
+Remaining dominoes : [(1, 1), (4, 6)]
+
+1's turn!
+I played a (0, 4), yay!
+Player 1 just played, ends of tiles are 2 and 0
+Remaining dominoes : [(0, 2)]
+
+I played a (0, 0), yay!
+Player 2 just played, ends of tiles are 2 and 0
+Remaining dominoes : []
+
+Player 0 has pips 2
+Player 1 has pips 2
+Player 2 has pips 0
+Player 3 has pips 10
+I win!
+Game ended.
+----PLAYING ROUND----  13
+Welcome.
+I have: [(0, 4), (0, 2), (3, 4), (0, 6), (4, 4), (0, 1), (2, 3)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(1, 6), (5, 6), (0, 0), (2, 4), (0, 5), (4, 5), (3, 5)]
+Player 2 has: [(1, 5), (4, 6), (1, 3), (0, 3), (3, 3), (1, 1), (1, 4)]
+Player 3 has: [(3, 6), (5, 5), (1, 2), (6, 6), (2, 5), (2, 6), (2, 2)]
+Player 1 is starting.
+I placed a (5, 6)
+
+DEPTH
+5
+Player 0 Move ((1, 5), None) how good it is: 0.0530959752322
+Player 0 Move ((4, 6), None) how good it is: 0.121362229102
+I played a (4, 6), yay!
+Player 2 just played, ends of tiles are 5 and 4
+Remaining dominoes : [(1, 1), (3, 3), (1, 4), (1, 3), (0, 3), (1, 5)]
+
+3's turn!
+I played a (5, 5), yay!
+Player 3 just played, ends of tiles are 5 and 4
+Remaining dominoes : [(2, 5), (3, 6), (2, 2), (6, 6), (1, 2), (2, 6)]
+
+DEPTH
+5
+Player 0 Move ((4, 4), None) how good it is: 0.147058823529
+Player 0 Move ((0, 4), None) how good it is: 0.102941176471
+Player 0 Move ((3, 4), None) how good it is: 0.0588235294118
+I played a (4, 4), yay!
+Player 0 just played, ends of tiles are 5 and 4
+Remaining dominoes : [(2, 3), (0, 1), (3, 4), (0, 6), (0, 2), (0, 4)]
+
+1's turn!
+I played a (4, 5), yay!
+Player 1 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(2, 4), (3, 5), (1, 6), (0, 0), (0, 5)]
+
+I played a (1, 5), yay!
+Player 2 just played, ends of tiles are 1 and 5
+Remaining dominoes : [(1, 1), (3, 3), (1, 4), (1, 3), (0, 3)]
+
+3's turn!
+I played a (2, 5), yay!
+Player 3 just played, ends of tiles are 1 and 2
+Remaining dominoes : [(3, 6), (2, 2), (6, 6), (1, 2), (2, 6)]
+
+DEPTH
+7
+Player 0 Move ((2, 3), None) how good it is: 0.00555000555001
+Player 0 Move ((0, 1), None) how good it is: 0.00444000444
+Player 0 Move ((0, 2), None) how good it is: 0.00555000555001
+I played a (2, 3), yay!
+Player 0 just played, ends of tiles are 1 and 3
+Remaining dominoes : [(0, 1), (3, 4), (0, 6), (0, 2), (0, 4)]
+
+1's turn!
+I played a (3, 5), yay!
+Player 1 just played, ends of tiles are 1 and 5
+Remaining dominoes : [(2, 4), (1, 6), (0, 0), (0, 5)]
+
+DEPTH
+10
+Player 0 Move ((1, 3), None) how good it is: -0.00380571809143
+Player 0 Move ((1, 1), None) how good it is: -0.00309214594929
+Player 0 Move ((1, 4), None) how good it is: -0.00214071642643
+I played a (1, 4), yay!
+Player 2 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(1, 1), (3, 3), (1, 3), (0, 3)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(3, 6), (2, 2), (6, 6), (1, 2), (2, 6)]
+
+DEPTH
+10
+Player 0 Move ((0, 4), None) how good it is: 0.003108003108
+Player 0 Move ((3, 4), None) how good it is: 0.00111000111
+I played a (0, 4), yay!
+Player 0 just played, ends of tiles are 0 and 5
+Remaining dominoes : [(0, 1), (3, 4), (0, 6), (0, 2)]
+
+1's turn!
+I played a (0, 5), yay!
+Player 1 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(2, 4), (1, 6), (0, 0)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(1, 1), (3, 3), (1, 3), (0, 3)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(3, 6), (2, 2), (6, 6), (1, 2), (2, 6)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(0, 1), (3, 4), (0, 6), (0, 2)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(2, 4), (1, 6), (0, 0)]
+
+Player 0 has pips 16
+Player 1 has pips 13
+Player 2 has pips 15
+Player 3 has pips 36
+I win!
+Game ended.
+----PLAYING ROUND----  14
+Welcome.
+I have: [(2, 2), (0, 1), (1, 1), (1, 2), (2, 4), (4, 6), (0, 4)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(5, 5), (4, 5), (1, 5), (6, 6), (2, 5), (5, 6), (0, 6)]
+Player 2 has: [(0, 3), (1, 6), (3, 4), (4, 4), (3, 5), (3, 6), (3, 3)]
+Player 3 has: [(2, 3), (0, 2), (1, 3), (0, 0), (1, 4), (2, 6), (0, 5)]
+Player 2 is starting.
+I placed a (3, 6)
+
+3's turn!
+I played a (2, 6), yay!
+Player 3 just played, ends of tiles are 3 and 2
+Remaining dominoes : [(1, 4), (0, 0), (0, 5), (1, 3), (2, 3), (0, 2)]
+
+DEPTH
+5
+Player 0 Move ((1, 2), None) how good it is: 0.438854489164
+Player 0 Move ((2, 2), None) how good it is: 0.465944272446
+Player 0 Move ((2, 4), None) how good it is: 0.585139318885
+I played a (2, 4), yay!
+Player 0 just played, ends of tiles are 3 and 4
+Remaining dominoes : [(0, 1), (1, 1), (1, 2), (0, 4), (2, 2), (4, 6)]
+
+1's turn!
+I played a (4, 5), yay!
+Player 1 just played, ends of tiles are 3 and 5
+Remaining dominoes : [(1, 5), (6, 6), (5, 5), (2, 5), (5, 6), (0, 6)]
+
+DEPTH
+7
+Player 0 Move ((0, 3), None) how good it is: -0.0109082094376
+Player 0 Move ((3, 3), None) how good it is: -0.00404007756949
+Player 0 Move ((3, 5), 0) how good it is: -0.0016160310278
+Player 0 Move ((3, 5), 1) how good it is: 0.00525210084034
+Player 0 Move ((3, 4), None) how good it is: -0.000808015513898
+I played a (3, 5), yay!
+Player 2 just played, ends of tiles are 3 and 3
+Remaining dominoes : [(1, 6), (0, 3), (3, 3), (3, 4), (4, 4)]
+
+3's turn!
+I played a (2, 3), yay!
+Player 3 just played, ends of tiles are 2 and 3
+Remaining dominoes : [(1, 4), (0, 0), (0, 5), (1, 3), (0, 2)]
+
+DEPTH
+7
+Player 0 Move ((1, 2), None) how good it is: 0.0369422244422
+Player 0 Move ((2, 2), None) how good it is: 0.0390234765235
+I played a (2, 2), yay!
+Player 0 just played, ends of tiles are 2 and 3
+Remaining dominoes : [(0, 1), (1, 1), (1, 2), (0, 4), (4, 6)]
+
+1's turn!
+I played a (2, 5), yay!
+Player 1 just played, ends of tiles are 5 and 3
+Remaining dominoes : [(1, 5), (6, 6), (5, 5), (5, 6), (0, 6)]
+
+DEPTH
+10
+Player 0 Move ((0, 3), None) how good it is: -0.11655011655
+Player 0 Move ((3, 3), None) how good it is: -0.000925000925001
+Player 0 Move ((3, 4), None) how good it is: -0.000185000185
+I played a (3, 4), yay!
+Player 2 just played, ends of tiles are 5 and 4
+Remaining dominoes : [(1, 6), (0, 3), (3, 3), (4, 4)]
+
+3's turn!
+I played a (1, 4), yay!
+Player 3 just played, ends of tiles are 5 and 1
+Remaining dominoes : [(0, 0), (0, 5), (1, 3), (0, 2)]
+
+DEPTH
+10
+Player 0 Move ((1, 2), None) how good it is: -3.54916451429e-18
+Player 0 Move ((1, 1), None) how good it is: 0.000666000666001
+Player 0 Move ((0, 1), None) how good it is: 0.000333000333
+I played a (1, 1), yay!
+Player 0 just played, ends of tiles are 5 and 1
+Remaining dominoes : [(0, 1), (1, 2), (0, 4), (4, 6)]
+
+1's turn!
+I played a (5, 6), yay!
+Player 1 just played, ends of tiles are 6 and 1
+Remaining dominoes : [(1, 5), (6, 6), (5, 5), (0, 6)]
+
+DEPTH
+14
+Player 0 Move ((1, 6), 0) how good it is: -0.00046176046176
+Player 0 Move ((1, 6), 1) how good it is: -0.000865800865801
+I played a (1, 6), yay!
+Player 2 just played, ends of tiles are 1 and 1
+Remaining dominoes : [(0, 3), (3, 3), (4, 4)]
+
+3's turn!
+I played a (1, 3), yay!
+Player 3 just played, ends of tiles are 3 and 1
+Remaining dominoes : [(0, 0), (0, 5), (0, 2)]
+
+DEPTH
+14
+Player 0 Move ((1, 2), None) how good it is: 0.00285714285714
+Player 0 Move ((0, 1), None) how good it is: 0.00238095238095
+I played a (1, 2), yay!
+Player 0 just played, ends of tiles are 3 and 2
+Remaining dominoes : [(0, 1), (0, 4), (4, 6)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 3 and 2
+Remaining dominoes : [(1, 5), (6, 6), (5, 5), (0, 6)]
+
+DEPTH
+20
+Player 0 Move ((0, 3), None) how good it is: -0.021
+Player 0 Move ((3, 3), None) how good it is: -0.0123015873016
+I played a (3, 3), yay!
+Player 2 just played, ends of tiles are 3 and 2
+Remaining dominoes : [(0, 3), (4, 4)]
+
+3's turn!
+I played a (0, 2), yay!
+Player 3 just played, ends of tiles are 3 and 0
+Remaining dominoes : [(0, 0), (0, 5)]
+
+DEPTH
+20
+Player 0 Move ((0, 4), None) how good it is: 0.15
+Player 0 Move ((0, 1), None) how good it is: 0.257142857143
+I played a (0, 1), yay!
+Player 0 just played, ends of tiles are 3 and 1
+Remaining dominoes : [(0, 4), (4, 6)]
+
+1's turn!
+I played a (1, 5), yay!
+Player 1 just played, ends of tiles are 3 and 5
+Remaining dominoes : [(6, 6), (5, 5), (0, 6)]
+
+I played a (0, 3), yay!
+Player 2 just played, ends of tiles are 0 and 5
+Remaining dominoes : [(4, 4)]
+
+3's turn!
+I played a (0, 5), yay!
+Player 3 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(0, 0)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(0, 4), (4, 6)]
+
+1's turn!
+I played a (5, 5), yay!
+Player 1 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(6, 6), (0, 6)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(4, 4)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(0, 0)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(0, 4), (4, 6)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(6, 6), (0, 6)]
+
+Player 0 has pips 14
+Player 1 has pips 18
+Player 2 has pips 8
+Player 3 has pips 0
+I lose :(
+Game ended.
+----PLAYING ROUND----  15
+Welcome.
+I have: [(5, 5), (1, 3), (4, 5), (4, 6), (3, 3), (1, 2), (1, 1)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(3, 4), (5, 6), (0, 2), (0, 4), (3, 6), (2, 3), (3, 5)]
+Player 2 has: [(0, 5), (2, 4), (4, 4), (2, 2), (2, 6), (1, 6), (0, 3)]
+Player 3 has: [(6, 6), (0, 6), (2, 5), (0, 1), (0, 0), (1, 4), (1, 5)]
+Player 3 is starting.
+I placed a (6, 6)
+
+I played a (4, 6), yay!
+Player 0 just played, ends of tiles are 4 and 6
+Remaining dominoes : [(4, 5), (5, 5), (1, 3), (3, 3), (1, 1), (1, 2)]
+
+1's turn!
+I played a (5, 6), yay!
+Player 1 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(3, 4), (0, 2), (2, 3), (0, 4), (3, 5), (3, 6)]
+
+DEPTH
+5
+Player 0 Move ((4, 4), None) how good it is: -0.0735294117647
+Player 0 Move ((0, 5), None) how good it is: -0.0882352941176
+Player 0 Move ((2, 4), None) how good it is: -0.132352941176
+I played a (4, 4), yay!
+Player 2 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(0, 5), (2, 4), (0, 3), (2, 6), (2, 2), (1, 6)]
+
+3's turn!
+I played a (2, 5), yay!
+Player 3 just played, ends of tiles are 4 and 2
+Remaining dominoes : [(1, 5), (0, 6), (0, 1), (0, 0), (1, 4)]
+
+DEPTH
+7
+Player 0 Move ((1, 2), None) how good it is: -0.0343406593407
+Player 0 Move ((4, 5), None) how good it is: -0.00808015513898
+I played a (4, 5), yay!
+Player 0 just played, ends of tiles are 5 and 2
+Remaining dominoes : [(5, 5), (1, 3), (3, 3), (1, 1), (1, 2)]
+
+1's turn!
+I played a (3, 5), yay!
+Player 1 just played, ends of tiles are 3 and 2
+Remaining dominoes : [(3, 4), (0, 2), (2, 3), (0, 4), (3, 6)]
+
+DEPTH
+7
+Player 0 Move ((0, 3), None) how good it is: -0.0111000111
+Player 0 Move ((2, 2), None) how good it is: -0.01665001665
+Player 0 Move ((2, 6), None) how good it is: -0.00222000222
+Player 0 Move ((2, 4), None) how good it is: -0.00333000333
+I played a (2, 6), yay!
+Player 2 just played, ends of tiles are 3 and 6
+Remaining dominoes : [(0, 5), (2, 4), (0, 3), (2, 2), (1, 6)]
+
+3's turn!
+I played a (0, 6), yay!
+Player 3 just played, ends of tiles are 3 and 0
+Remaining dominoes : [(1, 5), (0, 1), (0, 0), (1, 4)]
+
+DEPTH
+10
+Player 0 Move ((1, 3), None) how good it is: -0.00666000666001
+Player 0 Move ((3, 3), None) how good it is: -0.00594643451786
+I played a (3, 3), yay!
+Player 0 just played, ends of tiles are 3 and 0
+Remaining dominoes : [(5, 5), (1, 3), (1, 1), (1, 2)]
+
+1's turn!
+I played a (3, 6), yay!
+Player 1 just played, ends of tiles are 6 and 0
+Remaining dominoes : [(3, 4), (0, 2), (2, 3), (0, 4)]
+
+DEPTH
+10
+Player 0 Move ((1, 6), None) how good it is: -0.0017316017316
+Player 0 Move ((0, 3), None) how good it is: -0.0025974025974
+Player 0 Move ((0, 5), None) how good it is: -0.00277056277056
+I played a (1, 6), yay!
+Player 2 just played, ends of tiles are 1 and 0
+Remaining dominoes : [(0, 5), (2, 4), (0, 3), (2, 2)]
+
+3's turn!
+I played a (1, 5), yay!
+Player 3 just played, ends of tiles are 5 and 0
+Remaining dominoes : [(0, 1), (0, 0), (1, 4)]
+
+I played a (5, 5), yay!
+Player 0 just played, ends of tiles are 5 and 0
+Remaining dominoes : [(1, 3), (1, 1), (1, 2)]
+
+1's turn!
+I played a (0, 4), yay!
+Player 1 just played, ends of tiles are 5 and 4
+Remaining dominoes : [(3, 4), (0, 2), (2, 3)]
+
+DEPTH
+14
+Player 0 Move ((0, 5), None) how good it is: -0.00595238095238
+Player 0 Move ((2, 4), None) how good it is: -0.0047619047619
+I played a (2, 4), yay!
+Player 2 just played, ends of tiles are 5 and 2
+Remaining dominoes : [(0, 5), (0, 3), (2, 2)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 5 and 2
+Remaining dominoes : [(0, 1), (0, 0), (1, 4)]
+
+I played a (1, 2), yay!
+Player 0 just played, ends of tiles are 5 and 1
+Remaining dominoes : [(1, 3), (1, 1)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 5 and 1
+Remaining dominoes : [(3, 4), (0, 2), (2, 3)]
+
+I played a (0, 5), yay!
+Player 2 just played, ends of tiles are 0 and 1
+Remaining dominoes : [(0, 3), (2, 2)]
+
+3's turn!
+I played a (1, 4), yay!
+Player 3 just played, ends of tiles are 0 and 4
+Remaining dominoes : [(0, 1), (0, 0)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 0 and 4
+Remaining dominoes : [(1, 3), (1, 1)]
+
+1's turn!
+I played a (3, 4), yay!
+Player 1 just played, ends of tiles are 0 and 3
+Remaining dominoes : [(0, 2), (2, 3)]
+
+DEPTH
+28
+Player 0 Move ((0, 3), 0) how good it is: 0.666666666667
+Player 0 Move ((0, 3), 1) how good it is: 0.888888888889
+I played a (0, 3), yay!
+Player 2 just played, ends of tiles are 0 and 0
+Remaining dominoes : [(2, 2)]
+
+3's turn!
+I played a (0, 1), yay!
+Player 3 just played, ends of tiles are 1 and 0
+Remaining dominoes : [(0, 0)]
+
+DEPTH
+40
+Player 0 Move ((1, 3), None) how good it is: 1.33333333333
+Player 0 Move ((1, 1), None) how good it is: 1.66666666667
+I played a (1, 1), yay!
+Player 0 just played, ends of tiles are 1 and 0
+Remaining dominoes : [(1, 3)]
+
+1's turn!
+I played a (0, 2), yay!
+Player 1 just played, ends of tiles are 1 and 2
+Remaining dominoes : [(2, 3)]
+
+I played a (2, 2), yay!
+Player 2 just played, ends of tiles are 1 and 2
+Remaining dominoes : []
+
+Player 0 has pips 4
+Player 1 has pips 5
+Player 2 has pips 0
+Player 3 has pips 0
+I win!
+Game ended.
+----PLAYING ROUND----  16
+Welcome.
+I have: [(3, 3), (0, 1), (1, 1), (3, 4), (5, 6), (0, 5), (0, 6)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(0, 2), (4, 5), (2, 5), (1, 5), (2, 3), (2, 4), (1, 4)]
+Player 2 has: [(2, 6), (6, 6), (3, 6), (4, 4), (4, 6), (0, 3), (0, 4)]
+Player 3 has: [(1, 2), (1, 6), (5, 5), (0, 0), (1, 3), (3, 5), (2, 2)]
+Player 0 is starting.
+I placed a (5, 6)
+
+1's turn!
+I played a (4, 5), yay!
+Player 1 just played, ends of tiles are 4 and 6
+Remaining dominoes : [(2, 3), (2, 4), (1, 5), (1, 4), (2, 5), (0, 2)]
+
+DEPTH
+5
+Player 0 Move ((6, 6), None) how good it is: -0.227554179567
+Player 0 Move ((4, 4), None) how good it is: -0.22213622291
+Player 0 Move ((3, 6), None) how good it is: -0.249226006192
+Player 0 Move ((0, 4), None) how good it is: -0.395510835913
+Player 0 Move ((2, 6), None) how good it is: -0.227554179567
+Player 0 Move ((4, 6), 0) how good it is: -0.0704334365325
+Player 0 Move ((4, 6), 1) how good it is: -0.130030959752
+I played a (4, 6), yay!
+Player 2 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(4, 4), (0, 3), (6, 6), (3, 6), (0, 4), (2, 6)]
+
+3's turn!
+I played a (1, 6), yay!
+Player 3 just played, ends of tiles are 1 and 6
+Remaining dominoes : [(1, 3), (1, 2), (2, 2), (5, 5), (0, 0), (3, 5)]
+
+DEPTH
+7
+Player 0 Move ((1, 1), None) how good it is: 0.00606011635423
+Player 0 Move ((0, 1), None) how good it is: 0.0133322559793
+Player 0 Move ((0, 6), None) how good it is: 0.0290885585003
+I played a (0, 6), yay!
+Player 0 just played, ends of tiles are 1 and 0
+Remaining dominoes : [(3, 4), (0, 5), (1, 1), (0, 1), (3, 3), (5, 6)]
+
+1's turn!
+I played a (1, 5), yay!
+Player 1 just played, ends of tiles are 5 and 0
+Remaining dominoes : [(2, 3), (2, 4), (1, 4), (2, 5), (0, 2)]
+
+DEPTH
+7
+Player 0 Move ((0, 3), None) how good it is: -0.0582750582751
+Player 0 Move ((0, 4), None) how good it is: -0.0447469197469
+I played a (0, 4), yay!
+Player 2 just played, ends of tiles are 5 and 4
+Remaining dominoes : [(4, 4), (0, 3), (6, 6), (3, 6), (2, 6)]
+
+3's turn!
+I played a (5, 5), yay!
+Player 3 just played, ends of tiles are 5 and 4
+Remaining dominoes : [(1, 3), (1, 2), (2, 2), (0, 0), (3, 5)]
+
+DEPTH
+10
+Player 0 Move ((0, 5), None) how good it is: -0.000555000555001
+Player 0 Move ((3, 4), None) how good it is: -0.00037000037
+I played a (3, 4), yay!
+Player 0 just played, ends of tiles are 5 and 3
+Remaining dominoes : [(0, 5), (1, 1), (0, 1), (3, 3), (5, 6)]
+
+1's turn!
+I played a (2, 5), yay!
+Player 1 just played, ends of tiles are 2 and 3
+Remaining dominoes : [(2, 3), (2, 4), (1, 4), (0, 2)]
+
+DEPTH
+10
+Player 0 Move ((2, 6), None) how good it is: -0.00566100566101
+Player 0 Move ((0, 3), None) how good it is: -0.00566100566101
+Player 0 Move ((3, 6), None) how good it is: -0.004995004995
+I played a (3, 6), yay!
+Player 2 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(4, 4), (0, 3), (6, 6), (2, 6)]
+
+3's turn!
+I played a (2, 2), yay!
+Player 3 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(1, 3), (1, 2), (0, 0), (3, 5)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(0, 5), (1, 1), (0, 1), (3, 3), (5, 6)]
+
+1's turn!
+I played a (2, 4), yay!
+Player 1 just played, ends of tiles are 4 and 6
+Remaining dominoes : [(2, 3), (1, 4), (0, 2)]
+
+DEPTH
+14
+Player 0 Move ((6, 6), None) how good it is: -0.00221645021645
+Player 0 Move ((2, 6), None) how good it is: -0.00519480519481
+Player 0 Move ((4, 4), None) how good it is: -0.000779220779221
+I played a (4, 4), yay!
+Player 2 just played, ends of tiles are 4 and 6
+Remaining dominoes : [(0, 3), (6, 6), (2, 6)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 4 and 6
+Remaining dominoes : [(1, 3), (1, 2), (0, 0), (3, 5)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 4 and 6
+Remaining dominoes : [(0, 5), (1, 1), (0, 1), (3, 3), (5, 6)]
+
+1's turn!
+I played a (1, 4), yay!
+Player 1 just played, ends of tiles are 1 and 6
+Remaining dominoes : [(2, 3), (0, 2)]
+
+DEPTH
+20
+Player 0 Move ((6, 6), None) how good it is: -0.184761904762
+Player 0 Move ((2, 6), None) how good it is: -0.188571428571
+I played a (6, 6), yay!
+Player 2 just played, ends of tiles are 1 and 6
+Remaining dominoes : [(0, 3), (2, 6)]
+
+3's turn!
+I played a (1, 3), yay!
+Player 3 just played, ends of tiles are 3 and 6
+Remaining dominoes : [(1, 2), (0, 0), (3, 5)]
+
+I played a (3, 3), yay!
+Player 0 just played, ends of tiles are 3 and 6
+Remaining dominoes : [(0, 5), (1, 1), (0, 1), (5, 6)]
+
+1's turn!
+I played a (2, 3), yay!
+Player 1 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(0, 2)]
+
+DEPTH
+28
+Player 0 Move ((2, 6), 0) how good it is: 4.28571428571
+Player 0 Move ((2, 6), 1) how good it is: -0.7125
+I played a (2, 6), yay!
+Player 2 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(0, 3)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(1, 2), (0, 0), (3, 5)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(0, 5), (1, 1), (0, 1), (5, 6)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(0, 2)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(0, 3)]
+
+Player 0 has pips 8
+Player 1 has pips 2
+Player 2 has pips 3
+Player 3 has pips 11
+I win!
+Game ended.
+----PLAYING ROUND----  17
+Welcome.
+I have: [(0, 0), (3, 6), (1, 6), (3, 4), (3, 3), (0, 5), (2, 2)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(6, 6), (1, 5), (1, 4), (3, 5), (2, 4), (4, 6), (0, 1)]
+Player 2 has: [(5, 6), (0, 2), (2, 6), (0, 4), (1, 3), (1, 2), (4, 5)]
+Player 3 has: [(0, 3), (0, 6), (4, 4), (2, 5), (1, 1), (5, 5), (2, 3)]
+Player 1 is starting.
+I placed a (6, 6)
+
+DEPTH
+5
+Player 0 Move ((5, 6), None) how good it is: 0.00758513931889
+Player 0 Move ((2, 6), None) how good it is: -0.00758513931888
+I played a (5, 6), yay!
+Player 2 just played, ends of tiles are 5 and 6
+Remaining dominoes : [(1, 2), (4, 5), (0, 4), (0, 2), (1, 3), (2, 6)]
+
+3's turn!
+I played a (5, 5), yay!
+Player 3 just played, ends of tiles are 5 and 6
+Remaining dominoes : [(0, 6), (2, 5), (2, 3), (1, 1), (4, 4), (0, 3)]
+
+DEPTH
+5
+Player 0 Move ((1, 6), None) how good it is: 0.0147058823529
+Player 0 Move ((3, 6), None) how good it is: 0.0294117647059
+Player 0 Move ((0, 5), None) how good it is: 0.0294117647059
+I played a (3, 6), yay!
+Player 0 just played, ends of tiles are 5 and 3
+Remaining dominoes : [(0, 0), (0, 5), (2, 2), (3, 4), (1, 6), (3, 3)]
+
+1's turn!
+I played a (3, 5), yay!
+Player 1 just played, ends of tiles are 3 and 3
+Remaining dominoes : [(0, 1), (4, 6), (2, 4), (1, 5), (1, 4)]
+
+I played a (1, 3), yay!
+Player 2 just played, ends of tiles are 1 and 3
+Remaining dominoes : [(1, 2), (4, 5), (0, 4), (0, 2), (2, 6)]
+
+3's turn!
+I played a (2, 3), yay!
+Player 3 just played, ends of tiles are 1 and 2
+Remaining dominoes : [(0, 6), (2, 5), (1, 1), (4, 4), (0, 3)]
+
+DEPTH
+7
+Player 0 Move ((1, 6), None) how good it is: -0.00666000666001
+Player 0 Move ((2, 2), None) how good it is: 0.00222000222
+I played a (2, 2), yay!
+Player 0 just played, ends of tiles are 1 and 2
+Remaining dominoes : [(0, 0), (0, 5), (3, 4), (1, 6), (3, 3)]
+
+1's turn!
+I played a (1, 5), yay!
+Player 1 just played, ends of tiles are 5 and 2
+Remaining dominoes : [(0, 1), (4, 6), (2, 4), (1, 4)]
+
+DEPTH
+10
+Player 0 Move ((2, 6), None) how good it is: -0.000832500832501
+Player 0 Move ((1, 2), None) how good it is: -0.000356786071072
+Player 0 Move ((4, 5), None) how good it is: -0.000237857380715
+Player 0 Move ((0, 2), None) how good it is: -0.000713572142144
+I played a (4, 5), yay!
+Player 2 just played, ends of tiles are 4 and 2
+Remaining dominoes : [(1, 2), (0, 4), (0, 2), (2, 6)]
+
+3's turn!
+I played a (4, 4), yay!
+Player 3 just played, ends of tiles are 4 and 2
+Remaining dominoes : [(0, 6), (2, 5), (1, 1), (0, 3)]
+
+I played a (3, 4), yay!
+Player 0 just played, ends of tiles are 3 and 2
+Remaining dominoes : [(0, 0), (0, 5), (1, 6), (3, 3)]
+
+1's turn!
+I played a (2, 4), yay!
+Player 1 just played, ends of tiles are 3 and 4
+Remaining dominoes : [(0, 1), (4, 6), (1, 4)]
+
+I played a (0, 4), yay!
+Player 2 just played, ends of tiles are 3 and 0
+Remaining dominoes : [(1, 2), (0, 2), (2, 6)]
+
+3's turn!
+I played a (0, 6), yay!
+Player 3 just played, ends of tiles are 3 and 6
+Remaining dominoes : [(2, 5), (1, 1), (0, 3)]
+
+DEPTH
+14
+Player 0 Move ((1, 6), None) how good it is: -0.00892857142857
+Player 0 Move ((3, 3), None) how good it is: -0.00178571428571
+I played a (3, 3), yay!
+Player 0 just played, ends of tiles are 3 and 6
+Remaining dominoes : [(0, 0), (0, 5), (1, 6)]
+
+1's turn!
+I played a (4, 6), yay!
+Player 1 just played, ends of tiles are 3 and 4
+Remaining dominoes : [(0, 1), (1, 4)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 3 and 4
+Remaining dominoes : [(1, 2), (0, 2), (2, 6)]
+
+3's turn!
+I played a (0, 3), yay!
+Player 3 just played, ends of tiles are 0 and 4
+Remaining dominoes : [(2, 5), (1, 1)]
+
+DEPTH
+20
+Player 0 Move ((0, 0), None) how good it is: -0.266666666667
+Player 0 Move ((0, 5), None) how good it is: -0.183333333333
+I played a (0, 5), yay!
+Player 0 just played, ends of tiles are 5 and 4
+Remaining dominoes : [(0, 0), (1, 6)]
+
+1's turn!
+I played a (1, 4), yay!
+Player 1 just played, ends of tiles are 5 and 1
+Remaining dominoes : [(0, 1)]
+
+I played a (1, 2), yay!
+Player 2 just played, ends of tiles are 5 and 2
+Remaining dominoes : [(0, 2), (2, 6)]
+
+3's turn!
+I played a (2, 5), yay!
+Player 3 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(1, 1)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(0, 0), (1, 6)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(0, 1)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(0, 2), (2, 6)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(1, 1)]
+
+Player 0 has pips 7
+Player 1 has pips 1
+Player 2 has pips 10
+Player 3 has pips 2
+I lose :(
+Game ended.
+----PLAYING ROUND----  18
+Welcome.
+I have: [(2, 2), (6, 6), (4, 6), (3, 4), (0, 2), (0, 3), (4, 5)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(0, 0), (1, 4), (4, 4), (5, 5), (0, 1), (1, 5), (1, 2)]
+Player 2 has: [(0, 6), (3, 6), (0, 4), (0, 5), (3, 3), (2, 3), (3, 5)]
+Player 3 has: [(5, 6), (2, 5), (1, 3), (1, 1), (1, 6), (2, 4), (2, 6)]
+Player 2 is starting.
+I placed a (3, 6)
+
+3's turn!
+I played a (5, 6), yay!
+Player 3 just played, ends of tiles are 3 and 5
+Remaining dominoes : [(2, 5), (2, 4), (2, 6), (1, 6), (1, 3), (1, 1)]
+
+DEPTH
+5
+Player 0 Move ((0, 3), None) how good it is: -0.216718266254
+Player 0 Move ((4, 5), None) how good it is: -0.0704334365325
+Player 0 Move ((3, 4), None) how good it is: -0.016253869969
+I played a (3, 4), yay!
+Player 0 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(0, 2), (4, 6), (2, 2), (6, 6), (4, 5), (0, 3)]
+
+1's turn!
+I played a (5, 5), yay!
+Player 1 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(0, 1), (0, 0), (4, 4), (1, 2), (1, 4), (1, 5)]
+
+DEPTH
+7
+Player 0 Move ((0, 4), None) how good it is: 0.00121202327085
+Player 0 Move ((0, 5), None) how good it is: 0.00202003878474
+Player 0 Move ((3, 5), None) how good it is: 0.0016160310278
+I played a (0, 5), yay!
+Player 2 just played, ends of tiles are 4 and 0
+Remaining dominoes : [(3, 3), (0, 6), (0, 4), (2, 3), (3, 5)]
+
+3's turn!
+I played a (2, 4), yay!
+Player 3 just played, ends of tiles are 2 and 0
+Remaining dominoes : [(2, 5), (2, 6), (1, 6), (1, 3), (1, 1)]
+
+DEPTH
+7
+Player 0 Move ((0, 3), None) how good it is: -0.0457875457875
+Player 0 Move ((2, 2), None) how good it is: -0.00728438228438
+Player 0 Move ((0, 2), 0) how good it is: -0.00572344322344
+Player 0 Move ((0, 2), 1) how good it is: -0.0202922077922
+I played a (0, 2), yay!
+Player 0 just played, ends of tiles are 0 and 0
+Remaining dominoes : [(4, 6), (2, 2), (6, 6), (4, 5), (0, 3)]
+
+1's turn!
+I played a (0, 1), yay!
+Player 1 just played, ends of tiles are 1 and 0
+Remaining dominoes : [(0, 0), (4, 4), (1, 2), (1, 4), (1, 5)]
+
+DEPTH
+10
+Player 0 Move ((0, 4), None) how good it is: -0.00259000259
+Player 0 Move ((0, 6), None) how good it is: -0.000555000555001
+I played a (0, 6), yay!
+Player 2 just played, ends of tiles are 1 and 6
+Remaining dominoes : [(3, 3), (0, 4), (2, 3), (3, 5)]
+
+3's turn!
+I played a (2, 6), yay!
+Player 3 just played, ends of tiles are 1 and 2
+Remaining dominoes : [(2, 5), (1, 6), (1, 3), (1, 1)]
+
+I played a (2, 2), yay!
+Player 0 just played, ends of tiles are 1 and 2
+Remaining dominoes : [(4, 6), (6, 6), (4, 5), (0, 3)]
+
+1's turn!
+I played a (1, 5), yay!
+Player 1 just played, ends of tiles are 5 and 2
+Remaining dominoes : [(0, 0), (4, 4), (1, 2), (1, 4)]
+
+DEPTH
+14
+Player 0 Move ((2, 3), None) how good it is: -0.000721500721501
+Player 0 Move ((3, 5), None) how good it is: -0.0004329004329
+I played a (3, 5), yay!
+Player 2 just played, ends of tiles are 3 and 2
+Remaining dominoes : [(3, 3), (0, 4), (2, 3)]
+
+3's turn!
+I played a (2, 5), yay!
+Player 3 just played, ends of tiles are 3 and 5
+Remaining dominoes : [(1, 6), (1, 3), (1, 1)]
+
+DEPTH
+14
+Player 0 Move ((0, 3), None) how good it is: 0.000952380952381
+Player 0 Move ((4, 5), None) how good it is: 0.000952380952381
+I played a (0, 3), yay!
+Player 0 just played, ends of tiles are 0 and 5
+Remaining dominoes : [(4, 6), (6, 6), (4, 5)]
+
+1's turn!
+I played a (0, 0), yay!
+Player 1 just played, ends of tiles are 0 and 5
+Remaining dominoes : [(4, 4), (1, 2), (1, 4)]
+
+I played a (0, 4), yay!
+Player 2 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(3, 3), (2, 3)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(1, 6), (1, 3), (1, 1)]
+
+DEPTH
+20
+Player 0 Move ((4, 5), 0) how good it is: -5.9
+Player 0 Move ((4, 5), 1) how good it is: 0.111428571429
+Player 0 Move ((4, 6), None) how good it is: 0.75
+I played a (4, 6), yay!
+Player 0 just played, ends of tiles are 6 and 5
+Remaining dominoes : [(6, 6), (4, 5)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 6 and 5
+Remaining dominoes : [(4, 4), (1, 2), (1, 4)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 6 and 5
+Remaining dominoes : [(3, 3), (2, 3)]
+
+3's turn!
+I played a (1, 6), yay!
+Player 3 just played, ends of tiles are 1 and 5
+Remaining dominoes : [(1, 3), (1, 1)]
+
+I played a (4, 5), yay!
+Player 0 just played, ends of tiles are 1 and 4
+Remaining dominoes : [(6, 6)]
+
+1's turn!
+I played a (4, 4), yay!
+Player 1 just played, ends of tiles are 1 and 4
+Remaining dominoes : [(1, 2), (1, 4)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 1 and 4
+Remaining dominoes : [(3, 3), (2, 3)]
+
+3's turn!
+I played a (1, 3), yay!
+Player 3 just played, ends of tiles are 3 and 4
+Remaining dominoes : [(1, 1)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 3 and 4
+Remaining dominoes : [(6, 6)]
+
+1's turn!
+I played a (1, 4), yay!
+Player 1 just played, ends of tiles are 3 and 1
+Remaining dominoes : [(1, 2)]
+
+DEPTH
+56
+Player 0 Move ((3, 3), None) how good it is: -6.16666666667
+Player 0 Move ((2, 3), None) how good it is: -6.33333333333
+I played a (3, 3), yay!
+Player 2 just played, ends of tiles are 3 and 1
+Remaining dominoes : [(2, 3)]
+
+3's turn!
+I played a (1, 1), yay!
+Player 3 just played, ends of tiles are 3 and 1
+Remaining dominoes : []
+
+Player 0 has pips 12
+Player 1 has pips 3
+Player 2 has pips 5
+Player 3 has pips 0
+I lose :(
+Game ended.
+----PLAYING ROUND----  19
+Welcome.
+I have: [(0, 2), (1, 2), (0, 3), (1, 4), (2, 4), (0, 4), (0, 5)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(3, 5), (5, 6), (1, 6), (3, 4), (0, 6), (1, 1), (4, 6)]
+Player 2 has: [(3, 6), (5, 5), (6, 6), (4, 4), (0, 1), (3, 3), (2, 5)]
+Player 3 has: [(0, 0), (4, 5), (2, 2), (2, 3), (1, 5), (2, 6), (1, 3)]
+Player 3 is starting.
+I placed a (4, 5)
+
+DEPTH
+5
+Player 0 Move ((0, 4), None) how good it is: 0.257894736842
+Player 0 Move ((1, 4), None) how good it is: 0.288235294118
+Player 0 Move ((0, 5), None) how good it is: 0.313519091847
+Player 0 Move ((2, 4), None) how good it is: 0.318575851393
+I played a (2, 4), yay!
+Player 0 just played, ends of tiles are 2 and 5
+Remaining dominoes : [(0, 2), (1, 2), (0, 5), (0, 3), (1, 4), (0, 4)]
+
+1's turn!
+I played a (5, 6), yay!
+Player 1 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(1, 6), (0, 6), (3, 4), (1, 1), (3, 5), (4, 6)]
+
+DEPTH
+5
+Player 0 Move ((6, 6), None) how good it is: -0.514705882353
+Player 0 Move ((2, 5), None) how good it is: -0.5
+Player 0 Move ((3, 6), None) how good it is: -0.529411764706
+I played a (2, 5), yay!
+Player 2 just played, ends of tiles are 5 and 6
+Remaining dominoes : [(4, 4), (3, 3), (3, 6), (0, 1), (5, 5), (6, 6)]
+
+3's turn!
+I played a (2, 6), yay!
+Player 3 just played, ends of tiles are 5 and 2
+Remaining dominoes : [(0, 0), (2, 3), (2, 2), (1, 3), (1, 5)]
+
+DEPTH
+7
+Player 0 Move ((1, 2), None) how good it is: 0.0242404654169
+Player 0 Move ((0, 5), None) how good it is: 0.0404007756949
+Player 0 Move ((0, 2), None) how good it is: 0.0282805429864
+I played a (0, 5), yay!
+Player 0 just played, ends of tiles are 0 and 2
+Remaining dominoes : [(0, 2), (1, 2), (0, 3), (1, 4), (0, 4)]
+
+1's turn!
+I played a (0, 6), yay!
+Player 1 just played, ends of tiles are 6 and 2
+Remaining dominoes : [(1, 6), (3, 4), (1, 1), (3, 5), (4, 6)]
+
+DEPTH
+7
+Player 0 Move ((6, 6), None) how good it is: -0.03774003774
+Player 0 Move ((3, 6), None) how good it is: -0.04329004329
+I played a (6, 6), yay!
+Player 2 just played, ends of tiles are 6 and 2
+Remaining dominoes : [(4, 4), (3, 3), (3, 6), (0, 1), (5, 5)]
+
+3's turn!
+I played a (2, 3), yay!
+Player 3 just played, ends of tiles are 6 and 3
+Remaining dominoes : [(0, 0), (2, 2), (1, 3), (1, 5)]
+
+I played a (0, 3), yay!
+Player 0 just played, ends of tiles are 6 and 0
+Remaining dominoes : [(0, 2), (1, 2), (1, 4), (0, 4)]
+
+1's turn!
+I played a (4, 6), yay!
+Player 1 just played, ends of tiles are 4 and 0
+Remaining dominoes : [(1, 6), (3, 4), (1, 1), (3, 5)]
+
+DEPTH
+10
+Player 0 Move ((4, 4), None) how good it is: -0.0109090909091
+Player 0 Move ((0, 1), None) how good it is: -0.0109090909091
+I played a (4, 4), yay!
+Player 2 just played, ends of tiles are 4 and 0
+Remaining dominoes : [(3, 3), (3, 6), (0, 1), (5, 5)]
+
+3's turn!
+I played a (0, 0), yay!
+Player 3 just played, ends of tiles are 4 and 0
+Remaining dominoes : [(2, 2), (1, 3), (1, 5)]
+
+DEPTH
+14
+Player 0 Move ((0, 4), 0) how good it is: -0.00164502164502
+Player 0 Move ((0, 4), 1) how good it is: 0.254545454545
+Player 0 Move ((1, 4), None) how good it is: -0.00138528138528
+Player 0 Move ((0, 2), None) how good it is: -0.000952380952381
+I played a (0, 4), yay!
+Player 0 just played, ends of tiles are 4 and 4
+Remaining dominoes : [(0, 2), (1, 2), (1, 4)]
+
+1's turn!
+I played a (3, 4), yay!
+Player 1 just played, ends of tiles are 3 and 4
+Remaining dominoes : [(1, 6), (1, 1), (3, 5)]
+
+DEPTH
+14
+Player 0 Move ((3, 3), None) how good it is: -0.142857142857
+Player 0 Move ((3, 6), None) how good it is: -0.00357142857143
+I played a (3, 6), yay!
+Player 2 just played, ends of tiles are 6 and 4
+Remaining dominoes : [(3, 3), (0, 1), (5, 5)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 6 and 4
+Remaining dominoes : [(2, 2), (1, 3), (1, 5)]
+
+I played a (1, 4), yay!
+Player 0 just played, ends of tiles are 6 and 1
+Remaining dominoes : [(0, 2), (1, 2)]
+
+1's turn!
+I played a (1, 6), yay!
+Player 1 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(1, 1), (3, 5)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(3, 3), (0, 1), (5, 5)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(2, 2), (1, 3), (1, 5)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(0, 2), (1, 2)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(1, 1), (3, 5)]
+
+Player 0 has pips 5
+Player 1 has pips 10
+Player 2 has pips 17
+Player 3 has pips 14
+I win!
+Game ended.
+----PLAYING ROUND----  20
+Welcome.
+I have: [(1, 1), (1, 6), (3, 3), (2, 2), (6, 6), (4, 6), (1, 3)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(0, 4), (3, 5), (2, 5), (0, 2), (0, 3), (2, 6), (0, 6)]
+Player 2 has: [(1, 4), (5, 5), (0, 0), (1, 2), (2, 3), (4, 5), (3, 6)]
+Player 3 has: [(1, 5), (4, 4), (2, 4), (5, 6), (3, 4), (0, 1), (0, 5)]
+Player 0 is starting.
+I placed a (6, 6)
+
+1's turn!
+I played a (2, 6), yay!
+Player 1 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(0, 3), (3, 5), (0, 2), (0, 4), (2, 5), (0, 6)]
+
+DEPTH
+5
+Player 0 Move ((1, 2), None) how good it is: 0.0433436532508
+Player 0 Move ((3, 6), None) how good it is: 0.0758513931889
+Player 0 Move ((2, 3), None) how good it is: 0.0325077399381
+I played a (3, 6), yay!
+Player 2 just played, ends of tiles are 2 and 3
+Remaining dominoes : [(4, 5), (0, 0), (2, 3), (1, 4), (1, 2), (5, 5)]
+
+3's turn!
+I played a (3, 4), yay!
+Player 3 just played, ends of tiles are 2 and 4
+Remaining dominoes : [(4, 4), (1, 5), (2, 4), (5, 6), (0, 5), (0, 1)]
+
+DEPTH
+7
+Player 0 Move ((2, 2), None) how good it is: -0.00484809308339
+Player 0 Move ((4, 6), None) how good it is: 0.00848416289593
+I played a (4, 6), yay!
+Player 0 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(2, 2), (6, 6), (3, 3), (1, 6), (1, 1), (1, 3)]
+
+1's turn!
+I played a (2, 5), yay!
+Player 1 just played, ends of tiles are 5 and 6
+Remaining dominoes : [(0, 3), (3, 5), (0, 2), (0, 4), (0, 6)]
+
+DEPTH
+7
+Player 0 Move ((5, 5), None) how good it is: 0.00156093906094
+Player 0 Move ((4, 5), None) how good it is: 0.00104062604063
+I played a (5, 5), yay!
+Player 2 just played, ends of tiles are 5 and 6
+Remaining dominoes : [(4, 5), (0, 0), (2, 3), (1, 4), (1, 2)]
+
+3's turn!
+I played a (5, 6), yay!
+Player 3 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(4, 4), (1, 5), (2, 4), (0, 5), (0, 1)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 5 and 5
+Remaining dominoes : [(2, 2), (6, 6), (3, 3), (1, 6), (1, 1), (1, 3)]
+
+1's turn!
+I played a (3, 5), yay!
+Player 1 just played, ends of tiles are 3 and 5
+Remaining dominoes : [(0, 3), (0, 2), (0, 4), (0, 6)]
+
+DEPTH
+10
+Player 0 Move ((4, 5), None) how good it is: -0.00239216565747
+Player 0 Move ((2, 3), None) how good it is: -0.0024975024975
+I played a (4, 5), yay!
+Player 2 just played, ends of tiles are 3 and 4
+Remaining dominoes : [(0, 0), (2, 3), (1, 4), (1, 2)]
+
+3's turn!
+I played a (4, 4), yay!
+Player 3 just played, ends of tiles are 3 and 4
+Remaining dominoes : [(1, 5), (2, 4), (0, 5), (0, 1)]
+
+DEPTH
+14
+Player 0 Move ((1, 3), None) how good it is: -0.125252525253
+Player 0 Move ((3, 3), None) how good it is: -0.000721500721501
+I played a (3, 3), yay!
+Player 0 just played, ends of tiles are 3 and 4
+Remaining dominoes : [(2, 2), (6, 6), (1, 6), (1, 1), (1, 3)]
+
+1's turn!
+I played a (0, 4), yay!
+Player 1 just played, ends of tiles are 3 and 0
+Remaining dominoes : [(0, 3), (0, 2), (0, 6)]
+
+DEPTH
+14
+Player 0 Move ((0, 0), None) how good it is: -0.0112554112554
+Player 0 Move ((2, 3), None) how good it is: -0.00155844155844
+I played a (2, 3), yay!
+Player 2 just played, ends of tiles are 2 and 0
+Remaining dominoes : [(0, 0), (1, 4), (1, 2)]
+
+3's turn!
+I played a (2, 4), yay!
+Player 3 just played, ends of tiles are 4 and 0
+Remaining dominoes : [(1, 5), (0, 5), (0, 1)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 4 and 0
+Remaining dominoes : [(2, 2), (6, 6), (1, 6), (1, 1), (1, 3)]
+
+1's turn!
+I played a (0, 6), yay!
+Player 1 just played, ends of tiles are 4 and 6
+Remaining dominoes : [(0, 3), (0, 2)]
+
+I played a (1, 4), yay!
+Player 2 just played, ends of tiles are 1 and 6
+Remaining dominoes : [(0, 0), (1, 2)]
+
+3's turn!
+I played a (1, 5), yay!
+Player 3 just played, ends of tiles are 5 and 6
+Remaining dominoes : [(0, 5), (0, 1)]
+
+I played a (1, 6), yay!
+Player 0 just played, ends of tiles are 5 and 1
+Remaining dominoes : [(2, 2), (6, 6), (1, 1), (1, 3)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 5 and 1
+Remaining dominoes : [(0, 3), (0, 2)]
+
+I played a (1, 2), yay!
+Player 2 just played, ends of tiles are 5 and 2
+Remaining dominoes : [(0, 0)]
+
+3's turn!
+I played a (0, 5), yay!
+Player 3 just played, ends of tiles are 0 and 2
+Remaining dominoes : [(0, 1)]
+
+I played a (2, 2), yay!
+Player 0 just played, ends of tiles are 0 and 2
+Remaining dominoes : [(6, 6), (1, 1), (1, 3)]
+
+1's turn!
+I played a (0, 3), yay!
+Player 1 just played, ends of tiles are 3 and 2
+Remaining dominoes : [(0, 2)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 3 and 2
+Remaining dominoes : [(0, 0)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 3 and 2
+Remaining dominoes : [(0, 1)]
+
+I played a (1, 3), yay!
+Player 0 just played, ends of tiles are 1 and 2
+Remaining dominoes : [(6, 6), (1, 1)]
+
+1's turn!
+I played a (0, 2), yay!
+Player 1 just played, ends of tiles are 1 and 0
+Remaining dominoes : []
+
+Player 0 has pips 2
+Player 1 has pips 0
+Player 2 has pips 0
+Player 3 has pips 1
+I win!
+Game ended.
+----PLAYING ROUND----  21
+Welcome.
+I have: [(0, 2), (4, 6), (4, 4), (3, 5), (0, 5), (5, 6), (0, 4)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(1, 3), (1, 4), (0, 0), (0, 3), (0, 6), (2, 2), (2, 5)]
+Player 2 has: [(4, 5), (3, 4), (1, 6), (3, 3), (1, 5), (2, 3), (2, 6)]
+Player 3 has: [(3, 6), (1, 1), (5, 5), (6, 6), (0, 1), (1, 2), (2, 4)]
+Player 1 is starting.
+I placed a (2, 5)
+
+DEPTH
+5
+Player 0 Move ((1, 5), None) how good it is: -0.151702786378
+Player 0 Move ((2, 6), None) how good it is: -0.219969040248
+Player 0 Move ((4, 5), None) how good it is: -0.106191950464
+Player 0 Move ((2, 3), None) how good it is: -0.232610939112
+I played a (4, 5), yay!
+Player 2 just played, ends of tiles are 2 and 4
+Remaining dominoes : [(2, 3), (3, 3), (1, 6), (2, 6), (1, 5), (3, 4)]
+
+3's turn!
+I played a (2, 4), yay!
+Player 3 just played, ends of tiles are 2 and 2
+Remaining dominoes : [(6, 6), (1, 2), (5, 5), (0, 1), (3, 6), (1, 1)]
+
+I played a (0, 2), yay!
+Player 0 just played, ends of tiles are 0 and 2
+Remaining dominoes : [(5, 6), (4, 6), (0, 4), (0, 5), (3, 5), (4, 4)]
+
+1's turn!
+I played a (0, 6), yay!
+Player 1 just played, ends of tiles are 6 and 2
+Remaining dominoes : [(2, 2), (1, 3), (1, 4), (0, 3), (0, 0)]
+
+DEPTH
+7
+Player 0 Move ((1, 6), None) how good it is: -0.00404007756949
+Player 0 Move ((2, 6), 0) how good it is: -0.00404007756949
+Player 0 Move ((2, 6), 1) how good it is: -0.00404007756949
+Player 0 Move ((2, 3), None) how good it is: -0.0222204266322
+I played a (1, 6), yay!
+Player 2 just played, ends of tiles are 1 and 2
+Remaining dominoes : [(2, 3), (3, 3), (2, 6), (1, 5), (3, 4)]
+
+3's turn!
+I played a (1, 2), yay!
+Player 3 just played, ends of tiles are 1 and 1
+Remaining dominoes : [(6, 6), (5, 5), (0, 1), (3, 6), (1, 1)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 1 and 1
+Remaining dominoes : [(5, 6), (4, 6), (0, 4), (0, 5), (3, 5), (4, 4)]
+
+1's turn!
+I played a (1, 4), yay!
+Player 1 just played, ends of tiles are 4 and 1
+Remaining dominoes : [(2, 2), (1, 3), (0, 3), (0, 0)]
+
+DEPTH
+10
+Player 0 Move ((1, 5), None) how good it is: -0.0162337662338
+Player 0 Move ((3, 4), None) how good it is: -0.0609945609946
+I played a (1, 5), yay!
+Player 2 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(2, 3), (3, 3), (2, 6), (3, 4)]
+
+3's turn!
+I played a (5, 5), yay!
+Player 3 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(6, 6), (0, 1), (3, 6), (1, 1)]
+
+DEPTH
+10
+Player 0 Move ((5, 6), None) how good it is: -0.0102164502165
+Player 0 Move ((4, 4), None) how good it is: -0.00987012987013
+Player 0 Move ((0, 4), None) how good it is: -0.0136796536797
+Player 0 Move ((3, 5), None) how good it is: -0.0102164502165
+Player 0 Move ((4, 6), None) how good it is: -0.0117748917749
+Player 0 Move ((0, 5), None) how good it is: -0.0135064935065
+I played a (4, 4), yay!
+Player 0 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(5, 6), (4, 6), (0, 4), (0, 5), (3, 5)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(2, 2), (1, 3), (0, 3), (0, 0)]
+
+I played a (3, 4), yay!
+Player 2 just played, ends of tiles are 3 and 5
+Remaining dominoes : [(2, 3), (3, 3), (2, 6)]
+
+3's turn!
+I played a (3, 6), yay!
+Player 3 just played, ends of tiles are 6 and 5
+Remaining dominoes : [(6, 6), (0, 1), (1, 1)]
+
+DEPTH
+14
+Player 0 Move ((5, 6), 0) how good it is: -0.00285714285714
+Player 0 Move ((5, 6), 1) how good it is: 0.000952380952381
+Player 0 Move ((3, 5), None) how good it is: 0.000952380952381
+Player 0 Move ((4, 6), None) how good it is: -0.00190476190476
+Player 0 Move ((0, 5), None) how good it is: 0.00047619047619
+I played a (5, 6), yay!
+Player 0 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(4, 6), (0, 4), (0, 5), (3, 5)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(2, 2), (1, 3), (0, 3), (0, 0)]
+
+I played a (2, 6), yay!
+Player 2 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(2, 3), (3, 3)]
+
+3's turn!
+I played a (6, 6), yay!
+Player 3 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(0, 1), (1, 1)]
+
+I played a (4, 6), yay!
+Player 0 just played, ends of tiles are 2 and 4
+Remaining dominoes : [(0, 4), (0, 5), (3, 5)]
+
+1's turn!
+I played a (2, 2), yay!
+Player 1 just played, ends of tiles are 2 and 4
+Remaining dominoes : [(1, 3), (0, 3), (0, 0)]
+
+I played a (2, 3), yay!
+Player 2 just played, ends of tiles are 3 and 4
+Remaining dominoes : [(3, 3)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 3 and 4
+Remaining dominoes : [(0, 1), (1, 1)]
+
+DEPTH
+28
+Player 0 Move ((0, 4), None) how good it is: 1.5
+Player 0 Move ((3, 5), None) how good it is: 1.83333333333
+I played a (3, 5), yay!
+Player 0 just played, ends of tiles are 5 and 4
+Remaining dominoes : [(0, 4), (0, 5)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 5 and 4
+Remaining dominoes : [(1, 3), (0, 3), (0, 0)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 5 and 4
+Remaining dominoes : [(3, 3)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 5 and 4
+Remaining dominoes : [(0, 1), (1, 1)]
+
+DEPTH
+40
+Player 0 Move ((0, 4), None) how good it is: 1.83333333333
+Player 0 Move ((0, 5), None) how good it is: 1.83333333333
+I played a (0, 4), yay!
+Player 0 just played, ends of tiles are 5 and 0
+Remaining dominoes : [(0, 5)]
+
+1's turn!
+I played a (0, 3), yay!
+Player 1 just played, ends of tiles are 5 and 3
+Remaining dominoes : [(1, 3), (0, 0)]
+
+I played a (3, 3), yay!
+Player 2 just played, ends of tiles are 5 and 3
+Remaining dominoes : []
+
+Player 0 has pips 5
+Player 1 has pips 4
+Player 2 has pips 0
+Player 3 has pips 3
+I win!
+Game ended.
+----PLAYING ROUND----  22
+Welcome.
+I have: [(1, 6), (0, 3), (3, 4), (1, 1), (2, 4), (0, 5), (4, 4)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(0, 4), (4, 6), (3, 6), (1, 2), (6, 6), (0, 6), (2, 6)]
+Player 2 has: [(1, 3), (2, 5), (5, 6), (3, 3), (1, 4), (5, 5), (2, 2)]
+Player 3 has: [(0, 0), (0, 2), (3, 5), (1, 5), (2, 3), (4, 5), (0, 1)]
+Player 2 is starting.
+I placed a (5, 6)
+
+3's turn!
+I played a (4, 5), yay!
+Player 3 just played, ends of tiles are 4 and 6
+Remaining dominoes : [(3, 5), (0, 2), (0, 1), (1, 5), (2, 3), (0, 0)]
+
+DEPTH
+5
+Player 0 Move ((1, 6), None) how good it is: 0.102941176471
+Player 0 Move ((4, 4), None) how good it is: 0.195046439628
+Player 0 Move ((3, 4), None) how good it is: 0.102941176471
+Player 0 Move ((2, 4), None) how good it is: 0.140866873065
+I played a (4, 4), yay!
+Player 0 just played, ends of tiles are 4 and 6
+Remaining dominoes : [(0, 3), (3, 4), (1, 1), (0, 5), (1, 6), (2, 4)]
+
+1's turn!
+I played a (6, 6), yay!
+Player 1 just played, ends of tiles are 4 and 6
+Remaining dominoes : [(0, 6), (1, 2), (4, 6), (2, 6), (3, 6), (0, 4)]
+
+I played a (1, 4), yay!
+Player 2 just played, ends of tiles are 1 and 6
+Remaining dominoes : [(2, 5), (3, 3), (2, 2), (5, 5), (1, 3)]
+
+3's turn!
+I played a (1, 5), yay!
+Player 3 just played, ends of tiles are 5 and 6
+Remaining dominoes : [(3, 5), (0, 2), (0, 1), (2, 3), (0, 0)]
+
+DEPTH
+7
+Player 0 Move ((1, 6), None) how good it is: 0.0104062604063
+Player 0 Move ((0, 5), None) how good it is: 0.0114468864469
+I played a (0, 5), yay!
+Player 0 just played, ends of tiles are 0 and 6
+Remaining dominoes : [(0, 3), (3, 4), (1, 1), (1, 6), (2, 4)]
+
+1's turn!
+I played a (4, 6), yay!
+Player 1 just played, ends of tiles are 0 and 4
+Remaining dominoes : [(0, 6), (1, 2), (2, 6), (3, 6), (0, 4)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 0 and 4
+Remaining dominoes : [(2, 5), (3, 3), (2, 2), (5, 5), (1, 3)]
+
+3's turn!
+I played a (0, 2), yay!
+Player 3 just played, ends of tiles are 2 and 4
+Remaining dominoes : [(3, 5), (0, 1), (2, 3), (0, 0)]
+
+DEPTH
+10
+Player 0 Move ((3, 4), None) how good it is: -0.000761143618286
+Player 0 Move ((2, 4), 0) how good it is: -0.00841750841751
+Player 0 Move ((2, 4), 1) how good it is: -0.000761143618286
+I played a (3, 4), yay!
+Player 0 just played, ends of tiles are 2 and 3
+Remaining dominoes : [(0, 3), (1, 1), (1, 6), (2, 4)]
+
+1's turn!
+I played a (3, 6), yay!
+Player 1 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(0, 6), (1, 2), (2, 6), (0, 4)]
+
+DEPTH
+14
+Player 0 Move ((2, 5), None) how good it is: -0.000779220779221
+Player 0 Move ((2, 2), None) how good it is: -0.00040404040404
+I played a (2, 2), yay!
+Player 2 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(2, 5), (3, 3), (5, 5), (1, 3)]
+
+3's turn!
+I played a (2, 3), yay!
+Player 3 just played, ends of tiles are 3 and 6
+Remaining dominoes : [(3, 5), (0, 1), (0, 0)]
+
+DEPTH
+14
+Player 0 Move ((1, 6), None) how good it is: -0.0727272727273
+Player 0 Move ((0, 3), None) how good it is: -0.0775510204082
+I played a (1, 6), yay!
+Player 0 just played, ends of tiles are 3 and 1
+Remaining dominoes : [(0, 3), (1, 1), (2, 4)]
+
+1's turn!
+I played a (1, 2), yay!
+Player 1 just played, ends of tiles are 3 and 2
+Remaining dominoes : [(0, 6), (2, 6), (0, 4)]
+
+DEPTH
+20
+Player 0 Move ((1, 3), None) how good it is: -0.328571428571
+Player 0 Move ((2, 5), None) how good it is: -0.833333333333
+Player 0 Move ((3, 3), None) how good it is: -0.0184523809524
+I played a (3, 3), yay!
+Player 2 just played, ends of tiles are 3 and 2
+Remaining dominoes : [(2, 5), (5, 5), (1, 3)]
+
+3's turn!
+I played a (3, 5), yay!
+Player 3 just played, ends of tiles are 5 and 2
+Remaining dominoes : [(0, 1), (0, 0)]
+
+I played a (2, 4), yay!
+Player 0 just played, ends of tiles are 5 and 4
+Remaining dominoes : [(0, 3), (1, 1)]
+
+1's turn!
+I played a (0, 4), yay!
+Player 1 just played, ends of tiles are 5 and 0
+Remaining dominoes : [(0, 6), (2, 6)]
+
+DEPTH
+28
+Player 0 Move ((2, 5), None) how good it is: -1.46666666667
+Player 0 Move ((5, 5), None) how good it is: -0.566666666667
+I played a (5, 5), yay!
+Player 2 just played, ends of tiles are 5 and 0
+Remaining dominoes : [(2, 5), (1, 3)]
+
+3's turn!
+I played a (0, 1), yay!
+Player 3 just played, ends of tiles are 5 and 1
+Remaining dominoes : [(0, 0)]
+
+I played a (1, 1), yay!
+Player 0 just played, ends of tiles are 5 and 1
+Remaining dominoes : [(0, 3)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 5 and 1
+Remaining dominoes : [(0, 6), (2, 6)]
+
+DEPTH
+40
+Player 0 Move ((1, 3), None) how good it is: -2.91666666667
+Player 0 Move ((2, 5), None) how good it is: -1.75
+I played a (2, 5), yay!
+Player 2 just played, ends of tiles are 2 and 1
+Remaining dominoes : [(1, 3)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 2 and 1
+Remaining dominoes : [(0, 0)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 2 and 1
+Remaining dominoes : [(0, 3)]
+
+1's turn!
+I played a (2, 6), yay!
+Player 1 just played, ends of tiles are 6 and 1
+Remaining dominoes : [(0, 6)]
+
+I played a (1, 3), yay!
+Player 2 just played, ends of tiles are 6 and 3
+Remaining dominoes : []
+
+Player 0 has pips 3
+Player 1 has pips 6
+Player 2 has pips 0
+Player 3 has pips 0
+I win!
+Game ended.
+----PLAYING ROUND----  23
+Welcome.
+I have: [(0, 5), (5, 5), (1, 6), (0, 6), (2, 3), (3, 3), (0, 1)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(2, 5), (4, 6), (2, 2), (4, 5), (0, 4), (3, 6), (2, 4)]
+Player 2 has: [(6, 6), (1, 3), (3, 5), (1, 1), (1, 2), (0, 3), (2, 6)]
+Player 3 has: [(0, 0), (4, 4), (0, 2), (1, 5), (5, 6), (3, 4), (1, 4)]
+Player 3 is starting.
+I placed a (5, 6)
+
+DEPTH
+5
+Player 0 Move ((1, 6), None) how good it is: -0.0606811145511
+Player 0 Move ((5, 5), None) how good it is: 0.113777089783
+Player 0 Move ((0, 5), None) how good it is: -0.00252837977296
+Player 0 Move ((0, 6), None) how good it is: 0.0429824561404
+I played a (5, 5), yay!
+Player 0 just played, ends of tiles are 5 and 6
+Remaining dominoes : [(3, 3), (1, 6), (0, 5), (2, 3), (0, 1), (0, 6)]
+
+1's turn!
+I played a (4, 6), yay!
+Player 1 just played, ends of tiles are 5 and 4
+Remaining dominoes : [(2, 4), (4, 5), (2, 5), (3, 6), (2, 2), (0, 4)]
+
+I played a (3, 5), yay!
+Player 2 just played, ends of tiles are 3 and 4
+Remaining dominoes : [(0, 3), (1, 2), (1, 3), (1, 1), (6, 6), (2, 6)]
+
+3's turn!
+I played a (4, 4), yay!
+Player 3 just played, ends of tiles are 3 and 4
+Remaining dominoes : [(3, 4), (1, 5), (0, 2), (1, 4), (0, 0)]
+
+DEPTH
+7
+Player 0 Move ((3, 3), None) how good it is: 0.00202003878474
+Player 0 Move ((2, 3), None) how good it is: 0.00202003878474
+I played a (3, 3), yay!
+Player 0 just played, ends of tiles are 3 and 4
+Remaining dominoes : [(1, 6), (0, 5), (2, 3), (0, 1), (0, 6)]
+
+1's turn!
+I played a (4, 5), yay!
+Player 1 just played, ends of tiles are 3 and 5
+Remaining dominoes : [(2, 4), (2, 5), (3, 6), (2, 2), (0, 4)]
+
+DEPTH
+7
+Player 0 Move ((1, 3), None) how good it is: -0.0444000444
+Player 0 Move ((0, 3), None) how good it is: -0.01665001665
+I played a (0, 3), yay!
+Player 2 just played, ends of tiles are 0 and 5
+Remaining dominoes : [(1, 2), (1, 3), (1, 1), (6, 6), (2, 6)]
+
+3's turn!
+I played a (1, 5), yay!
+Player 3 just played, ends of tiles are 0 and 1
+Remaining dominoes : [(3, 4), (0, 2), (1, 4), (0, 0)]
+
+DEPTH
+10
+Player 0 Move ((1, 6), None) how good it is: -0.000594643451786
+Player 0 Move ((0, 5), None) how good it is: -0.000713572142144
+Player 0 Move ((0, 1), 0) how good it is: -0.00111000111
+Player 0 Move ((0, 1), 1) how good it is: -0.00321107463965
+Player 0 Move ((0, 6), None) how good it is: -0.000475714761429
+I played a (0, 6), yay!
+Player 0 just played, ends of tiles are 6 and 1
+Remaining dominoes : [(1, 6), (0, 5), (2, 3), (0, 1)]
+
+1's turn!
+I played a (3, 6), yay!
+Player 1 just played, ends of tiles are 3 and 1
+Remaining dominoes : [(2, 4), (2, 5), (2, 2), (0, 4)]
+
+DEPTH
+10
+Player 0 Move ((1, 3), 0) how good it is: -0.0034632034632
+Player 0 Move ((1, 3), 1) how good it is: -0.00727272727273
+Player 0 Move ((1, 2), None) how good it is: -0.00450216450216
+Player 0 Move ((1, 1), None) how good it is: -0.00554112554113
+I played a (1, 3), yay!
+Player 2 just played, ends of tiles are 1 and 1
+Remaining dominoes : [(1, 2), (1, 1), (6, 6), (2, 6)]
+
+3's turn!
+I played a (1, 4), yay!
+Player 3 just played, ends of tiles are 4 and 1
+Remaining dominoes : [(3, 4), (0, 2), (0, 0)]
+
+DEPTH
+14
+Player 0 Move ((1, 6), None) how good it is: -0.00121212121212
+Player 0 Move ((0, 1), None) how good it is: -0.00164502164502
+I played a (1, 6), yay!
+Player 0 just played, ends of tiles are 4 and 6
+Remaining dominoes : [(0, 5), (2, 3), (0, 1)]
+
+1's turn!
+I played a (2, 4), yay!
+Player 1 just played, ends of tiles are 2 and 6
+Remaining dominoes : [(2, 5), (2, 2), (0, 4)]
+
+DEPTH
+14
+Player 0 Move ((6, 6), None) how good it is: -0.0130952380952
+Player 0 Move ((1, 2), None) how good it is: 0.285714285714
+Player 0 Move ((2, 6), 0) how good it is: 6.66666666667
+Player 0 Move ((2, 6), 1) how good it is: -0.0202380952381
+I played a (2, 6), yay!
+Player 2 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(1, 2), (1, 1), (6, 6)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(3, 4), (0, 2), (0, 0)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(0, 5), (2, 3), (0, 1)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(2, 5), (2, 2), (0, 4)]
+
+I played a (6, 6), yay!
+Player 2 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(1, 2), (1, 1)]
+
+3's turn!
+I played a PASS, yay!
+Player 3 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(3, 4), (0, 2), (0, 0)]
+
+I played a PASS, yay!
+Player 0 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(0, 5), (2, 3), (0, 1)]
+
+1's turn!
+I played a PASS, yay!
+Player 1 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(2, 5), (2, 2), (0, 4)]
+
+I played a PASS, yay!
+Player 2 just played, ends of tiles are 6 and 6
+Remaining dominoes : [(1, 2), (1, 1)]
+
+Player 0 has pips 11
+Player 1 has pips 15
+Player 2 has pips 5
+Player 3 has pips 9
+I win!
+Game ended.
+----PLAYING ROUND----  24
+Welcome.
+I have: [(3, 3), (0, 3), (1, 5), (1, 4), (2, 3), (5, 5), (3, 5)]
+
+Players are numbered as the following:
+(0 = me, 1 = opponent on my right,
+2 = partner across from me, 3 = opponent on my left)
+Player 1 has: [(6, 6), (2, 6), (3, 6), (0, 2), (1, 1), (0, 5), (2, 5)]
+Player 2 has: [(0, 4), (1, 3), (2, 4), (4, 4), (1, 6), (0, 0), (0, 1)]
+Player 3 has: [(3, 4), (1, 2), (0, 6), (4, 5), (5, 6), (2, 2), (4, 6)]
+Player 0 is starting.
+I placed a (5, 5)
+
+1's turn!
+I played a (2, 5), yay!
+Player 1 just played, ends of tiles are 2 and 5
+Remaining dominoes : [(1, 1), (0, 2), (6, 6), (2, 6), (0, 5), (3, 6)]
+
+I played a (2, 4), yay!
+Player 2 just played, ends of tiles are 4 and 5
+Remaining dominoes : [(1, 3), (0, 4), (4, 4), (1, 6), (0, 0), (0, 1)]
+
+3's turn!
+I played a (5, 6), yay!
+Player 3 just played, ends of tiles are 4 and 6
+Remaining dominoes : [(3, 4), (1, 2), (2, 2), (0, 6), (4, 5), (4, 6)]
+
+I played a (1, 4), yay!
+Player 0 just played, ends of tiles are 1 and 6
+Remaining dominoes : [(0, 3), (3, 5), (5, 5), (3, 3), (1, 5), (2, 3)]
+
+1's turn!
+I played a (6, 6), yay!
+Player 1 just played, ends of tiles are 1 and 6
+Remaining dominoes : [(1, 1), (0, 2), (2, 6), (0, 5), (3, 6)]
+
+DEPTH
+7
+Player 0 Move ((1, 3), None) how good it is: 0.0260156510157
+Player 0 Move ((1, 6), 0) how good it is: 0.0483891108891
+Player 0 Move ((1, 6), 1) how good it is: 0.0509906759907
+Player 0 Move ((0, 1), None) how good it is: 0.0421453546454
+I played a (1, 6), yay!
+Player 2 just played, ends of tiles are 1 and 1
+Remaining dominoes : [(1, 3), (0, 4), (4, 4), (0, 0), (0, 1)]
+
+3's turn!
+I played a (1, 2), yay!
+Player 3 just played, ends of tiles are 2 and 1
+Remaining dominoes : [(3, 4), (2, 2), (0, 6), (4, 5), (4, 6)]
+
+DEPTH
+10
+Player 0 Move ((1, 5), None) how good it is: -0.002775002775
+Player 0 Move ((2, 3), None) how good it is: -0.000555000555001
+I played a (2, 3), yay!
+Player 0 just played, ends of tiles are 3 and 1
+Remaining dominoes : [(0, 3), (3, 5), (5, 5), (3, 3), (1, 5)]
+
+1's turn!
+I played a (3, 6), yay!
+Player 1 just played, ends of tiles are 6 and 1
+Remaining dominoes : [(1, 1), (0, 2), (2, 6), (0, 5)]
+
+DEPTH
+10
+Player 0 Move ((1, 3), None) how good it is: -0.000333000333
+Player 0 Move ((0, 1), None) how good it is: -0.000333000333
+I played a (1, 3), yay!
+Player 2 just played, ends of tiles are 6 and 3
+Remaining dominoes : [(0, 4), (4, 4), (0, 0), (0, 1)]
+
+3's turn!
+I played a (4, 6), yay!
+Player 3 just played, ends of tiles are 4 and 3
+Remaining dominoes : [(3, 4), (2, 2), (0, 6), (4, 5)]
+
+DEPTH
+14
+Player 0 Move ((0, 3), None) how good it is: -0.00046176046176

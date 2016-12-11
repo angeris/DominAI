@@ -1,7 +1,7 @@
 '''
 TODO:
 Fix list assignment index out of range
-    dominos_played can be of any length!! 
+    dominos_played can be of any length!!
 Who won the game? Say it
 '''
 
@@ -62,7 +62,7 @@ def smartPlays(game, tiles, player):
             tiles[2*player].remove(actions[0][0])
     else:
         pnm = ProbabilisticNegaMax(curr_game)
-        depth = int(4*(2**(1./3*int(len(curr_game.dominos_played)/4))))
+        depth = int(5*(2**(1./3*int(len(curr_game.dominos_played)/4))))
         print "DEPTH"
         print depth
         max_move, max_score = pnm.p_negamax_ab(depth, depth, -float("inf"), float("inf"), 0)
@@ -98,17 +98,8 @@ def setupGame(r):
         players_tuples[i] = this_players_tiles
     starter = r % 4
     print "Player " + str(starter) + " is starting."
-    if starter > 0:
-        start_tile = greedyStarts(players_tiles[starter])
-        print "I placed a " + str(start_tile)
-        players_tiles[starter].remove(start_tile)
-        start_tile = start_tile.vals
-    else:
-        start_tile = greedyStarts(my_tiles)
-        print "I placed a " + str(start_tile)
-        start_tile = start_tile.vals
     print
-    return ((Dominoes(tiles, my_tiles, starter, start_tile), Dominoes(tiles, players_tuples[2], (starter+2)%4, start_tile)), players_tiles)
+    return ((Dominoes(tiles, my_tiles, starter), Dominoes(tiles, players_tuples[2], (starter+2)%4)), players_tiles)
 
 def greedyStarts(my_tiles):
     maximum = 0
@@ -174,7 +165,7 @@ def get_dominoes_list(game, player, player_tiles):
                 my_tiles.append(t)
         return my_tiles
     return [t for t in player_tiles[player] if t not in game.dominos_played]
-random.seed(1234)
+random.seed(100)
 
 if __name__ == '__main__':
     results = []
@@ -189,10 +180,6 @@ if __name__ == '__main__':
                 "are " + str(games[0].ends[0]) + " and " + str(games[0].ends[1])
             print 'Remaining dominoes : {}'.format(sorted(list(players_tiles[player])))
             print
-            print 'PLAYER 0 GAME ------'
-            games[0].debugging_fml()
-            print 'PLAYER 1 GAME ------'
-            games[1].debugging_fml()
         results.append(computeScore(games[0], players_tiles))
         print "Game ended."
     print "---STATS YAY---"
