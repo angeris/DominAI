@@ -42,15 +42,8 @@ def setupGame():
         else:
             print "Not valid, try again"
     print "Player " + str(starter) + " is starting."
-    if starter > 0:
-        print 'Write down your move (e.g. 23):'
-        move = raw_input("").strip()
-        start_tile = tuple([int(v) for v in move])
-    else:
-        start_tile = greedyStarts(my_tiles) # TODO: change
-        print "I placed a " + str(start_tile)
     print
-    return Dominoes(tiles, my_tiles, starter, start_tile)
+    return Dominoes(tiles, my_tiles, starter)
 
 def humanPlays(game, player):
     '''
