@@ -9,7 +9,7 @@ Roadmap of files in this repository:
 - *main.py*: Allows three humans to play with an AI player
 - *oracle.py*: The advanced AI players know the allocation of tiles in the game. 
 - *smart_team.py*: Two advanced AI players play multiple rounds against greedy players. 
-- *greedy_vs_smarter.py*: An early version of smart_team.py where an advanced player and greedy player played against a greedy team. 
+- *greedy_vs_smarter.py*: An early version of smart_team.py where an advanced player and greedy player played against a greedy team. Deprecated. 
 - *test.py*: Tests our negamax function on the halving game 
 - **algorithms**
 	- *negamax.py*: traditional negamax
