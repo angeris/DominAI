@@ -38,8 +38,8 @@ class ProbabilisticNegaMax:
             assert prob > 0
             curr_move, curr_score = self.p_negamax_ab(initial, depth-1, -beta, -alpha, cg.get_next_player(player))
             curr_score = -prob*curr_score
-            if depth == initial:
-                print "Player", player, "Move", move, "how good it is:", curr_score
+            # if depth == initial:
+                # print "Player", player, "Move", move, "how good it is:", curr_score
 
             if max_score is None or curr_score > max_score:
                 max_move, max_score = move, curr_score

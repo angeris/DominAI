@@ -11,6 +11,7 @@ from algorithms.p_negamax import ProbabilisticNegaMax
 import random
 from copy import deepcopy
 import sys
+from numpy.random import choice
 
 PASS_STR = 'PASS'
 PASS_DOMINO = Domino(-1,-1)
@@ -62,10 +63,16 @@ def smartPlays(game, tiles, player):
             tiles[2*player].remove(actions[0][0])
     else:
         pnm = ProbabilisticNegaMax(curr_game)
-        depth = int(5*(2**(1./3*int(len(curr_game.dominos_played)/4))))
+        depth = int(4*(2**(1./3*int(len(curr_game.dominos_played)/4))))
         print "DEPTH"
         print depth
-        max_move, max_score = pnm.p_negamax_ab(depth, depth, -float("inf"), float("inf"), 0)
+        max_move, max_expectation = None, None
+        for a in actions:
+            curr_expectation = calculate_expectation(curr_game, depth, a)
+            if max_move is None or max_expectation < curr_expectation:
+                max_move, max_expectation = a, curr_expectation
+                print 'new max found with expectation : {}'.format(max_expectation)
+
         # max_move, max_score = pnm.p_negamax(6,0)
         curr_game.update(max_move[0], placement=max_move[1])
         other_game.update(max_move[0], placement=max_move[1])
@@ -73,6 +80,34 @@ def smartPlays(game, tiles, player):
         if not max_move[0] == PASS_DOMINO:
             tiles[2*player].remove(max_move[0])
     return tiles
+
+def calculate_expectation(game, depth, move, samples=50):
+    exp_total = 0.0
+    remaining_dominoes = make_dominoes()
+    players = range(4)
+    pnm = ProbabilisticNegaMax(game)
+    game.make_probabilistic_move(0, move)
+    for t in game.dominos_played:
+        if not t == PASS_DOMINO:
+            remaining_dominoes.remove(t)
+    for _ in range(samples):
+        curr_dominoes = list(remaining_dominoes)
+        random.shuffle(curr_dominoes)
+        old_probabilities = deepcopy(game.probabilities)
+        while curr_dominoes:
+            curr_domino = curr_dominoes.pop()
+            curr_domino_probs = game.probabilities[curr_domino]
+            curr_assignment = choice(players, p=curr_domino_probs)
+            game._update_probs(curr_domino, curr_assignment)
+        exp_total += -pnm.p_negamax_ab(depth, depth, -float('inf'), float('inf'), 1)[1]
+        game.probabilities = old_probabilities
+    game.undo_move(0, move)
+    exp_total /= samples
+    return exp_total
+
+def make_dominoes():
+    return set(Domino(i,j) for i in range(7) for j in range(i,7))
+
 
 def setupGame(r):
     print 'Welcome.'
@@ -169,8 +204,8 @@ random.seed(100)
 
 if __name__ == '__main__':
     results = []
-
-    for r in range(100):
+    games, players_tiles = setupGame(0)
+    for r in range(10):
         print "----PLAYING ROUND---- ", r
         games, players_tiles = setupGame(r)
         while not games[0].is_end():
