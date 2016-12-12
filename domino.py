@@ -172,12 +172,12 @@ class Dominoes(ZeroSumBayesGame):
                 value = sum(d.vals)
                 expectation_opp += value*probs[(player + 1)%4] + value*probs[(player + 3)%4]
                 expectation_us += value*probs[player] + value*probs[(player + 2)%4]
-        # p_total = self._count_pieces(player)
-        return expectation_opp - expectation_us #+ 6*(p_total[1] - p_total[0])
+        p_total = self._count_pieces(player)
+        return expectation_opp - expectation_us + 6*(p_total[1] - p_total[0])
 
     def _count_pieces(self, player):
-        rel_players = [(player + i - self.starter)%4 for i in range(4)]
-        pieces_player = [self._dom_played(self.dominos_played[p::4]) for p in rel_players]
+        rel_players = [(player + i)%4 for i in range(4)]
+        pieces_player = [self._dom_played(p) for p in rel_players]
         return (pieces_player[0] + pieces_player[2], pieces_player[1] + pieces_player[3])
 
     def get_next_player(self, player):
@@ -360,4 +360,3 @@ if __name__ == '__main__':
     # test.undo_move(3, (PASS_DOMINO, None))
     # print test.curr_player
     # c.is_equal(test)
-

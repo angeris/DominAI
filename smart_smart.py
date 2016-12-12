@@ -1,11 +1,3 @@
-'''
-TODO:
-Fix list assignment index out of range
-    dominos_played can be of any length!!
-Who won the game? Say it
-'''
-
-
 from domino import Dominoes, Domino
 from algorithms.p_negamax import ProbabilisticNegaMax
 import random
@@ -16,55 +8,18 @@ from numpy.random import choice
 PASS_STR = 'PASS'
 PASS_DOMINO = Domino(-1,-1)
 
-def greedyPlays(game, tiles):
-    '''
-    @params:
-        - game (Dominoes)
-    '''
-    games = game
-    game, ogame = games
-    print str(game.curr_player) + "'s turn!"
-    player = game.curr_player
-    actions = game.possible_actions(None, False)
-    my_tiles = tiles[player]
-    possible_moves = [PASS_DOMINO]
-    for t in my_tiles:
-        if t in actions:
-            possible_moves.append(t)
-    maximum = -1
-    ret = possible_moves[0]
-    print possible_moves
-    for domino in possible_moves:
-        if domino.vals[1] + domino.vals[0] > maximum:
-            maximum = domino.vals[1] + domino.vals[0]
-            ret = domino
-    if (game.ends[0] in ret and game.ends[1] in ret and game.ends[0] != game.ends[1]):
-        placement = random.choice((0, 1))
-        game.update(ret, None, placement)
-        ogame.update(ret, None, placement)
-
-    else:
-        game.update(ret, None)
-        ogame.update(ret, None)
-    if ret != PASS_DOMINO:
-        tiles[player].remove(ret)
-    print "I played a " + str(ret) + ", yay!"
-    return tiles
-
-def smartPlays(game, tiles, player):
-    player /= 2
+def newSmartPlays(game, tiles, player):
     curr_game = game[player]
-    other_game = game[1-player]
     actions = curr_game.possible_actions(0)
     if len(actions) == 1:
-        curr_game.update(actions[0][0])
-        other_game.update(actions[0][0])
+        for g in games:
+            g.update(actions[0][0])
         print "I played a " + str(actions[0][0]) + ", yay!"
         if not actions[0][0] == PASS_DOMINO:
-            tiles[2*player].remove(actions[0][0])
+            tiles[player].remove(actions[0][0])
     else:
         pnm = ProbabilisticNegaMax(curr_game)
-        depth = int(6*(2**(1./3*int(len(curr_game.dominos_played)/4))))
+        depth = int(5*(2**(1./3*int(len(curr_game.dominos_played)/4))))
         print "DEPTH"
         print depth
         max_move, max_expectation = None, None
@@ -73,16 +28,38 @@ def smartPlays(game, tiles, player):
             if max_move is None or max_expectation < curr_expectation:
                 max_move, max_expectation = a, curr_expectation
                 print 'new max found with expectation : {}'.format(max_expectation)
-
         # max_move, max_score = pnm.p_negamax(6,0)
-        curr_game.update(max_move[0], placement=max_move[1])
-        other_game.update(max_move[0], placement=max_move[1])
+        for g in games:
+            g.update(max_move[0], placement=max_move[1])
         print "I played a " + str(max_move[0]) + ", yay!"
         if not max_move[0] == PASS_DOMINO:
-            tiles[2*player].remove(max_move[0])
+            tiles[player].remove(max_move[0])
     return tiles
 
-def calculate_expectation(game, depth, move, samples=30):
+def oldSmartPlays(game, tiles, player):
+    curr_game = game[player]
+    actions = curr_game.possible_actions(0)
+    if len(actions) == 1:
+        for g in games:
+            g.update(actions[0][0])
+        print "I played a " + str(actions[0][0]) + ", yay!"
+        if not actions[0][0] == PASS_DOMINO:
+            tiles[player].remove(actions[0][0])
+    else:
+        pnm = ProbabilisticNegaMax(curr_game)
+        depth = int(5*(2**(1./3*int(len(curr_game.dominos_played)/4))))
+        print "DEPTH"
+        print depth
+        max_move, max_score = pnm.p_negamax_ab(depth, depth, -float("inf"), float("inf"), 0)
+        # max_move, max_score = pnm.p_negamax(6,0)
+        for g in games:
+            g.update(max_move[0], placement=max_move[1])
+        print "I played a " + str(max_move[0]) + ", yay!"
+        if not max_move[0] == PASS_DOMINO:
+            tiles[player].remove(max_move[0])
+    return tiles
+
+def calculate_expectation(game, depth, move, samples=50):
     exp_total = 0.0
     remaining_dominoes = make_dominoes()
     players = range(4)
@@ -109,7 +86,6 @@ def calculate_expectation(game, depth, move, samples=30):
 def make_dominoes():
     return set(Domino(i,j) for i in range(7) for j in range(i,7))
 
-
 def setupGame(r):
     print 'Welcome.'
     tiles = []
@@ -135,17 +111,11 @@ def setupGame(r):
     starter = r % 4
     print "Player " + str(starter) + " is starting."
     print
-    return ((Dominoes(tiles, my_tiles, starter), Dominoes(tiles, players_tuples[2], (starter+2)%4)), players_tiles)
-
-def greedyStarts(my_tiles):
-    maximum = 0
-    for domino in my_tiles:
-        if type(domino) == tuple:
-            domino = Domino(*domino)
-        if domino.vals[1] + domino.vals[0] > maximum:
-            maximum = domino.vals[1] + domino.vals[0]
-            ret = domino
-    return ret
+    return ((Dominoes(tiles, my_tiles, starter),
+        Dominoes(tiles, players_tuples[1], (starter-1)%4),
+        Dominoes(tiles, players_tuples[2], (starter-2)%4),
+        Dominoes(tiles, players_tuples[3], (starter-3)%4)),
+        players_tiles)
 
 def computeScore(game, players_tiles):
     player_pips = [0]*4
@@ -210,7 +180,7 @@ if __name__ == '__main__':
         games, players_tiles = setupGame(r)
         while not games[0].is_end():
             player = games[0].curr_player
-            tiles = greedyPlays(games, players_tiles) if player%2==1 else smartPlays(games, players_tiles, player)
+            tiles = oldSmartPlays(games, players_tiles, player) if player%2==1 else newSmartPlays(games, players_tiles, player)
             print "Player " + str(player) + " just played, ends of tiles " + \
                 "are " + str(games[0].ends[0]) + " and " + str(games[0].ends[1])
             print 'Remaining dominoes : {}'.format(sorted(list(players_tiles[player])))
