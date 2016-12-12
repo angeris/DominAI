@@ -145,7 +145,10 @@ class Dominoes(ZeroSumBayesGame):
         for t in self.tiles:
             if self._is_valid(t) and self.probabilities[t][curr_player] > 0:
                 if not self.dominos_played:
-                    possible_moves.append((t, None))
+                    if placements_included:
+                        possible_moves.append((t, None))
+                    else:
+                        possible_moves.append(t)
                     continue
                 if placements_included:
                     if not (self.ends[0] in t)^(self.ends[1] in t) \

@@ -33,6 +33,7 @@ def greedyPlays(game, tiles):
             possible_moves.append(t)
     maximum = -1
     ret = possible_moves[0]
+    print possible_moves
     for domino in possible_moves:
         if domino.vals[1] + domino.vals[0] > maximum:
             maximum = domino.vals[1] + domino.vals[0]
