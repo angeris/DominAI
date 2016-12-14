@@ -173,7 +173,7 @@ class Dominoes(ZeroSumBayesGame):
                 expectation_opp += value*probs[(player + 1)%4] + value*probs[(player + 3)%4]
                 expectation_us += value*probs[player] + value*probs[(player + 2)%4]
         p_total = self._count_pieces(player)
-        return expectation_opp - expectation_us + 6*(p_total[1] - p_total[0])
+        return expectation_opp - expectation_us #+ 6*(p_total[1] - p_total[0])
 
     def _count_pieces(self, player):
         rel_players = [(player + i)%4 for i in range(4)]

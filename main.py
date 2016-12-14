@@ -81,6 +81,10 @@ def humanPlays(games, player):
             raise
         except:
             print "Something went wrong, try again"
+        if (games[0].ends == [None, None]): 
+            games[0].update(move)
+            games[1].update(move)
+            return 
         if (games[0].ends[0] in move and games[0].ends[1] in move
                 and games[0].ends[0] != games[0].ends[1]):
             while True:
@@ -111,7 +115,7 @@ def smartPlays(game, player):
         print "I played a " + str(actions[0][0]) + ", yay!"
     else:
         pnm = ProbabilisticNegaMax(curr_game)
-        depth = int(8*(2**(1./2*int(len(curr_game.dominos_played)/4))))
+        depth = int(6*(2**(1./3*int(len(curr_game.dominos_played)/4))))
         print "DEPTH"
         print depth
         max_move, max_expectation = None, None
@@ -126,7 +130,7 @@ def smartPlays(game, player):
         other_game.update(max_move[0], placement=max_move[1])
         print "I played a " + str(max_move[0]) + ", yay!"
 
-def calculate_expectation(game, depth, move, samples=20):
+def calculate_expectation(game, depth, move, samples=40):
     exp_total = 0.0
     remaining_dominoes = make_dominoes()
     players = range(4)
