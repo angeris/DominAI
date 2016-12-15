@@ -1,16 +1,9 @@
-'''
-TODO:
-Fix list assignment index out of range
-    dominos_played can be of any length!! 
-Who won the game? Say it
-'''
-
-
 from domino import Dominoes, Domino
 from algorithms.p_negamax import ProbabilisticNegaMax
 import random
 from copy import deepcopy
 import sys
+from numpy.random import choice
 
 PASS_STR = 'PASS'
 PASS_DOMINO = Domino(-1,-1)
@@ -32,6 +25,7 @@ def greedyPlays(game, tiles):
             possible_moves.append(t)
     maximum = -1
     ret = possible_moves[0]
+    print possible_moves
     for domino in possible_moves:
         if domino.vals[1] + domino.vals[0] > maximum:
             maximum = domino.vals[1] + domino.vals[0]
@@ -62,10 +56,12 @@ def smartPlays(game, tiles, player):
             tiles[2*player].remove(actions[0][0])
     else:
         pnm = ProbabilisticNegaMax(curr_game)
-        depth = int(4*(2**(1./3*int(len(curr_game.dominos_played)/4))))
+        depth = int(5*(2**(1./3*int(len(curr_game.dominos_played)/4))))
         print "DEPTH"
         print depth
+        # uncomment out the line below for oldSmartPlayer:
         max_move, max_score = pnm.p_negamax_ab(depth, depth, -float("inf"), float("inf"), 0)
+
         # max_move, max_score = pnm.p_negamax(6,0)
         curr_game.update(max_move[0], placement=max_move[1])
         other_game.update(max_move[0], placement=max_move[1])
@@ -73,6 +69,10 @@ def smartPlays(game, tiles, player):
         if not max_move[0] == PASS_DOMINO:
             tiles[2*player].remove(max_move[0])
     return tiles
+
+def make_dominoes():
+    return set(Domino(i,j) for i in range(7) for j in range(i,7))
+
 
 def setupGame(r):
     print 'Welcome.'
@@ -98,17 +98,8 @@ def setupGame(r):
         players_tuples[i] = this_players_tiles
     starter = r % 4
     print "Player " + str(starter) + " is starting."
-    if starter > 0:
-        start_tile = greedyStarts(players_tiles[starter])
-        print "I placed a " + str(start_tile)
-        players_tiles[starter].remove(start_tile)
-        start_tile = start_tile.vals
-    else:
-        start_tile = greedyStarts(my_tiles)
-        print "I placed a " + str(start_tile)
-        start_tile = start_tile.vals
     print
-    return ((Dominoes(tiles, my_tiles, starter, start_tile), Dominoes(tiles, players_tuples[2], (starter+2)%4, start_tile)), players_tiles)
+    return ((Dominoes(tiles, my_tiles, starter), Dominoes(tiles, players_tuples[2], (starter+2)%4)), players_tiles)
 
 def greedyStarts(my_tiles):
     maximum = 0
@@ -187,7 +178,7 @@ def reveal_tiles(games, players_tiles):
 if __name__ == '__main__':
     results = []
 
-    for r in range(50):
+    for r in range(100):
         print "----PLAYING ROUND---- ", r
         games, players_tiles = setupGame(r)
         reveal_tiles(games, players_tiles)

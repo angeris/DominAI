@@ -1,11 +1,3 @@
-'''
-TODO:
-Fix list assignment index out of range
-    dominos_played can be of any length!!
-Who won the game? Say it
-'''
-
-
 from domino import Dominoes, Domino
 from algorithms.p_negamax import ProbabilisticNegaMax
 import random
@@ -64,9 +56,12 @@ def smartPlays(game, tiles, player):
             tiles[2*player].remove(actions[0][0])
     else:
         pnm = ProbabilisticNegaMax(curr_game)
-        depth = int(6*(2**(1./3*int(len(curr_game.dominos_played)/4))))
+        depth = int(5*(2**(1./3*int(len(curr_game.dominos_played)/4))))
         print "DEPTH"
         print depth
+        # uncomment out the line below for oldSmartPlayer:
+        # max_move, max_score = pnm.p_negamax_ab(depth, depth, -float("inf"), float("inf"), 0)
+        # comment out up to after for loop for newSmartPlayer
         max_move, max_expectation = None, None
         for a in actions:
             curr_expectation = calculate_expectation(curr_game, depth, a)
@@ -82,7 +77,7 @@ def smartPlays(game, tiles, player):
             tiles[2*player].remove(max_move[0])
     return tiles
 
-def calculate_expectation(game, depth, move, samples=30):
+def calculate_expectation(game, depth, move, samples=50):
     exp_total = 0.0
     remaining_dominoes = make_dominoes()
     players = range(4)
