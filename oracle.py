@@ -56,7 +56,7 @@ def smartPlays(game, tiles, player):
             tiles[2*player].remove(actions[0][0])
     else:
         pnm = ProbabilisticNegaMax(curr_game)
-        depth = int(5*(2**(1./3*int(len(curr_game.dominos_played)/4))))
+        depth = int(8*(2**(1./2*int(len(curr_game.dominos_played)/4))))
         print "DEPTH"
         print depth
         # uncomment out the line below for oldSmartPlayer:

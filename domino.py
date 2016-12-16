@@ -126,7 +126,7 @@ class Dominoes(ZeroSumBayesGame):
     def undo_move(self, player, move):
         move = move[0]
         self.dominos_played.pop()
-        if move != PASS_DOMINO:
+        if not move == PASS_DOMINO:
             self.tiles.add(move)
         self.probabilities = self.undoable_probs.pop()
         self.ends = self.undoable_ends.pop()
@@ -173,7 +173,7 @@ class Dominoes(ZeroSumBayesGame):
                 expectation_opp += value*probs[(player + 1)%4] + value*probs[(player + 3)%4]
                 expectation_us += value*probs[player] + value*probs[(player + 2)%4]
         p_total = self._count_pieces(player)
-        return expectation_opp - expectation_us #+ 6*(p_total[1] - p_total[0])
+        return expectation_opp - expectation_us #+ 6*(p_total[0] - p_total[1])
 
     def _count_pieces(self, player):
         rel_players = [(player + i)%4 for i in range(4)]
@@ -224,7 +224,7 @@ class Dominoes(ZeroSumBayesGame):
 
     def _dom_played(self, l):
         l = self.dominos_played[(l-self.starter)%4::4]
-        return sum(map(lambda x:x!=PASS_DOMINO, l))
+        return sum(map(lambda x:not x==PASS_DOMINO, l))
 
     def _get_score(self, player):
         # Gets opposing team score
@@ -260,7 +260,7 @@ class Dominoes(ZeroSumBayesGame):
         if move == PASS_DOMINO:
             possible_moves = self.possible_actions(placements_included=False)
             for t in possible_moves:
-                if t != PASS_DOMINO and self.probabilities[t][curr_player] != 1:
+                if not t == PASS_DOMINO and self.probabilities[t][curr_player] != 1:
                     self.probabilities[t][curr_player] = 0
                     self.probabilities[t] = _renormalize(self.probabilities[t])
         else:
