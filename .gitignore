@@ -97,3 +97,6 @@ ENV/
 
 # MacOS BS
 .DS_Store
+
+# Symbols stuff
+.tags
