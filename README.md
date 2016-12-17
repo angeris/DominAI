@@ -14,8 +14,8 @@ python name_of_program.py
 - *main.py*: Requires two human players, a human to input moves, and a domino set. Plays PIMC team against humans. 
 - *oracle.py*: Negamax oracle team against greedy team. 
 
-Outputs for *smart_smart.py*, *smart_team.py*, and *oracle.py* can be found in the *results_texts* folder.
+Outputs for *smart_smart.py*, *smart_team.py*, and *oracle.py* can be found in the *results_texts* folder. We used these for Fig 1 and 2 in our final writeup. 
 
-Negamax algorithms used by IMS and PIMC can be found in the *algorithms* folder. Game and domino classes are in *domino.py*. 
+Negamax algorithms used by IMS and PIMC can be found in the *algorithms* folder. Game and domino classes are in *domino.py*. The evaluation function, which we modified for one of our runs by uncommenting the latter part of the line, is on line 176 of *domino.py*. 
 
 There are some other files in this repo, that are older iterations of our project or miscellaneous attempts.
